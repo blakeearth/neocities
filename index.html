@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    
+    <title>Hello World!</title>
+
+    <script src="components/box-container/box-container.js" defer></script>
+    <script src="components/clock-face/clock-face.js" defer></script>
+    <script src="components/month-calendar/month-calendar.js" defer></script>
+    <script src="components/top-bar/top-bar.js" defer></script>
+    <script src="components/cartridge-box/cartridge-box.js" defer></script>
+    <script src="components/software-box/software-box.js" defer></script>
+
+    <script src="components/widget-boxes/widget-boxes.js" defer></script>
+    <script src="components/standard-page/standard-page.js" defer></script>
+
+
+    <style>
+        @import url("/styles/global.css");
+        
+        div {
+            border: 1px solid black;
+            flex-grow: 1;
+            height: 2000px;
+        }
+    </style>
+</head>
+
+<body>
+    <standard-page>
+        <div slot="main-content">
+            <div>
+
+            </div>
+        </div>
+    </standard-page>
+</body>
+
+</html>

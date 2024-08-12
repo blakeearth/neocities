@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>blake.earth</title>
+    <link>https://write.as/blake/</link>
+    <description>Tinkerer</description>
+    <pubDate>Mon, 12 Aug 2024 01:41:52 +0000</pubDate>
+    <item>
+      <title>A digital garden and a second brain</title>
+      <link>https://write.as/blake/a-digital-garden-and-a-second-brain?pk_campaign=rss-feed</link>
+      <description>&lt;![CDATA[These ideas sometimes seem at odds. A garden suggests curation, but brains aren’t curated (at least, mine isn’t!). But by building this space as both a digital garden and a second brain, I am (hopefully) reducing overhead and eliminating some of the difficulty of adoption. The end result treats meta-notes like these (and evergreen notes) the same way it treats random thoughts about worlds I’d like to build. That kind of makes sense--it’s a lot more like how my brain works, I guess.
+
+And maybe the garden part of all this has less to do with how I curate this content and more to do with how I make it and share it:
+
+  digital gardening is not about specific tools – it's not a Wordpress plugin, Gastby theme, or Jekyll template. It's a different way of thinking about our online behaviour around information - one that accumulates personal knowledge over time in an explorable space. Maggie Appleton’s history and contextualization of digital gardens
+
+It’s about behavior: by writing my unpolished thoughts here for my own benefit and connecting them using the magic of hyperlinks, I fall into a pattern that creates a space primed for wandering and exploration.
+
+budding]]&gt;</description>
+      <content:encoded><![CDATA[<p>These ideas sometimes seem at odds. A <a href="./garden-games">garden suggests curation</a>, but brains aren’t curated (at least, mine isn’t!). But by building this space as <a href="./digital-garden">both a digital garden and a second brain</a>, I am (hopefully) reducing overhead and eliminating some of the difficulty of adoption. The end result treats meta-notes like these (and evergreen notes) the same way it treats random thoughts about worlds I’d like to build. That kind of makes sense—it’s a lot more like how my brain works, I guess.</p>
+
+<p>And maybe the garden part of all this has less to do with how I curate this content and more to do with how I make it and share it:</p>
+
+<blockquote><p>digital gardening is not about specific tools – it&#39;s not a Wordpress plugin, Gastby theme, or Jekyll template. It&#39;s a different way of thinking about our online behaviour around information – one that accumulates personal knowledge over time in an explorable space. <a href="https://maggieappleton.com/garden-history"><em>Maggie Appleton’s history and contextualization of digital gardens</em></a></p></blockquote>
+
+<p>It’s about behavior: by writing my unpolished thoughts here for my own benefit and connecting them using the magic of hyperlinks, I fall into a pattern that creates a space primed for wandering and exploration.</p>
+
+<p><a href="https://write.as/blake/tag:budding" class="hashtag"><span>#</span><span class="p-category">budding</span></a></p>
+]]></content:encoded>
+      <guid>https://write.as/blake/a-digital-garden-and-a-second-brain</guid>
+      <pubDate>Wed, 04 May 2022 04:16:26 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Kobo Glo</title>
+      <link>https://write.as/blake/the-kobo-glo?pk_campaign=rss-feed</link>
+      <description>&lt;![CDATA[I bought my Kobo Glo #eink e-reader from eBay on October 25, 2019 for $23.50 plus about $10 shipping (though it looks like costs have increased since), and I’ve been using it for about a year and a half. Despite a few issues, it’s served me pretty well overall, and I see myself continuing to use it for at least a few more years.
+
+!--more--
+
+My Kobo Glo order on eBay
+
+Portability and Size
+My Glo has a bookshelf’s worth of books on it—not a whole lot, but certainly more than would be practical to move—for both leisure and school/career reading. I don’t have to worry about the physical space my books take up. At about 4.5 x 6.2 inches, the Glo fits snugly in my pocket or between books in my backpack.
+
+Battery Life
+In sleep mode, the device can last weeks. I haven't tested the device with constant use, but I almost never need to charge it. I do most of my reading at night with the frontlight enabled.
+
+Operating System
+The Kobo Glo does not run on Android, unlike newer E-Ink devices, but instead uses a custom Linux-based OS. This is a little tricky, and my experience tinkering with Linux systems is definitely what made the Glo usable to me at all. When I first opened up the device and charged it, it refused to boot into the home screen, demanding to be either connected to a computer via USB or connected to the Internet. Neither of these was an option, since the WiFi driver was broken and I had no micro-USB compatible with the Glo’s data transfer.
+
+Ultimately, I needed to open up the back of the Glo, remove the microSD card with the operating system, and write an updated version to it (in this process, you can also replace or supplement the operating system with something like Plato or Koreader, or just bypass the Kobo sign-up step).
+
+After trying many operating systems and document readers, I've settled on using the stock OS, Nickel, for now.
+
+Update 08/31/2021: I've switched back to using Plato, since it's much faster than the current version of Nickel and allows me to annotate PDFs.
+
+Evergreen]]&gt;</description>
+      <content:encoded><![CDATA[<p>I bought my <a href="https://en.wikipedia.org/wiki/Kobo_Glo">Kobo Glo</a> <a href="https://write.as/blake/tag:eink" class="hashtag"><span>#</span><span class="p-category">eink</span></a> e-reader from eBay on October 25, 2019 for $23.50 plus about $10 shipping (though it looks like costs have increased since), and I’ve been using it for about a year and a half. Despite a few issues, it’s served me pretty well overall, and I see myself continuing to use it for at least a few more years.</p>
+
+
+
+<p><img src="https://i.snap.as/nZGyyXq4.jpeg" alt="My Kobo Glo order on eBay"/></p>
+
+<h2 id="portability-and-size" id="portability-and-size">Portability and Size</h2>
+
+<p>My Glo has a bookshelf’s worth of books on it—not a whole lot, but certainly more than would be practical to move—for both leisure and school/career reading. I don’t have to worry about the physical space my books take up. At about 4.5 x 6.2 inches, the Glo fits snugly in my pocket or between books in my backpack.</p>
+
+<h2 id="battery-life" id="battery-life">Battery Life</h2>
+
+<p>In sleep mode, the device can last weeks. I haven&#39;t tested the device with constant use, but I almost never need to charge it. I do most of my reading at night with the frontlight enabled.</p>
+
+<h2 id="operating-system" id="operating-system">Operating System</h2>
+
+<p>The Kobo Glo does not run on Android, unlike newer E-Ink devices, but instead uses a custom Linux-based OS. This is a little tricky, and my experience tinkering with Linux systems is definitely what made the Glo usable to me at all. When I first opened up the device and charged it, it refused to boot into the home screen, demanding to be either connected to a computer via USB or connected to the Internet. Neither of these was an option, since the WiFi driver was broken and I had no micro-USB compatible with the Glo’s data transfer.</p>
+
+<p>Ultimately, I needed to open up the back of the Glo, remove the microSD card with the operating system, and write an updated version to it (in this process, you can also replace or supplement the operating system with something like <a href="https://github.com/baskerville/plato">Plato</a> or <a href="https://github.com/koreader/koreader">Koreader</a>, or just bypass the Kobo sign-up step).</p>
+
+<p>After trying many operating systems and document readers, I&#39;ve settled on using the stock OS, Nickel, for now.</p>
+
+<p>Update 08/31/2021: I&#39;ve switched back to using <a href="https://github.com/baskerville/plato">Plato</a>, since it&#39;s much faster than the current version of Nickel and allows me to annotate PDFs.</p>
+
+<p><a href="https://write.as/blake/tag:Evergreen" class="hashtag"><span>#</span><span class="p-category">Evergreen</span></a></p>
+]]></content:encoded>
+      <guid>https://write.as/blake/the-kobo-glo</guid>
+      <pubDate>Tue, 20 Apr 2021 04:41:25 +0000</pubDate>
+    </item>
+    <item>
+      <title>Garden Games</title>
+      <link>https://write.as/blake/garden-games?pk_campaign=rss-feed</link>
+      <description>&lt;![CDATA[I'd like to talk about my love of visiting state parks and playing what I'm calling "garden games". These are games that are designed to reward exploration; the core game loop is a cycle of exploration and discovery in a carefully constructed environment. (If there's already another term for these games, please let me know! They're some of my favorites, and I'd love to find a way to search for them more easily.) For now, I'm taking the word "garden" after reading the below part of a review of my favorite game, Eastshade.
+
+  "Each painting costs inspiration, which you collect by visiting new areas or completing new tasks...Games being pretty isn’t unusual, but Eastshade’s design is closer to that of a grand garden. The buildings feel more like follies than functional houses, the bridges come straight from arcadian paintings, and curated lines of sight are key." PCGamer (emphasis mine)
+
+That review is describing Eastshade's environment design, and indeed in playing the game it seems every frame could be a carefully composed painting, but I think the depiction of Eastshade as a "grand garden" extends to the broader scope of its game design as well.
+
+What's a garden?
+A garden is a curated environment designed for the enjoyment of nature. According to the concept's Wikipedia entry, the defining feature of a garden is its curation; if a space hasn't been controlled and curated by a human, it isn't a garden. To extend the definition to games, I replace nature with the game world.
+
+For gardens, the carefully curated experience centers the environment itself, not another end goal.
+
+Why "garden"?
+I also considered the terms "theme park" (later preferring "amusement park") and "pleasure garden".
+
+budding]]&gt;</description>
+      <content:encoded><![CDATA[<p>I&#39;d like to talk about my love of visiting state parks and playing what I&#39;m calling “garden games”. These are games that are designed to reward exploration; the core game loop is a cycle of exploration and discovery in a carefully constructed environment. (If there&#39;s already another term for these games, please let me know! They&#39;re some of my favorites, and I&#39;d love to find a way to search for them more easily.) For now, I&#39;m taking the word “garden” after reading the below part of a review of my favorite game, <em>Eastshade</em>.</p>
+
+<blockquote><p>“Each painting costs inspiration, which you collect by visiting new areas or completing new tasks...Games being pretty isn’t unusual, but <strong>Eastshade’s design is closer to that of a grand garden</strong>. The buildings feel more like follies than functional houses, the bridges come straight from arcadian paintings, and curated lines of sight are key.” <a href="https://www.pcgamer.com/eastshade-review/"><em>PCGamer</em></a> (emphasis mine)</p></blockquote>
+
+<p>That review is describing <em>Eastshade</em>&#39;s environment design, and indeed in playing the game it seems every frame could be a carefully composed painting, but I think the depiction of <em>Eastshade</em> as a “grand garden” extends to the broader scope of its game design as well.</p>
+
+<h2 id="what-s-a-garden" id="what-s-a-garden">What&#39;s a garden?</h2>
+
+<p>A garden is a curated environment designed for the enjoyment of nature. According to the concept&#39;s <a href="https://en.wikipedia.org/wiki/Garden">Wikipedia entry</a>, the defining feature of a garden is its curation; if a space hasn&#39;t been controlled and curated by a human, it isn&#39;t a garden. To extend the definition to games, I replace nature with the game world.</p>
+
+<p>For gardens, the carefully curated experience centers the environment itself, not another end goal.</p>
+
+<h2 id="why-garden" id="why-garden">Why “garden”?</h2>
+
+<p>I also considered the terms “theme park” (later preferring “<a href="https://en.wikipedia.org/wiki/Amusement_park">amusement park</a>”) and “<a href="https://en.wikipedia.org/wiki/Pleasure_garden">pleasure garden</a>”.</p>
+
+<p><a href="https://write.as/blake/tag:budding" class="hashtag"><span>#</span><span class="p-category">budding</span></a></p>
+]]></content:encoded>
+      <guid>https://write.as/blake/garden-games</guid>
+      <pubDate>Wed, 30 Dec 2020 01:42:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Decentralized Online Communities</title>
+      <link>https://write.as/blake/decentralized-online-communities?pk_campaign=rss-feed</link>
+      <description>&lt;![CDATA[A rambling discussion of online communities, from Facebook and Discord to an ideal of the entire web as a community and the Fediverse as our burgeoning compromise
+
+Companies like Facebook and Discord, who provide very centralized, siloed community-building services, might claim "decentralized community" is an oxymoron. They'd argue that centralization is necessary for a community, that the very definition of a community is a single place where people come together to share ideas and keep in touch.
+
+Indeed, both websites have a rules page about their respective "communities". (Facebook's here and Discord's here. Facebook proclaims on the first line: "Every day, people come to Facebook to share their stories, see the world through the eyes of others, and connect with friends and causes," and this frames Facebook as a massive community (containing many smaller ones, also locked to the platform).
+
+!--more--
+
+But I think it's a stretch to view such a massive platform as Facebook as a single, expansive community. Certainly it's a single place where people come to get together and communicate in separate cliques, but is the entire website a community? I tend to stay in my circle of family and friends. I know nothing about what happens in the millions of other corners of the website. I have the same question about Discord: with its many servers, which are indisputably communities, but no place to communicate that is both central to the platform and global, I'd hesitate describe the entire platform as a contiguous community. Both are centralized in terms of ownership and yet neither are centralized in terms of community (at least in the way they might suggest they are).
+
+Still, looking at this broader sense of "community" these companies would like us to accept makes me more readily think of the entire Internet as a community. We log on the Internet to communicate, write thoughts, share with our peers, learn, and laugh.
+
+The Internet was designed to be decentralized. When it was first conceptualized, it was as an experimental community of universities and academics. Because of this, while large parts of the Internet can go down (due to D.N.S. failures or shared hosting services), it's highly unlikely that the whole network could collapse at once.
+
+But Facebook goes down. Facebook has some rights to everything posted. Facebook snoops on its users, taking their privacy and making them into products for advertisers.
+
+I think we're using Facebook, a centralized, arguably evil corporation, primarily because it is already being used: our families and friends are there. My aunts and uncles don't have personal blogs or registered domain names.
+
+Additionally, centralization (the server kind) makes communication very easy. If I only want to use Facebook to communicate, I only have one online ID. I only need to prove to Facebook's servers that I am who I say I am, and then my friends and family (and anyone else I communicate with) can at least generally trust that my account represents the same person across the website.
+
+Facebook and other popular social media platforms have a discovery feed that allow users to not only see content from people they already follow, but content from people and companies the platform thinks users might want to see. The Internet as a whole has R.S.S. and Atom, but these aren't as universal as they should be, and there is no central discovery feed.
+
+Lastly, I have no clue if somebody mentions my website or engages in conversation with the things I make unless they contact me directly (see pingback and Webmention). Conversation starts to feel more like screaming into the void when it relies on each party painstakingly seeking out the other's responses. Similarly, I can be certain of my response but not certain that it will be seen.
+
+These are the primary things preventing us from using the web itself as a massive, decentralized community. Personally, I'd love to see that change.
+
+The Fediverse starts to help us with this. Federated  platforms like Mastodon, and indeed Write.as, are a step in the right direction. I don't need to personally prove my identity to every Mastodon instance I interact with. The Fediverse is gaining popularity among those of us interested in tech and democratization, so even though my aunts and uncles aren't there yet, I can count on some sort of community.
+
+Federated content makes discovery easier; I don't always have to seek out what I want. Still, most of my discovery of people and blogs and accounts to follow happens via word-of-mouth, organically. If I publish something into the Fediverse, I have to trust that someone will see it and want to share it, because the Fediverse itself will not algorithmically promote my content. It's easier to consume content when you don't have to go looking for it. Please read this post for more on the discoverability issues in the decentralized web.
+
+The Fediverse also takes care of mentions and follows very well with ActivityPub. I generally know when someone engages with my content, follows me, or mentions me.
+
+While not totally decentralized (instances often have many users each), federation is a step toward a more decentralized, reliable, privacy-friendly Internet. It's unlikely that the entire Fediverse could go down, and no one instance has access to all my data.
+
+The Fediverse is moving in the right direction. But to me, it sometimes feels like a high-level implementation of a low-level concept. What if we could just use domain names as identities, and somehow have a global way of proving our ownership of them? I just wish everyone on Facebook instead had a domain name, a blog, a mentions system, comments, R.S.S. feed readers... It's not too much to ask, is it? Imagine the decentralization.
+
+budding]]&gt;</description>
+      <content:encoded><![CDATA[<p><em>A rambling discussion of online communities, from Facebook and Discord to an ideal of the entire web as a community and the Fediverse as our burgeoning compromise</em></p>
+
+<p>Companies like Facebook and Discord, who provide very centralized, siloed community-building services, might claim “decentralized community” is an oxymoron. They&#39;d argue that centralization is necessary for a community, that the very definition of a community is a single place where people come together to share ideas and keep in touch.</p>
+
+<p>Indeed, both websites have a rules page about their respective “communities”. (Facebook&#39;s <a href="https://www.facebook.com/communitystandards/">here</a> and Discord&#39;s <a href="https://discordapp.com/guidelines">here</a>. Facebook proclaims on the first line: “Every day, people come to Facebook to share their stories, see the world through the eyes of others, and connect with friends and causes,” and this frames Facebook as a massive community (containing many smaller ones, also locked to the platform).</p>
+
+
+
+<p>But I think it&#39;s a stretch to view such a massive platform as Facebook as a single, expansive community. Certainly it&#39;s a single place where people come to get together and communicate in separate cliques, but is the entire website a community? I tend to stay in my circle of family and friends. I know nothing about what happens in the millions of other corners of the website. I have the same question about Discord: with its many servers, which are indisputably communities, but no place to communicate that is both central to the platform and global, I&#39;d hesitate describe the <em>entire platform</em> as a contiguous community. <strong>Both are centralized in terms of ownership and yet neither are centralized in terms of community</strong> (at least in the way they might suggest they are).</p>
+
+<p>Still, looking at this broader sense of “community” these companies would like us to accept makes me more readily think of the entire Internet as a community. We log on the Internet to communicate, write thoughts, share with our peers, learn, and laugh.</p>
+
+<p>The Internet was designed to be decentralized. When it was first conceptualized, it was as an <a href="https://www.internetsociety.org/internet/history-internet/brief-history-internet/">experimental community of universities and academics</a>. Because of this, while large parts of the Internet can go down (due to D.N.S. failures or shared hosting services), it&#39;s highly unlikely that the whole network could collapse at once.</p>
+
+<p>But Facebook goes down. Facebook has some rights to everything posted. Facebook snoops on its users, taking their privacy and making them into products for advertisers.</p>
+
+<p>I think we&#39;re using Facebook, a centralized, arguably evil corporation, primarily because it is already being used: our families and friends are there. My aunts and uncles don&#39;t have personal blogs or registered domain names.</p>
+
+<p>Additionally, centralization (the server kind) makes communication very easy. If I only want to use Facebook to communicate, I only have one online ID. I only need to prove to Facebook&#39;s servers that I am who I say I am, and then my friends and family (and anyone else I communicate with) can at least generally trust that my account represents the same person across the website.</p>
+
+<p>Facebook and other popular social media platforms have a discovery feed that allow users to not only see content from people they already follow, but content from people and companies the platform thinks users might want to see. The Internet as a whole has R.S.S. and Atom, but these aren&#39;t as universal as they should be, and there is no central discovery feed.</p>
+
+<p>Lastly, I have no clue if somebody mentions my website or <a href="https://blog.cjeller.site/uncertainty-of-reception">engages in conversation with the things I make</a> unless they contact me directly (see <a href="https://indieweb.org/pingback">pingback</a> and <a href="https://indieweb.org/Webmention">Webmention</a>). Conversation starts to feel more like <a href="https://www.brendanschlagel.com/2019/09/01/weaving-a-public-web-or-why-dont-i-blog-more/">screaming into the void</a> when it relies on each party painstakingly seeking out the other&#39;s responses. Similarly, I can be certain of my response but not certain that it will be seen.</p>
+
+<p>These are the primary things preventing us from using the web itself as a massive, decentralized community. Personally, I&#39;d love to see that change.</p>
+
+<p>The <a href="https://en.wikipedia.org/wiki/Fediverse">Fediverse</a> starts to help us with this. Federated  platforms like Mastodon, and indeed Write.as, are a step in the right direction. I don&#39;t need to personally prove my identity to every Mastodon instance I interact with. The Fediverse is gaining popularity among those of us interested in tech and democratization, so even though my aunts and uncles aren&#39;t there yet, I can count on some sort of community.</p>
+
+<p>Federated content makes discovery easier; I don&#39;t always have to seek out what I want. Still, most of my discovery of people and blogs and accounts to follow happens via word-of-mouth, organically. If I publish something into the Fediverse, I have to trust that someone will see it and want to share it, because the Fediverse itself will not algorithmically promote my content. It&#39;s easier to consume content when you don&#39;t have to go looking for it. Please read this <a href="https://hjarta.io/i-am-shutting-down-my-peertube-server-its-just-not-worth-it">post</a> for more on the discoverability issues in the decentralized web.</p>
+
+<p>The Fediverse also takes care of mentions and follows very well with ActivityPub. I generally know when someone engages with my content, follows me, or mentions me.</p>
+
+<p>While not totally decentralized (instances often have many users each), federation is a step toward a more decentralized, reliable, privacy-friendly Internet. It&#39;s unlikely that the entire Fediverse could go down, and no one instance has access to all my data.</p>
+
+<p>The Fediverse is moving in the right direction. But to me, it sometimes feels like a high-level implementation of a low-level concept. What if we could just use domain names as identities, and somehow have a global way of proving our ownership of them? I just wish everyone on Facebook instead had a domain name, a blog, a mentions system, comments, R.S.S. feed readers... It&#39;s not too much to ask, is it? Imagine the decentralization.</p>
+
+<p><a href="https://write.as/blake/tag:budding" class="hashtag"><span>#</span><span class="p-category">budding</span></a></p>
+]]></content:encoded>
+      <guid>https://write.as/blake/decentralized-online-communities</guid>
+      <pubDate>Sun, 08 Sep 2019 02:22:33 +0000</pubDate>
+    </item>
+    <item>
+      <title>Looking for Sea Glass on a Tidal Sandbar</title>
+      <link>https://write.as/blake/looking-for-sea-glass-on-a-tidal-sandbar?pk_campaign=rss-feed</link>
+      <description>&lt;![CDATA[In an early cloudy August afternoon, my family and I walked to the tip of Great Diamond Island, where we’re staying for a few days. At high tide, Little Diamond Island is visible across a stretch of blue-green water, with just the thin ends of grass blades breaking the surface. But when we arrived at the shore, low tide was just an hour past.
+
+Between late-1800s-era houses, flowing grass and bright wildflowers, we approached the narrow, muddy sandbar connecting the two islands. Cross-island joggers passed us as we strolled along the sandbar, our voices loud and our eyes turned down. The mud was laden with snail shells, clam shells, and barnacle-covered rocks and bricks. We chatted over little fish (were they minnows or tadpoles?) darting around in tide pools. We were probably all wrong; both only live in freshwater, not the saltwater of Casco Bay.
+
+!--more--
+
+A few minutes later, one of us picked up a frosted fragment of glass. “It’s not true sea glass yet, but give it another four or five years.” And so began my little hunt.
+
+We circled the sandbar, the cool summer breeze carrying mist to our cheeks. We talked, but we didn’t make eye contact: our eyes were on the almost-repeating pattern of shells, rocks, and brick crunching at our feet. Occasionally, we’d spot a glimmer, a shard of glass or shell we’d bring to our faces for examination, and occasionally, the fragment would meet our standards for “sea glass”–rounded edges, frosted, smooth–with bonus points if the piece had an embossed word or had a rarer color, like a pastel pink or aquamarine.
+
+Sea Glass
+
+We filled an hour this way before ending our search to head back to Great Diamond Island, and I don’t think we could have stayed much longer. As we reached the end of the sandbar, our feet brushed through a refreshingly chilly, ever-deepening current racing across the shoal.
+
+#travel #evergreen]]&gt;</description>
+      <content:encoded><![CDATA[<p>In an early cloudy August afternoon, my family and I walked to the tip of Great Diamond Island, where we’re staying for a few days. At high tide, Little Diamond Island is visible across a stretch of blue-green water, with just the thin ends of grass blades breaking the surface. But when we arrived at the shore, low tide was just an hour past.</p>
+
+<p>Between late-1800s-era houses, flowing grass and bright wildflowers, we approached the narrow, muddy sandbar connecting the two islands. Cross-island joggers passed us as we strolled along the sandbar, our voices loud and our eyes turned down. The mud was laden with snail shells, clam shells, and barnacle-covered rocks and bricks. We chatted over little fish (were they minnows or tadpoles?) darting around in tide pools. We were probably all wrong; both only live in freshwater, not the saltwater of Casco Bay.</p>
+
+
+
+<p>A few minutes later, one of us picked up a frosted fragment of glass. “It’s not true sea glass yet, but give it another four or five years.” And so began my little hunt.</p>
+
+<p>We circled the sandbar, the cool summer breeze carrying mist to our cheeks. We talked, but we didn’t make eye contact: our eyes were on the almost-repeating pattern of shells, rocks, and brick crunching at our feet. Occasionally, we’d spot a glimmer, a shard of glass or shell we’d bring to our faces for examination, and occasionally, the fragment would meet our standards for “sea glass”–rounded edges, frosted, smooth–with bonus points if the piece had an embossed word or had a rarer color, like a pastel pink or aquamarine.</p>
+
+<p><img src="https://i.snap.as/Lc1bKJN.jpg" alt="Sea Glass"/></p>
+
+<p>We filled an hour this way before ending our search to head back to Great Diamond Island, and I don’t think we could have stayed much longer. As we reached the end of the sandbar, our feet brushed through a refreshingly chilly, ever-deepening current racing across the shoal.</p>
+
+<p><a href="https://write.as/blake/tag:travel" class="hashtag"><span>#</span><span class="p-category">travel</span></a> <a href="https://write.as/blake/tag:evergreen" class="hashtag"><span>#</span><span class="p-category">evergreen</span></a></p>
+]]></content:encoded>
+      <guid>https://write.as/blake/looking-for-sea-glass-on-a-tidal-sandbar</guid>
+      <pubDate>Sun, 01 Sep 2019 19:59:15 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

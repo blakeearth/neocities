@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'ds';
+    src: url('/assets/fonts/ds.ttf') format('truetype');
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    --ds-size: 1.2rem;
+    background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 0% 0% / 128px 128px, radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 64px 64px / 128px 128px, linear-gradient(#61869e 1px, transparent 1px) 0px -0.5px / 64px 64px, linear-gradient(90deg, #61869e 1px, #ffffff 1px) -0.5px 0px / 64px 64px #ffffff;
+    background-size: 128px 128px, 128px 128px, 64px 64px, 64px 64px;
+    background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+li {
+    font-family: 'ds';
+    font-weight: normal;
+}

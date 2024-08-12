@@ -1,0 +1,143 @@
+<style>
+    @import url("../../styles/global.css");
+
+    .clock {
+        width: calc(var(--ds-size) * 6);
+        height: calc(var(--ds-size) * 6);
+        position: relative;
+        border: 1px solid black;
+        background-color: white;
+        background-size: var(--ds-size) var(--ds-size);
+        background-position: -1px -1px;
+        background-image:
+            linear-gradient(to right, #E4E4E4 2px, transparent 1px),
+            linear-gradient(to bottom, #E4E4E4 2px, transparent 1px);
+    }
+
+    .outer-clock-face {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        --d: var(--ds-size);
+        --rel: 1;
+        --r: calc(.5*(1 + var(--rel))*var(--d)/var(--tan));
+    }
+
+    .outer-clock-face::after {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        transform: rotate(90deg)
+    }
+
+    .inner-clock-face {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+    }
+
+    .outer-clock-face .node {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        --p: 4px;
+        margin: calc(-.5*var(--p));
+        width: var(--p);
+        height: var(--p);
+        --az: calc(var(--i)*1turn/var(--m));
+        transform:
+            rotate(var(--az)) translate(var(--r)) rotate(calc(-1*var(--az)));
+    }
+
+    .outer-clock-face .node.box {
+        background-color: #7D7D7D;
+    }
+
+    .outer-clock-face .node span {
+        position: absolute;
+        font-size: calc(var(--ds-size) * 1.5);
+        font-family: 'ds';
+        color: #B6B6B6;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .inner-clock-face::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 6px;
+        height: 6px;
+        margin-left: -3px;
+        margin-top: -3px;
+        background: #4D4D4D;
+        z-index: 11;
+    }
+
+    .hand {
+        width: 50%;
+        right: 50%;
+        height: 2px;
+        background: #7D7D7D;
+        position: absolute;
+        top: 50%;
+        transform-origin: 100%;
+        transform: rotate(90deg);
+        transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    }
+
+    .hand.hour-hand {
+        width: 20%;
+        z-index: 3;
+    }
+
+    .hand.min-hand {
+        z-index: 10;
+        width: 35%;
+    }
+
+    .hand.second-hand {
+        background: #65869E;
+        width: 40%;
+    }
+</style>
+
+<div class="clock">
+    <div class="outer-clock-face" style="--m: 12; --tan: 0.41">
+        <div class="node box" style="--i: 1"></div>
+        <div class="node box" style="--i: 2"></div>
+        <div class="node" style="--i: 3">
+            <span>6</span>
+        </div>
+        <div class="node box" style="--i: 4"></div>
+        <div class="node box" style="--i: 5"></div>
+        <div class="node" style="--i: 6">
+            <span>9</span>
+        </div>
+        <div class="node box" style="--i: 7"></div>
+        <div class="node box" style="--i: 8"></div>
+        <div class="node" style="--i: 9">
+            <span>12</span>
+        </div>
+        <div class="node box" style="--i: 10"></div>
+        <div class="node box" style="--i: 11"></div>
+        <div class="node" style="--i: 12">
+            <span>3</span>
+        </div>
+
+        <div class="inner-clock-face">
+            <div class="hand hour-hand"></div>
+            <div class="hand min-hand"></div>
+            <div class="hand second-hand"></div>
+        </div>
+    </div>
+</div>

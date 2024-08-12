@@ -1,0 +1,22 @@
+<style>
+    @import url("../../styles/global.css");
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient(#89A3B3, #61869E);
+        color: white;
+        padding: 0.5em;
+        max-height: fit-content;
+    }
+
+    h2 {
+        margin: 0;
+    }
+</style>
+
+<nav>
+    <slot name="title">
+        <h2>Default title</h2>
+    </slot>
+</nav>

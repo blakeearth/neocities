@@ -1,0 +1,60 @@
+<style>
+    @import url("../../styles/global.css");
+
+    .holder {
+        display: flex;
+        justify-content: center;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        padding: var(--ds-size);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        gap: 2px;
+    }
+
+    .row {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--ds-size);
+        height: calc(var(--ds-size) * 8);
+        margin-top: var(--ds-size);
+    }
+
+    .row>* {
+        box-shadow: 0px 0px 0px 2px #E7E7E7;
+    }
+
+    .software-row {
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
+    }
+</style>
+
+<div class="holder">
+    <box-container>
+        <span slot="title">blake.earth</span>
+        <div class="container" slot="content">
+            <div class="row">
+                <clock-face></clock-face>
+                <month-calendar></month-calendar>
+            </div>
+            <cartridge-box></cartridge-box>
+            <div class="software-row">
+                <software-box></software-box>
+                <software-box></software-box>
+            </div>
+            <cartridge-box></cartridge-box>
+        </div>
+    </box-container>
+</div>

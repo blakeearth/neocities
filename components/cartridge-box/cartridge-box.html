@@ -1,0 +1,54 @@
+<style>
+    @import url("../../styles/global.css");
+
+    .container {
+        width: calc(var(--ds-size) * 12);
+        height: calc(var(--ds-size) * 3);
+        background-image: linear-gradient(#FFFFFF, #C7C7C7);
+        border: 1px solid black;
+    }
+
+    .cart {
+        display: flex;
+        gap: calc(var(--ds-size) * 0.5);
+        padding: calc(var(--ds-size) * 0.5);
+    }
+
+    .icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: calc(var(--ds-size) * 2);
+        height: calc(var(--ds-size) * 2);
+        background-color: white;
+    }
+
+    .icon span {
+        text-align: center;
+    }
+
+    .title {
+        flex-grow: 1;
+        background-color: white;
+        border: 1px solid #4D4D4D;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: calc(var(--ds-size) * 0.75);
+    }
+</style>
+
+<div class="container">
+    <div class="cart">
+        <div class="icon">
+            <slot name="cartridge-icon">
+                <span>🔗</span>
+            </slot>
+        </div>
+        <div class="title">
+            <slot name="cartridge-title">
+                <span>Something will go here</span>
+            </slot>
+        </div>
+    </div>
+</div>
