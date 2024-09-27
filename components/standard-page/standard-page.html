@@ -19,7 +19,7 @@
     }
 
     .layout {
-        width: 80%;
+        width: 1024px;
         display: flex;
         flex-direction: row;
         gap: var(--ds-size);
@@ -36,12 +36,12 @@
         gap: var(--ds-size);
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1080px) {
         .layout {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 100%;
+            width: calc(var(--ds-size) * 16);
             margin: var(--ds-size);
         }
     }

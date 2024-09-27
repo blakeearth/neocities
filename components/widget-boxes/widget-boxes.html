@@ -13,6 +13,7 @@
     }
 
     .container {
+        position: relative;
         padding: var(--ds-size);
         display: flex;
         flex-direction: column;
@@ -39,22 +40,46 @@
         flex-direction: row;
         gap: 2px;
     }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    #flower {
+        position: absolute;
+        width: calc(var(--ds-size) * 7);
+        bottom: -32px;
+        left: -64px;
+        pointer-events: none;
+    }
 </style>
 
 <div class="holder">
     <box-container>
-        <span slot="title">blake.earth</span>
+        <span slot="title"><a href="/">blake.earth</a></span>
         <div class="container" slot="content">
             <div class="row">
                 <clock-face></clock-face>
                 <month-calendar></month-calendar>
             </div>
-            <cartridge-box></cartridge-box>
+            <cartridge-box>
+                <img src="/assets/images/flicker.gif" slot="cartridge-icon"/>
+                <span slot="cartridge-title">Yeah there's nothing here yet</span>
+            </cartridge-box>
             <div class="software-row">
-                <software-box></software-box>
-                <software-box></software-box>
+                <software-box>
+                    <span slot="software-title">Under</span>
+                </software-box>
+                <software-box>
+                    <span slot="software-title">Construction</span>
+                </software-box>
             </div>
-            <cartridge-box></cartridge-box>
+            <cartridge-box>
+                <span slot="cartridge-icon">📅</span>
+                <span slot="cartridge-title">Last updated: 08/26/24</span>
+            </cartridge-box>
+            <img id="flower" src="/assets/images/flower.webp" />
         </div>
     </box-container>
 </div>

@@ -1,0 +1,62 @@
+<style>
+    @import url("../../styles/global.css");
+
+    .post {
+        display: block;
+        box-sizing: border-box;
+        border: 2px solid #61869E;
+        border-radius: 4px;
+        background-color: white;
+    }
+
+    .meta {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 1ch;
+        font-size: 1.2rem;
+    }
+
+    .author {
+        margin: -1px 0 0 -1px;
+        background-color: #89A3B3;
+        border: 2px solid #61869E;
+        border-radius: 4px 0 4px 0;
+        width: 12ch;
+        color: white;
+    }
+
+    h4 {
+        margin: 0;
+        padding-left: 1ch;
+    }
+
+    .content {
+        padding: 0.2rem 1ch 0.2rem 1ch;
+        font-size: 1.2rem;
+    }
+</style>
+
+<div class="post">
+    <div class="meta">
+        <div class="author">
+            <slot name="author">
+                <h4>blake.earth</h4>
+            </slot>
+        </div>
+        <a id="title">
+            <slot name="title">
+                Post title
+            </slot>
+        </a>
+        <slot name="date">
+            <span class="date">Post date</span>
+        </slot>
+    </div>
+    <div class="content">
+        <slot name="content">
+            <span>Content</span>
+        </slot>
+    </div>
+</div>

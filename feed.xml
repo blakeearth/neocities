@@ -2,31 +2,12 @@
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>blake.earth</title>
-    <link>https://write.as/blake/</link>
+    <link>https://blake.earth/blog</link>
     <description>Tinkerer</description>
-    <pubDate>Mon, 12 Aug 2024 01:41:52 +0000</pubDate>
     <item>
       <title>A digital garden and a second brain</title>
       <link>https://write.as/blake/a-digital-garden-and-a-second-brain?pk_campaign=rss-feed</link>
-      <description>&lt;![CDATA[These ideas sometimes seem at odds. A garden suggests curation, but brains aren’t curated (at least, mine isn’t!). But by building this space as both a digital garden and a second brain, I am (hopefully) reducing overhead and eliminating some of the difficulty of adoption. The end result treats meta-notes like these (and evergreen notes) the same way it treats random thoughts about worlds I’d like to build. That kind of makes sense--it’s a lot more like how my brain works, I guess.
-
-And maybe the garden part of all this has less to do with how I curate this content and more to do with how I make it and share it:
-
-  digital gardening is not about specific tools – it's not a Wordpress plugin, Gastby theme, or Jekyll template. It's a different way of thinking about our online behaviour around information - one that accumulates personal knowledge over time in an explorable space. Maggie Appleton’s history and contextualization of digital gardens
-
-It’s about behavior: by writing my unpolished thoughts here for my own benefit and connecting them using the magic of hyperlinks, I fall into a pattern that creates a space primed for wandering and exploration.
-
-budding]]&gt;</description>
-      <content:encoded><![CDATA[<p>These ideas sometimes seem at odds. A <a href="./garden-games">garden suggests curation</a>, but brains aren’t curated (at least, mine isn’t!). But by building this space as <a href="./digital-garden">both a digital garden and a second brain</a>, I am (hopefully) reducing overhead and eliminating some of the difficulty of adoption. The end result treats meta-notes like these (and evergreen notes) the same way it treats random thoughts about worlds I’d like to build. That kind of makes sense—it’s a lot more like how my brain works, I guess.</p>
-
-<p>And maybe the garden part of all this has less to do with how I curate this content and more to do with how I make it and share it:</p>
-
-<blockquote><p>digital gardening is not about specific tools – it&#39;s not a Wordpress plugin, Gastby theme, or Jekyll template. It&#39;s a different way of thinking about our online behaviour around information – one that accumulates personal knowledge over time in an explorable space. <a href="https://maggieappleton.com/garden-history"><em>Maggie Appleton’s history and contextualization of digital gardens</em></a></p></blockquote>
-
-<p>It’s about behavior: by writing my unpolished thoughts here for my own benefit and connecting them using the magic of hyperlinks, I fall into a pattern that creates a space primed for wandering and exploration.</p>
-
-<p><a href="https://write.as/blake/tag:budding" class="hashtag"><span>#</span><span class="p-category">budding</span></a></p>
-]]></content:encoded>
+      <description>a rambly post about digital gardens and second brains</description>
       <guid>https://write.as/blake/a-digital-garden-and-a-second-brain</guid>
       <pubDate>Wed, 04 May 2022 04:16:26 +0000</pubDate>
     </item>

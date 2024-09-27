@@ -18,13 +18,12 @@ export function getEntries(feed, tag) {
             if (!hasTag) return;
 
             html += `
-                <article>
-                    <h2>
-                        <a href="${el.querySelector("link").innerHTML}" target="_blank" rel="noopener">
-                        ${el.querySelector("title").innerHTML}
-                        </a>
-                    </h2>
-                </article>
+                <chat-post data-url="${el.querySelector("link").innerHTML}">
+                    <span slot="content">
+                        ${el.querySelector("description").innerHTML}
+                    </span>
+                    <span slot="title">${el.querySelector("title").innerHTML}</span>
+                </chat-post>
             `;
         });
         document.getElementById('rss').insertAdjacentHTML("beforeend", html);
