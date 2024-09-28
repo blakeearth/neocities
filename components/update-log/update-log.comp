@@ -46,6 +46,10 @@
         color: inherit;
     }
 
+    #updates {
+        display: block;
+    }
+
     #flower {
         position: absolute;
         width: calc(var(--ds-size) * 7);
@@ -79,6 +83,11 @@
                 <span slot="cartridge-icon">📅</span>
                 <span slot="cartridge-title">Last updated: 08/26/24</span>
             </cartridge-box>
+            <div id="updates">
+                <chat-post>
+                    <span slot="chat-title">Hello</span>
+                </chat-post>
+            </div>
             <img id="flower" src="/assets/images/flower.webp" />
         </div>
     </box-container>

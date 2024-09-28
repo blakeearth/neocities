@@ -1,4 +1,4 @@
-fetch("/components/month-calendar/month-calendar.html")
+fetch("/components/month-calendar/month-calendar.comp")
     .then(stream => stream.text())
     .then(html => {
         // Create the template

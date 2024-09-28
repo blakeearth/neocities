@@ -1,4 +1,4 @@
-fetch("/components/widget-boxes/widget-boxes.html")
+fetch("/components/widget-boxes/widget-boxes.comp")
     .then(stream => stream.text())
     .then(html => {
         // Create the template

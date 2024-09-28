@@ -1,4 +1,4 @@
-fetch("/components/chat-post/chat-post.html")
+fetch("/components/chat-post/chat-post.comp")
     .then(stream => stream.text())
     .then(html => {
         // Create the template

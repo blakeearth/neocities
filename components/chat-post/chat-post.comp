@@ -41,21 +41,16 @@
 <div class="post">
     <div class="meta">
         <div class="author">
-            <slot name="author">
+            <slot name="chat-author">
                 <h4>blake.earth</h4>
             </slot>
         </div>
-        <a id="title">
-            <slot name="title">
-                Post title
-            </slot>
-        </a>
-        <slot name="date">
+        <slot name="chat-date">
             <span class="date">Post date</span>
         </slot>
     </div>
     <div class="content">
-        <slot name="content">
+        <slot name="chat-content">
             <span>Content</span>
         </slot>
     </div>

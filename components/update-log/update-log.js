@@ -1,4 +1,4 @@
-fetch("/components/top-bar/top-bar.comp")
+fetch("/components/update-log/update-log.comp")
     .then(stream => stream.text())
     .then(html => {
         // Create the template
@@ -6,7 +6,7 @@ fetch("/components/top-bar/top-bar.comp")
         template.innerHTML = html;
         const element = document.body.appendChild(template);
 
-        class TopBar extends HTMLElement {
+        class NavLinks extends HTMLElement {
             constructor() {
                 super();
 
@@ -19,5 +19,5 @@ fetch("/components/top-bar/top-bar.comp")
                 shadowRoot.appendChild(templateContent.cloneNode(true));
             }
         }
-        customElements.define('top-bar', TopBar);
+        customElements.define('update-log', NavLinks);
     });

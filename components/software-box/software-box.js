@@ -1,4 +1,4 @@
-fetch("/components/software-box/software-box.html")
+fetch("/components/software-box/software-box.comp")
     .then(stream => stream.text())
     .then(html => {
         // Create the template

@@ -1,4 +1,4 @@
-fetch("/components/standard-page/standard-page.html")
+fetch("/components/standard-page/standard-page.comp")
     .then(stream => stream.text())
     .then(html => {
           // Create the template

@@ -1,0 +1,94 @@
+<style>
+    @import url("../../styles/global.css");
+
+    .holder {
+        display: flex;
+        justify-content: center;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        position: relative;
+        padding: var(--ds-size);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        gap: 2px;
+    }
+
+    .row {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--ds-size);
+        height: calc(var(--ds-size) * 8);
+        margin-top: var(--ds-size);
+    }
+
+    .row>* {
+        box-shadow: 0px 0px 0px 2px #E7E7E7;
+    }
+
+    .software-row {
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    #updates {
+        display: block;
+    }
+
+    #flower {
+        position: absolute;
+        width: calc(var(--ds-size) * 7);
+        bottom: -32px;
+        left: -64px;
+        pointer-events: none;
+    }
+</style>
+
+<div class="holder">
+    <box-container>
+        <span slot="title"><a href="/">blake.earth</a></span>
+        <div class="container" slot="content">
+            <div class="row">
+                <clock-face></clock-face>
+                <month-calendar></month-calendar>
+            </div>
+            <cartridge-box>
+                <img src="/assets/images/flicker.gif" slot="cartridge-icon"/>
+                <span slot="cartridge-title">Yeah there's nothing here yet</span>
+            </cartridge-box>
+            <div class="software-row">
+                <software-box>
+                    <span slot="software-title">Under</span>
+                </software-box>
+                <software-box>
+                    <span slot="software-title">Construction</span>
+                </software-box>
+            </div>
+            <cartridge-box>
+                <span slot="cartridge-icon">📅</span>
+                <span slot="cartridge-title">Last updated: 08/26/24</span>
+            </cartridge-box>
+            <div id="updates">
+                <chat-post>
+                    <span slot="chat-title">Hello</span>
+                </chat-post>
+            </div>
+            <img id="flower" src="/assets/images/flower.webp" />
+        </div>
+    </box-container>
+</div>

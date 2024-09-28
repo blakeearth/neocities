@@ -1,4 +1,4 @@
-fetch("/components/clock-face/clock-face.html")
+fetch("/components/clock-face/clock-face.comp")
     .then(stream => stream.text())
     .then(html => {
         // Create the template
