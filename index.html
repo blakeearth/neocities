@@ -24,21 +24,134 @@
         @import url("/styles/global.css");
         
         div {
-            border: 1px solid black;
+            color: white;
+        }
+
+        .main {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10rem 0;
+        }
+
+        .vbox {
+            flex-grow: 0.25;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content {
+            box-sizing: border-box;
+            border: 2px solid #7db4e8;
+            border-radius: 0.5rem 0 0.5rem 0.5rem;
             flex-grow: 1;
-            height: 2000px;
+            width: 100%;
+
+            background-color: #3d7bb6;
+
+            box-shadow: 0 0 0 2px #2d5e8b;
+
+            z-index: 1;
+
+            min-height: 200px;
+        }
+
+        .cartridge-top {
+            box-sizing: border-box;
+            border-top: 2px solid #7db4e8;
+            border-right: 2px solid #7db4e8;
+            border-left: 2px solid #7db4e8;
+            border-radius: 0.5rem 0.5rem 0 0;
+            box-shadow: 0 0 0 2px #2d5e8b;
+            background-color: #3d7bb6;
+        }
+
+        .header-nav {
+            position: absolute;
+            top: -1.5rem;
+            right: 0;
+
+            padding-bottom: 5px;
+            margin: 0;
+
+            z-index: 2;
+            box-sizing: border-box;
+            box-shadow: -2px -2px 0 0 #2d5e8b,
+                        2px -2px 0 0 #2d5e8b;
+        }
+        
+        .cartridge {
+            position: absolute;
+            top: -2rem;
+            left: 2rem;
+            width: 128px;
+            height: 128px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cartridge:hover, .cartridge:focus {
+            top: -7rem;
+        }
+
+        .cartridge .cartridge-title {
+            position: absolute;
+            top: -1rem;
+            width: 132px;
+            text-align: center;
+            padding: 0.25rem 0;
+        }
+
+        .cartridge-logo, #logo {
+            position: absolute;
+            box-shadow: 0 0 2px 1px gray inset;
+            border-radius: 0.5rem;
+            background-color: transparent;
+            width: 75%;
+            height: 75%;
+            top: 15%;
+            left: 12.5%;
+        }
+
+        .cartridge-logo {
+            z-index: 1;
+        }
+
+        .footer {
+            margin-top: 0.5rem;
+            max-width: 50%;
+            text-align: center;
+            color: #ffffff99;
         }
     </style>
 </head>
 
 <body>
-    <standard-page>
-        <div slot="main-content">
-            <div>
-
+    <div class="main">
+        <div class="vbox">
+            <a href="/" class="cartridge cartridge-top">
+                <div class="cartridge-title cartridge-top">blake.earth</div>
+                <div class="sticker">
+                    <div class="cartridge-logo"></div>
+                    <img id="logo" src="/assets/images/flicker.gif"/>
+                </div>
+            </a>
+            <nav class="header-nav cartridge-top">
+                <span>nav content tabs</span>
+            </nav>
+            <div class="content">
+                s
+            </div>
+            <div class="footer">
+                <span>Copyright blakeearth 2017-2024, all rights reserved. Training AI on the contents of this website is expressly prohibited.</span>
             </div>
         </div>
-    </standard-page>
+    </div>
 </body>
 
 </html>
