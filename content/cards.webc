@@ -1,0 +1,46 @@
+---js
+{
+permalink: function(args) {
+return `/cards/index.html`;
+}
+}
+---
+
+<style>
+  .tags {
+    display: flex;
+    gap: 1ch;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  .cards li {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li {
+    list-style: none;
+  }
+</style>
+
+<template webc:type="11ty" 11ty:type="njk">
+  <article>
+    <h2>All Cards</h2>
+
+    <blockquote>Hey! This thing is still pretty barebones <span class="emoji">🙂</span>. I have a few ideas for topics, but for now it'll be pretty empty.</blockquote>
+
+    <ul class="tags">
+      {% for tag in collections.tagsList %}
+      <li><a href="/tags/{{tag}}">#{{tag}}</a></li>
+      {% endfor %}
+    </ul>
+    <ul class="cards">
+      {% for card in collections.card | reverse %}
+      <li><a href="{{ card.url }}">{{ card.data.title }}</a><span>{{ card.data.date | toReadableDate }}</span></li>
+      {% endfor %}
+    </ul>
+  </article>
+</template>

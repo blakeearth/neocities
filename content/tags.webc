@@ -1,0 +1,40 @@
+---js
+{
+pagination: {
+data: "collections",
+size: 1,
+alias: "tag"
+},
+permalink: function(args) {
+const { tag } = args;
+return `/tags/${tag}/`;
+}
+}
+---
+<style>
+  ul {
+    padding-left: 0;
+  }
+
+  .cards li {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li {
+    list-style: none;
+  }
+</style>
+
+<template webc:type="11ty" 11ty:type="njk">
+  <article>
+    <h2>Tagged “{{ tag }}”</h2>
+
+    <ul class="cards">
+      {% set taglist = collections[ tag ] %}
+      {% for card in taglist | reverse %}
+      <li><a href="{{ card.url }}">{{ card.data.title }}</a><span>{{ card.date | toReadableDate }}</span></li>
+      {% endfor %}
+    </ul>
+  </article>
+</template>

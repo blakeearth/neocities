@@ -1,0 +1,19 @@
+<style webc:scoped>
+    .blockquote {
+        background: #f9f9f93a;
+        border-left: 5px solid #f9f9f98e;
+        margin: 1em 0;
+        padding: 0.5em 10px;
+        quotes: "\201C" "\201D" "\2018" "\2019";
+    }
+
+    .blockquote p {
+        display: inline;
+    }
+
+    :host {
+        margin: 0;
+    }
+</style>
+
+<p class="blockquote"><slot>Empty blockquote</slot></p>

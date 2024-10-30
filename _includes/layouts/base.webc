@@ -1,0 +1,64 @@
+<!doctype html>
+<html :lang="metadata.language">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title @text="title || metadata.title"></title>
+	<meta name="description" :content="description || metadata.description">
+
+	<!--- This is rolled into the bundle. --->
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+
+	<style webc:keep @raw="getBundle('css')"></style>
+</head>
+
+<body>
+	<div class="main">
+		<div class="vbox">
+			<header>
+				<cartridge-component id="cartridge"></cartridge-component>
+			</header>
+
+			<div class="site">
+
+				<nav class="header-nav cartridge-top">
+					<ul>
+						<li id="home-link">
+							<a href="/" {% if page.url == pagination.hrefs[ forloop.index0 ] %} aria-current="page"{% endif %}>
+								<img id="nav-logo" src="/assets/images/blakeearth.gif">
+								<span>Home</span>
+							</a>
+						</li>
+						<li>
+							<a href="/about">
+								<span class="emoji">👋</span>
+								<span>About</span>
+							</a>
+						</li>
+						<li>
+							<a href="/cards">
+								<span class="emoji">🗃️</span>
+								<span>All</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+
+				<main class="main-layout" @raw="content"></main>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<span>©2017-<span webc:nokeep @text="(new Date()).getFullYear()"></span> blakeearth, all rights reserved. Don't
+			train AI on the contents of this site.</span>
+		<span>All emojis designed by <a href="https://openmoji.org/" target="_blank">OpenMoji</a>&mdash;the open-source
+			emoji and icon project. License: <a href="https://creativecommons.org/licenses/by-sa/4.0/#">CC BY-SA
+				4.0</a></span>
+	</footer>
+
+	<script type="module" webc:keep @raw="getBundle('js')"></script>
+</body>
+
+</html>

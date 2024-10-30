@@ -1,0 +1,41 @@
+{
+	"name": "@11ty/eleventy-base-webc",
+	"version": "1.0.0",
+	"description": "The little web home of blakeearth.",
+	"type": "module",
+	"scripts": {
+		"build": "npx @11ty/eleventy",
+		"start": "npx @11ty/eleventy --serve --quiet --incremental",
+		"debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+		"benchmark": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/11ty/eleventy-base-webc.git"
+	},
+	"author": {
+		"name": "Zach Leatherman",
+		"email": "zachleatherman@gmail.com",
+		"url": "https://zachleat.com/"
+	},
+	"license": "MIT",
+	"engines": {
+		"node": ">=18"
+	},
+	"funding": {
+		"type": "opencollective",
+		"url": "https://opencollective.com/11ty"
+	},
+	"bugs": {
+		"url": "https://github.com/11ty/eleventy-base-webc/issues"
+	},
+	"homepage": "https://github.com/11ty/eleventy-base-webc#readme",
+	"devDependencies": {
+		"@11ty/eleventy": "3.0.0-alpha.5",
+		"@11ty/eleventy-plugin-webc": "^0.11.2",
+		"luxon": "^3.5.0"
+	},
+	"dependencies": {
+		"@11ty/is-land": "^4.0.0"
+	}
+}
