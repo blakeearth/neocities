@@ -22,6 +22,8 @@ export default function (eleventyConfig) {
 
 	eleventyConfig.addPassthroughCopy("assets");
 
+	eleventyConfig.addPassthroughCopy({ 'content/robots.txt': '/robots.txt' });
+
 	// Filters
 	eleventyConfig.addPlugin(pluginFilters);
 
