@@ -32,16 +32,12 @@
 				<h2>Updates</h2>
 				<ul class="updates-list">
 					<li>
-						<span class="update-date">January 25, 2024</span>
+						<span class="update-date">January 25, 2025</span>
 						Added a theme inspired by Frutiger Aero and Vista. It feels relaxing to me.
 					</li>
 					<li>
-						<span class="update-date">January 24, 2024</span>
-						Added recent posts section
-					</li>
-					<li>
-						<span class="update-date">January 23, 2024</span>
-						Updated about page content
+						<span class="update-date">December 24, 2024</span>
+						Updated the About page
 					</li>
 				</ul>
 			</aside>
