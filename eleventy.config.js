@@ -45,9 +45,12 @@ export default function (eleventyConfig) {
 		return `${month} ${day}, ${year}`;
 	}
 
-
-	eleventyConfig.addLiquidFilter("toReadableDate", toReadableDate);
 	eleventyConfig.addNunjucksFilter("toReadableDate", toReadableDate);
+
+	function getPostTags(array) {
+		return array.filter((tagName) => {return !tagName.includes('card')});
+	}
+	eleventyConfig.addNunjucksFilter("getPostTags", getPostTags);
 
 	return {
 		dir: {
