@@ -14,49 +14,43 @@
 </head>
 
 <body>
-	<div class="main">
-		<div class="vbox">
-			<header>
-				<cartridge-component id="cartridge"></cartridge-component>
-			</header>
+	<div class="bg-circle"></div>
+	<div class="bg-circle"></div>
 
-			<div class="site">
+	<div class="container">
+		<nav>
+			<span>blake.earth</span>
+			<a href="/">Home</a>
+			<a href="/about">About</a>
+			<a href="/cards">All</a>
+		</nav>
 
-				<nav class="header-nav cartridge-top">
-					<ul>
-						<li id="home-link">
-							<a href="/" {% if page.url == pagination.hrefs[ forloop.index0 ] %} aria-current="page"{% endif %}>
-								<img id="nav-logo" src="/assets/images/blakeearth.gif">
-								<span>Home</span>
-							</a>
-						</li>
-						<li>
-							<a href="/about">
-								<span class="emoji">👋</span>
-								<span>About</span>
-							</a>
-						</li>
-						<li>
-							<a href="/cards">
-								<span class="emoji">🗃️</span>
-								<span>All</span>
-							</a>
-						</li>
-					</ul>
-				</nav>
+		<div class="layout">
+			<main class="glass-panel" @raw="content"></main>
 
-				<main class="main-layout" @raw="content"></main>
-			</div>
+			<aside class="sidebar glass-panel">
+				<h2>Updates</h2>
+				<ul class="updates-list">
+					<li>
+						<span class="update-date">January 25, 2024</span>
+						Added a theme inspired by Frutiger Aero and Vista. It feels relaxing to me.
+					</li>
+					<li>
+						<span class="update-date">January 24, 2024</span>
+						Added recent posts section
+					</li>
+					<li>
+						<span class="update-date">January 23, 2024</span>
+						Updated about page content
+					</li>
+				</ul>
+			</aside>
 		</div>
-	</div>
 
-	<footer>
-		<span>©2017-<span webc:nokeep @text="(new Date()).getFullYear()"></span> blakeearth, all rights reserved. Don't
-			train AI on the contents of this site.</span>
-		<span>All emojis designed by <a href="https://openmoji.org/" target="_blank">OpenMoji</a>&mdash;the open-source
-			emoji and icon project. License: <a href="https://creativecommons.org/licenses/by-sa/4.0/#">CC BY-SA
-				4.0</a></span>
-	</footer>
+		<footer>
+			<p>©2017-<span webc:nokeep @text="(new Date()).getFullYear()"></span> blakeearth, all rights reserved.</p>
+		</footer>
+	</div>
 
 	<script type="module" webc:keep @raw="getBundle('js')"></script>
 </body>

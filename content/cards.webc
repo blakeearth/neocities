@@ -30,7 +30,8 @@ return `/cards/index.html`;
   <article>
     <h2>All Cards</h2>
 
-    <blockquote>Hey! This thing is still pretty barebones <span class="emoji">🙂</span>. I have a few ideas for topics, but for now it'll be pretty empty.</blockquote>
+    <blockquote>Hey! This thing is still pretty barebones <span class="emoji">🙂</span>. I have a few ideas for topics,
+      but for now it'll be pretty empty.</blockquote>
 
     <ul class="tags">
       {% for tag in collections.tagsList %}
