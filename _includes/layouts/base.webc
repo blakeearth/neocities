@@ -19,8 +19,7 @@
 
 	<div class="container">
 		<nav>
-			<span>blake.earth</span>
-			<a href="/">Home</a>
+			<a href="/">blake.earth</a>
 			<a href="/about">About</a>
 			<a href="/cards">All</a>
 		</nav>
@@ -28,19 +27,34 @@
 		<div class="layout">
 			<main class="glass-panel" @raw="content"></main>
 
-			<aside class="sidebar glass-panel">
-				<h2>Updates</h2>
-				<ul class="updates-list">
-					<li>
-						<span class="update-date">January 25, 2025</span>
-						Added a theme inspired by Frutiger Aero and Vista. It feels relaxing to me.
-					</li>
-					<li>
-						<span class="update-date">December 24, 2024</span>
-						Updated the About page
-					</li>
-				</ul>
-			</aside>
+			<div class="next">
+				<aside class="sidebar glass-panel">
+					<h2>Updates</h2>
+					<ul class="updates-list">
+						<li>
+							<span class="update-date">January 25, 2025</span>
+							Added a theme inspired by Frutiger Aero and Vista. It feels calm.
+						</li>
+						<li>
+							<span class="update-date">December 24, 2024</span>
+							Updated the About page.
+						</li>
+					</ul>
+				</aside>
+
+				<aside class="sidebar glass-panel">
+					<h2>Next</h2>
+					<ul class="updates-list">
+						<li>LEGO Universe</li>
+						<li>books</li>
+						<li>Honda Fit</li>
+						<li>more recipes</li>
+						<li>singing</li>
+						<li>board games</li>
+					</ul>
+				</aside>
+			</div>
+
 		</div>
 
 		<footer>
