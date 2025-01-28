@@ -9,8 +9,7 @@
 
 	<!--- This is rolled into the bundle. --->
 	<link rel="stylesheet" type="text/css" href="css/base.css">
-
-	<style webc:keep @raw="getBundle('css')"></style>
+	<link rel="stylesheet" webc:keep :href="getBundleFileUrl('css')">
 </head>
 
 <body>
