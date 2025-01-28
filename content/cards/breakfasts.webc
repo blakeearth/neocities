@@ -1,0 +1,83 @@
+---
+title: Oats and coffee
+date: 2025-01-27
+tags:
+- card
+- food
+---
+
+<template webc:type="11ty" 11ty:type="njk">
+    <style>
+        .tags {
+            padding-left: 0;
+            gap: 1ch;
+            display: flex;
+        }
+
+        .tags li {
+            list-style: none;
+        }
+    </style>
+
+    <article>
+        <h2>{{ title }}</h2>
+        <p>{{ date | toReadableDate }}</p>
+        <ul class="tags">
+            {% set taglist = tags | getPostTags %}
+            {% for tag in taglist %}
+            <li><a href="/tags/{{ tag }}">#{{ tag }}</a></li>
+            {% endfor %}
+        </ul>
+        <p>Hmm, another post about food. I was inspired to write this after reading <a
+                href="https://frills.dev/blog/240325-breakfast/" target="_blank">this post from Frills</a>, who was in
+            turn inspired by <a href="https://jamesg.blog/2024/03/21/eggs-and-coffee/" target="_blank">this post from
+                James</a>!</p>
+        <p>I don't mind eating the same things every day. That's especially true for breakfasts — like lots of people, I
+            don't really want to think about what to eat in the morning anyway, and I already know what's good. If I
+            didn't run out of ingredients, I probably wouldn't rotate these.</p>
+        <p>But alas, I do run out of ingredients! And I guess because I haven't completely automated my grocery
+            lists, I actually spend some time thinking about it. And so sometimes I change it up. Here are some of my
+            favorites!</p>
+        <blockquote>When I worked at a company that had a cafeteria and convenience stores, despite having a
+            different menu to choose from for lunch daily, I'd almost always buy a protein shake and either make a salad
+            or buy two bars. Now, I usually eat leftovers.
+        </blockquote>
+        <p>I'm addicted to caffeine (and very sensitive to it), so I enjoy all of these breakfasts alongside a really
+            sweet and creamy cup of coffee. <a href="https://www.home-assistant.io/" target="_blank">Home Assistant</a>
+            kindly brews a pot for me daily via a cheap drip machine
+            hooked up to a smart outlet.</p>
+        <h3>Oats</h3>
+        <p>This one's from Meema (of <a href="/cards/meemas-toasted-cheese">toasted cheese fame</a>).</p>
+        <p>It's easy. There's no prep. This one's my preference almost all the time.</p>
+        <p>Just pour in
+            about a half cup of rolled oats, add too much milk (I prefer soy), and optionally add some walnuts on top.
+            Don't cook it.
+            It's cold and chewy and crunchy and contrasts perfectly with coffee.</p>
+        <h3>Chickpea bars</h3>
+        <p>A more recent addition! I started making these because I was spending too much money on Perfect Bars. These
+            very filling and dense, but they're also pretty soft.</p>
+        <p>In a blender or food processor, combine two cans of chickpeas (with the aquafaba), 1/4 cup peanut butter, 1
+            cup peanut butter powder, 1/2 cup oats, and 1/2 cup honey. Mix in some chocolate chips. Try not to measure
+            those. Line a 9x12 brownie pan with parchment paper and bake at 350°F for 20-25 minutes.</p>
+        <p>These are really no good until you chill them. Seriously, don't eat the batter. But once they're chilled, the
+            textures and flavors are just perfect. Love a good crunchy chocolate chip.</p>
+        <h3>Tofu scramble pita pockets</h3>
+        <p>This one's a little more involved, so you'll need to be willing to do some prep and cleanup. But the recipe
+            makes like 10 of them, so you're set for more than a week. I started making these after buying lots of
+            Sandwich Bros. Egg and Cheese Pita Sandwiches, but I don't think making them is actually much cheaper.</p>
+        <p>This way, though, I can have a tofu scramble, which lately I prefer to eggs. The recipe for this scramble
+            roughly comes from <a href="https://rainbowplantlife.com/eggy-tofu-scramble/" target="_blank">Rainbow Plant
+                Life</a>.</p>
+        <p>Cut 5 pita loaves into halfs and gently open them into pockets. They really want to rip, so go slow.</p>
+        <p>In a measuring glass, add about 1/4 cup tahini, 3 tbsp nutritional yeast, a half teaspoon of cumin, a half
+            teaspoon of tumeric, and a half teaspoon of salt. Then add whatever other spices you want. Mix it together,
+            adding water as necessary, until you get a consistency slightly thinner than pancake batter.</p>
+        <p>In a mixing bowl, crumble two blocks of pressed silken tofu. Yes, you really should press it. If you don't,
+            the pockets will end up watery and soggy.</p>
+        <p>Heat a neutral oil in a large skillet on high heat. Add the tofu and stir occasionally until it starts to
+            brown. Add your tahini mixture and stir until the texture resembles scrambled eggs.</p>
+        <p>Fold your eggy mixture into the pita pockets and wait for them to cool completely, then freeze. You can heat
+            them up in the microwave or in the air fryer.</p>
+        <p>I don't always want a hot breakfast, so I keep these in the freezer for when I do.</p>
+    </article>
+</template>

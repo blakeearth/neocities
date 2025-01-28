@@ -20,8 +20,8 @@
 	<div class="container">
 		<nav>
 			<a href="/">blake.earth</a>
-			<a href="/about">About</a>
-			<a href="/cards">All</a>
+			<a href="/about">about</a>
+			<a href="/cards">all</a>
 		</nav>
 
 		<div class="layout">
@@ -32,19 +32,23 @@
 					<h2>Updates</h2>
 					<ul class="updates-list">
 						<li>
+							<span class="update-date">January 27, 2025</span>
+							Added <a href="/cards/breakfasts">Oats and coffee</a>
+						</li>
+						<li>
 							<span class="update-date">January 25, 2025</span>
-							Added a theme inspired by Frutiger Aero and Vista. It feels calm.
+							Added a theme inspired by Frutiger Aero and Vista. It feels calm
 						</li>
 						<li>
 							<span class="update-date">December 24, 2024</span>
-							Updated the About page.
+							Updated the About page
 						</li>
 					</ul>
 				</aside>
 
 				<aside class="sidebar glass-panel">
-					<h2>Next</h2>
-					<ul class="updates-list">
+					<h2>Next 📝</h2>
+					<ul class="todo-list">
 						<li>LEGO Universe</li>
 						<li>books</li>
 						<li>Honda Fit</li>

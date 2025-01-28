@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-    max-width: 150ch;
+    max-width: 125ch;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -26,7 +26,7 @@ body {
 .layout {
     display: flex;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 article {
@@ -72,17 +72,11 @@ nav {
 }
 
 nav a {
-    padding: 0.5rem 2ch;
     color: white;
-    background: linear-gradient(to bottom, #3b82f64d, #1d4ed833);
-    border: 0.2vh solid var(--glass-border);
-    border-radius: 2ch;
-    transition: all 0.2s;
-    box-shadow: 0 4px 6px var(--glass-shadow);
+    text-decoration: underline;
 }
 
 nav a:hover {
-    transform: translateY(-2px);
     background: linear-gradient(to bottom, #3b82f666, rgba(29, 78, 2#1d4ed84d));
     box-shadow: 0 6px 8px var(--glass-shadow);
 }
@@ -120,7 +114,11 @@ nav img {
 
 .sidebar h2 {
     margin-bottom: 1rem;
-    font-size: 1.25rem;
+    font-size: large;
+}
+
+.todo-list {
+    list-style: none;
 }
 
 .updates-list {
