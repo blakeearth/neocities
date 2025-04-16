@@ -34,6 +34,10 @@
 					<h2>Updates</h2>
 					<ul class="updates-list">
 						<li>
+							<span class="update-date">April 16, 2025</span>
+							Added a few old blog posts from previous versions of the site
+						</li>
+						<li>
 							<span class="update-date">January 27, 2025</span>
 							Added <a href="/cards/breakfasts">Oats and coffee</a>
 						</li>
