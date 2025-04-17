@@ -76,7 +76,7 @@ nav a {
 }
 
 nav a:hover {
-    background: linear-gradient(to bottom, #3b82f666, rgba(29, 78, 2#1d4ed84d));
+    background: linear-gradient(to bottom, #3b82f666, #1d4ed84d);
     box-shadow: 0 6px 8px var(--glass-shadow);
 }
 
@@ -116,28 +116,78 @@ nav img {
     font-size: large;
 }
 
-.todo-list {
+.todo-list, .lyrics, .updates-list {
     list-style: none;
 }
 
-.updates-list {
-    list-style: none;
-    max-height: 30vh;
-    overflow-y: scroll;
-}
-
-.lyrics {
-    max-height: 60vh;
-    overflow-y: scroll;
-}
-
+/* Restore borders and spacing for updates list */
 .updates-list li, lyric-status {
     margin-bottom: 1rem;
     padding-bottom: 1rem;
     border-bottom: 0.2vh solid var(--glass-border);
 }
 
-.updates-list li:last-child, .lyrics lyric-status:last-child{
+.updates-list li:last-child, .lyrics lyric-status:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* Remove scrolling since we're using details now */
+.updates-list, .lyrics {
+    max-height: none;
+    overflow-y: visible;
+}
+
+/* Style the details elements - removing ALL borders */
+details.older-updates, details.older-lyrics {
+    margin-top: 1rem;
+    border-top: none;
+}
+
+details summary {
+    cursor: pointer;
+    user-select: none;
+    color: #93c5fd;
+    font-size: 0.9rem;
+    padding-bottom: 1rem;
+    margin: 0;
+    border-bottom: none;
+}
+
+details summary:hover {
+    color: #bfdbfe;
+}
+
+/* Add bottom border to summary when expanded */
+details[open] summary {
+    border-bottom: 0.2vh solid var(--glass-border);
+}
+
+/* Fix border handling inside details */
+details .updates-list, 
+details .lyrics-container {
+    padding-top: 1rem;
+}
+
+details .updates-list li:first-child,
+details .lyrics-container lyric-status:first-child {
+    padding-top: 0;
+    border-top: none;
+}
+
+details .lyrics-container {
+    display: flex;
+    flex-direction: column;
+}
+
+details .lyrics-container lyric-status {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.2vh solid var(--glass-border);
+}
+
+details .lyrics-container lyric-status:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: none;
@@ -203,11 +253,11 @@ a:hover {
         align-items: stretch;
         gap: 1rem;
     }
-    
+
     .sidebar {
         width: 100%;
     }
-    
+
     .container {
         padding: 1rem;
     }

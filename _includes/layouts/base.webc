@@ -40,18 +40,24 @@
 							Added a few old blog posts from previous versions of the site & brought back the Lyric
 							Status section
 						</li>
-						<li>
-							<span class="update-date">January 27, 2025</span>
-							Added <a href="/cards/breakfasts">Oats and coffee</a>
-						</li>
-						<li>
-							<span class="update-date">January 25, 2025</span>
-							Added a theme inspired by Frutiger Aero and Vista. It feels calm
-						</li>
-						<li>
-							<span class="update-date">December 24, 2024</span>
-							Updated the About page
-						</li>
+						<details class="older-updates">
+							<summary>Older</summary>
+							<ul class="updates-list">
+								<li>
+									<span class="update-date">January 27, 2025</span>
+									Added <a href="/cards/breakfasts">Oats and coffee</a>
+								</li>
+								<li>
+									<span class="update-date">January 25, 2025</span>
+									Added a theme inspired by Frutiger Aero and Vista. It feels calm
+								</li>
+								<li>
+									<span class="update-date">December 24, 2024</span>
+									Updated the About page
+								</li>
+							</ul>
+
+						</details>
 					</ul>
 				</aside>
 
@@ -68,51 +74,58 @@
 							date="October 29, 2020" attribution="&quot;Coffee Sunday NYT&quot; by Leah Nobel">
 						</lyric-status>
 
-						<lyric-status emoji="🛻"
-							text="Do I make you wanna dance real slow / Go flyin' down a two-lane road"
-							date="August 22, 2020" attribution="&quot;Do I Make You Wanna&quot; by Billy Currington">
-						</lyric-status>
+						<details class="older-lyrics">
+							<summary>Older</summary>
+							<div class="lyrics-container">
+								<lyric-status emoji="🛻"
+									text="Do I make you wanna dance real slow / Go flyin' down a two-lane road"
+									date="August 22, 2020"
+									attribution="&quot;Do I Make You Wanna&quot; by Billy Currington">
+								</lyric-status>
 
-						<lyric-status emoji="🎙️" text="And it breaks my heart" date="May 23, 2020"
-							attribution="&quot;Fidelity&quot; by Regina Spektor">
-						</lyric-status>
+								<lyric-status emoji="🎙️" text="And it breaks my heart" date="May 23, 2020"
+									attribution="&quot;Fidelity&quot; by Regina Spektor">
+								</lyric-status>
 
-						<lyric-status emoji="🌈" text="And now I see technicolor" date="April 28, 2020"
-							attribution="&quot;The Fool&quot; by Ryn Weaver">
-						</lyric-status>
+								<lyric-status emoji="🌈" text="And now I see technicolor" date="April 28, 2020"
+									attribution="&quot;The Fool&quot; by Ryn Weaver">
+								</lyric-status>
 
-						<lyric-status emoji="⛵" text="I'm gonna need something to hold on to" date="February 4, 2020"
-							attribution="&quot;Something to Hold on To&quot; by Emily Warren">
-						</lyric-status>
+								<lyric-status emoji="⛵" text="I'm gonna need something to hold on to"
+									date="February 4, 2020"
+									attribution="&quot;Something to Hold on To&quot; by Emily Warren">
+								</lyric-status>
 
-						<lyric-status emoji="👻"
-							text="Good at overthinking with my heart / How you even think it got this far?"
-							date="December 19, 2019" attribution="&quot;needy&quot; by Ariana Grande">
-						</lyric-status>
+								<lyric-status emoji="👻"
+									text="Good at overthinking with my heart / How you even think it got this far?"
+									date="December 19, 2019" attribution="&quot;needy&quot; by Ariana Grande">
+								</lyric-status>
 
-						<lyric-status emoji="💤" text="You think that I could sense a trend" date="November 25, 2019"
-							attribution="&quot;Bored&quot; by Tessa Violet">
-						</lyric-status>
+								<lyric-status emoji="💤" text="You think that I could sense a trend"
+									date="November 25, 2019" attribution="&quot;Bored&quot; by Tessa Violet">
+								</lyric-status>
 
-						<lyric-status emoji="⏰" text="I'm stayin' up too late just so I can stay awake"
-							date="November 23, 2019" attribution="&quot;Bored&quot; by Tessa Violet">
-						</lyric-status>
+								<lyric-status emoji="⏰" text="I'm stayin' up too late just so I can stay awake"
+									date="November 23, 2019" attribution="&quot;Bored&quot; by Tessa Violet">
+								</lyric-status>
 
-						<lyric-status emoji="🍃" text="Bad ideas, ay / I know where they lead" date="August 24, 2019"
-							attribution="&quot;Bad Ideas&quot; by Tessa Violet">
-						</lyric-status>
+								<lyric-status emoji="🍃" text="Bad ideas, ay / I know where they lead"
+									date="August 24, 2019" attribution="&quot;Bad Ideas&quot; by Tessa Violet">
+								</lyric-status>
 
-						<lyric-status emoji="🌳" text="Forming empires in the shade of trees" date=""
-							attribution="&quot;Running with the Boys&quot; (Midnight Machines version) by Lights">
-						</lyric-status>
+								<lyric-status emoji="🌳" text="Forming empires in the shade of trees" date=""
+									attribution="&quot;Running with the Boys&quot; (Midnight Machines version) by Lights">
+								</lyric-status>
 
-						<lyric-status emoji="⏳" text="Backup makeshift life" date=""
-							attribution="&quot;Wait it Out&quot; by Imogen Heap">
-						</lyric-status>
+								<lyric-status emoji="⏳" text="Backup makeshift life" date=""
+									attribution="&quot;Wait it Out&quot; by Imogen Heap">
+								</lyric-status>
 
-						<lyric-status emoji="🕊️" text="Handmade Heaven" date="February 9, 2019"
-							attribution="&quot;Handmade Heaven&quot; by Marina">
-						</lyric-status>
+								<lyric-status emoji="🕊️" text="Handmade Heaven" date="February 9, 2019"
+									attribution="&quot;Handmade Heaven&quot; by Marina">
+								</lyric-status>
+							</div>
+						</details>
 					</div>
 				</aside>
 
