@@ -32,12 +32,13 @@
 			<main class="glass-panel" @raw="content"></main>
 
 			<div class="next">
-				<aside class="sidebar glass-panel">
+				<aside class="glass-panel sidebar">
 					<h2>Updates</h2>
 					<ul class="updates-list">
 						<li>
 							<span class="update-date">April 16, 2025</span>
-							Added a few old blog posts from previous versions of the site
+							Added a few old blog posts from previous versions of the site & brought back the Lyric
+							Status section
 						</li>
 						<li>
 							<span class="update-date">January 27, 2025</span>
@@ -55,100 +56,75 @@
 				</aside>
 
 				<aside class="sidebar glass-panel">
-					<h2>Updates</h2>
-					<ul class="updates-list">
-						<li>
-							<span class="update-date">April 16, 2025</span>
-							Added a few old blog posts from previous versions of the site
-						</li>
-						<li>
-							<span class="update-date">January 27, 2025</span>
-							Added <a href="/cards/breakfasts">Oats and coffee</a>
-						</li>
-						<li>
-							<span class="update-date">January 25, 2025</span>
-							Added a theme inspired by Frutiger Aero and Vista. It feels calm
-						</li>
-						<li>
-							<span class="update-date">December 24, 2024</span>
-							Updated the About page
-						</li>
-					</ul>
+					<h2>Lyric Status</h2>
+					<div class="lyrics">
+						<lyric-status emoji="🚪"
+							text="Always dreamed of kicking down the door / What were you waiting for?"
+							date="April 19, 2021" attribution="&quot;Younger Me&quot; by Brothers Osborne">
+						</lyric-status>
+
+						<lyric-status emoji="💤"
+							text="I got my coffee, Sunday, New York Times / Little piece of paradise"
+							date="October 29, 2020" attribution="&quot;Coffee Sunday NYT&quot; by Leah Nobel">
+						</lyric-status>
+
+						<lyric-status emoji="🛻"
+							text="Do I make you wanna dance real slow / Go flyin' down a two-lane road"
+							date="August 22, 2020" attribution="&quot;Do I Make You Wanna&quot; by Billy Currington">
+						</lyric-status>
+
+						<lyric-status emoji="🎙️" text="And it breaks my heart" date="May 23, 2020"
+							attribution="&quot;Fidelity&quot; by Regina Spektor">
+						</lyric-status>
+
+						<lyric-status emoji="🌈" text="And now I see technicolor" date="April 28, 2020"
+							attribution="&quot;The Fool&quot; by Ryn Weaver">
+						</lyric-status>
+
+						<lyric-status emoji="⛵" text="I'm gonna need something to hold on to" date="February 4, 2020"
+							attribution="&quot;Something to Hold on To&quot; by Emily Warren">
+						</lyric-status>
+
+						<lyric-status emoji="👻"
+							text="Good at overthinking with my heart / How you even think it got this far?"
+							date="December 19, 2019" attribution="&quot;needy&quot; by Ariana Grande">
+						</lyric-status>
+
+						<lyric-status emoji="💤" text="You think that I could sense a trend" date="November 25, 2019"
+							attribution="&quot;Bored&quot; by Tessa Violet">
+						</lyric-status>
+
+						<lyric-status emoji="⏰" text="I'm stayin' up too late just so I can stay awake"
+							date="November 23, 2019" attribution="&quot;Bored&quot; by Tessa Violet">
+						</lyric-status>
+
+						<lyric-status emoji="🍃" text="Bad ideas, ay / I know where they lead" date="August 24, 2019"
+							attribution="&quot;Bad Ideas&quot; by Tessa Violet">
+						</lyric-status>
+
+						<lyric-status emoji="🌳" text="Forming empires in the shade of trees" date=""
+							attribution="&quot;Running with the Boys&quot; (Midnight Machines version) by Lights">
+						</lyric-status>
+
+						<lyric-status emoji="⏳" text="Backup makeshift life" date=""
+							attribution="&quot;Wait it Out&quot; by Imogen Heap">
+						</lyric-status>
+
+						<lyric-status emoji="🕊️" text="Handmade Heaven" date="February 9, 2019"
+							attribution="&quot;Handmade Heaven&quot; by Marina">
+						</lyric-status>
+					</div>
 				</aside>
 
 				<aside class="sidebar glass-panel">
-					<h2 id="current-status" id="current-status">Current Status</h2>
-					<ul>
-						<li>🚪 <em>Always dreamed of kicking down the door / What were you waiting for?</em>
-							<ul>
-								<li>Set 4/19/21, Brothers Osborne&#39;s “Younger Me”</li>
-							</ul>
-						</li>
-					</ul>
-
-					<h2 id="past-statuses" id="past-statuses">Past Statuses</h2>
-					<ul>
-						<li>💤 <em>I got my coffee Sunday, New York Times / Little piece of paradise</em>
-							<ul>
-								<li>Set 10/29/20, Leah Nobel’s “Coffee Sunday NYT”</li>
-							</ul>
-						</li>
-						<li>🛻 <em>Do I make you wanna dance real slow / Go flyin&#39; down a two-lane road</em>
-							<ul>
-								<li>Set 8/22/20, Billy Currington&#39;s “Do I Make You Wanna”</li>
-							</ul>
-						</li>
-						<li>🎙️ <em>And it breaks my heart</em>
-							<ul>
-								<li>Set 5/23/20, Regina Spektor&#39;s “Fidelity”</li>
-							</ul>
-						</li>
-						<li>📽️🌈 <em>And now I see technicolor</em>
-							<ul>
-								<li>Set 4/28/20, Ryn Weaver&#39;s “The Fool”</li>
-							</ul>
-						</li>
-						<li>⛵ <em>I&#39;m gonna need something to hold on to</em>
-							<ul>
-								<li>Set 2/4/20, Emily Warren&#39;s “Something to Hold on To”</li>
-							</ul>
-						</li>
-						<li>👻 <em>Good at overthinking with my heart / How you even think it got this far?</em>
-							<ul>
-								<li>Set 12/19/19, Ariana Grande&#39;s “needy”</li>
-							</ul>
-						</li>
-						<li>💤 <em>You think that I could sense a trend</em>
-							<ul>
-								<li>Set 11/25/19, Tessa Violet&#39;s “Bored”</li>
-							</ul>
-						</li>
-						<li>⏰ <em>I’m stayin&#39; up too late just so I can stay awake</em>
-							<ul>
-								<li>Set 11/23/19, Tessa Violet&#39;s “Bored”</li>
-							</ul>
-						</li>
-						<li>🍃 <em>Bad ideas, ay / I know where they lead</em>
-							<ul>
-								<li>Set 8/24/19, Tessa Violet&#39;s “Bad Ideas”</li>
-							</ul>
-						</li>
-						<li>🌳 <em>Forming empires in the shade of trees</em>
-							<ul>
-								<li>Set on an unknown date, Lights&#39;s “Running with the Boys” (<em>Midnight
-										Machines</em> version)</li>
-							</ul>
-						</li>
-						<li>⏳ <em>Backup makeshift life</em>
-							<ul>
-								<li>Set on an unknown date, Imogen Heap&#39;s “Wait it Out”</li>
-							</ul>
-						</li>
-						<li>🕊️ <em>Handmade Heaven</em>
-							<ul>
-								<li>Set 2/9/19, Marina&#39;s “Handmade Heaven”</li>
-							</ul>
-						</li>
+					<h2>Next 📝</h2>
+					<ul class="todo-list">
+						<li>LEGO Universe</li>
+						<li>books</li>
+						<li>Honda Fit</li>
+						<li>more recipes</li>
+						<li>singing</li>
+						<li>board games</li>
 					</ul>
 				</aside>
 			</div>

@@ -61,8 +61,6 @@ main {
 .sidebar {
     width: 20rem;
     height: fit-content;
-    max-height: 30vh;
-    overflow-y: scroll;
 }
 
 nav {
@@ -124,15 +122,22 @@ nav img {
 
 .updates-list {
     list-style: none;
+    max-height: 30vh;
+    overflow-y: scroll;
 }
 
-.updates-list li {
+.lyrics {
+    max-height: 60vh;
+    overflow-y: scroll;
+}
+
+.updates-list li, lyric-status {
     margin-bottom: 1rem;
     padding-bottom: 1rem;
     border-bottom: 0.2vh solid var(--glass-border);
 }
 
-.updates-list li:last-child {
+.updates-list li:last-child, .lyrics lyric-status:last-child{
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: none;
