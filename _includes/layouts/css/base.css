@@ -76,7 +76,6 @@ nav a {
 }
 
 nav a:hover {
-    background: linear-gradient(to bottom, #3b82f666, #1d4ed84d);
     box-shadow: 0 6px 8px var(--glass-shadow);
 }
 
