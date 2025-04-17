@@ -61,6 +61,8 @@ main {
 .sidebar {
     width: 20rem;
     height: fit-content;
+    max-height: 30vh;
+    overflow-y: scroll;
 }
 
 nav {
