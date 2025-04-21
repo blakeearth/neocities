@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-    max-width: 100ch;
+    max-width: 125ch;
     margin: 0 auto;
     padding: 2rem;
 }
