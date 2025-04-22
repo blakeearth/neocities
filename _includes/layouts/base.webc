@@ -23,7 +23,7 @@
 		<nav>
 			<a href="/">blake.earth</a>
 			<a href="/about">about</a>
-			<a href="/favs">favs</a>
+			<!--<a href="/library">library</a>-->
 			<a href="/cards">cards</a>
 			<a target="_blank" href="https://drive.proton.me/urls/4Z6XRNNZ64#qIyCKpbs20KG">guestbook</a>
 		</nav>
@@ -64,19 +64,23 @@
 				<aside class="sidebar glass-panel">
 					<h2>Lyric Status</h2>
 					<div class="lyrics">
-						<lyric-status emoji="🚪"
-							text="Always dreamed of kicking down the door / What were you waiting for?"
-							date="April 19, 2021" attribution="&quot;Younger Me&quot; by Brothers Osborne">
-						</lyric-status>
-
-						<lyric-status emoji="💤"
-							text="I got my coffee, Sunday, New York Times / Little piece of paradise"
-							date="October 29, 2020" attribution="&quot;Coffee Sunday NYT&quot; by Leah Nobel">
+						<lyric-status emoji="📂" text="Nobody's keeping tabs on us" date="April 22, 2025"
+							attribution="&quot;Tabs&quot; by Lights">
 						</lyric-status>
 
 						<details class="older-lyrics">
 							<summary>Older</summary>
 							<div class="lyrics-container">
+								<lyric-status emoji="🚪"
+									text="Always dreamed of kicking down the door / What were you waiting for?"
+									date="April 19, 2021" attribution="&quot;Younger Me&quot; by Brothers Osborne">
+								</lyric-status>
+
+								<lyric-status emoji="💤"
+									text="I got my coffee, Sunday, New York Times / Little piece of paradise"
+									date="October 29, 2020" attribution="&quot;Coffee Sunday NYT&quot; by Leah Nobel">
+								</lyric-status>
+
 								<lyric-status emoji="🛻"
 									text="Do I make you wanna dance real slow / Go flyin' down a two-lane road"
 									date="August 22, 2020"
