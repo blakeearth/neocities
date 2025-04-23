@@ -28,13 +28,13 @@ tags:
             <li><a href="/tags/{{ tag }}">#{{ tag }}</a></li>
             {% endfor %}
         </ul>
-        <p>I grew up with my grandmother next door. I could walk through the woods, past the shed and fruit
+        <p>I grew up with Meema next door. I could walk through the woods, past the shed and fruit
             trees, and enter through the
-            screen porch (I can hear the screen door opening and closing...). She'd often offer to make "toasted
-            cheese", the best grilled cheese sandwich known to any child.</p>
-        <p>I'd sit up at her counter and watch, every time, while she worked.</p>
-        <p>I haven't been able to make it exactly right (in this photo, you can see that not all
-            the cheese is melted!), but I'm getting close.</p>
+            screen porch (I can hear the screen door opening and closing...). She'd often offer to make toasted
+            cheese, the best grilled cheese sandwich known to any child.</p>
+        <p>I'd sit up at her counter and watch while she worked.</p>
+        <p>I haven't been able to make it exactly the way she makes it (in this photo, you can see that not all
+            the cheese is melted!), but I'm getting close!</p>
         <figure>
             <img src="/assets/images/cheese.webp" alt="My rendition of Meema's toasted cheese">
             <figcaption>My attempt at Meema's toasted cheese</figcaption>
