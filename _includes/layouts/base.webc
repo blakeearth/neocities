@@ -32,35 +32,6 @@
 			<main class="glass-panel" @raw="content"></main>
 
 			<div class="next">
-				<aside class="glass-panel sidebar">
-					<h2>Updates</h2>
-					<ul class="updates-list">
-						<li>
-							<span class="update-date">April 16, 2025</span>
-							Added a few old blog posts from previous versions of the site & brought back the Lyric
-							Status section
-						</li>
-						<details class="older-updates">
-							<summary>Older</summary>
-							<ul class="updates-list">
-								<li>
-									<span class="update-date">January 27, 2025</span>
-									Added <a href="/cards/breakfasts">Oats and coffee</a>
-								</li>
-								<li>
-									<span class="update-date">January 25, 2025</span>
-									Added a theme inspired by Frutiger Aero and Vista. It feels calm
-								</li>
-								<li>
-									<span class="update-date">December 24, 2024</span>
-									Updated the About page
-								</li>
-							</ul>
-
-						</details>
-					</ul>
-				</aside>
-
 				<aside class="sidebar glass-panel">
 					<h2>Lyric Status</h2>
 					<div class="lyrics">
@@ -131,6 +102,35 @@
 							</div>
 						</details>
 					</div>
+				</aside>
+
+				<aside class="glass-panel sidebar">
+					<h2>Updates</h2>
+					<ul class="updates-list">
+						<li>
+							<span class="update-date">April 16, 2025</span>
+							Added a few old blog posts from previous versions of the site & brought back the Lyric
+							Status section
+						</li>
+						<details class="older-updates">
+							<summary>Older</summary>
+							<ul class="updates-list">
+								<li>
+									<span class="update-date">January 27, 2025</span>
+									Added <a href="/cards/breakfasts">Oats and coffee</a>
+								</li>
+								<li>
+									<span class="update-date">January 25, 2025</span>
+									Added a theme inspired by Frutiger Aero and Vista. It feels calm
+								</li>
+								<li>
+									<span class="update-date">December 24, 2024</span>
+									Updated the About page
+								</li>
+							</ul>
+
+						</details>
+					</ul>
 				</aside>
 			</div>
 
