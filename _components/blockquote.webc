@@ -1,8 +1,11 @@
 <style webc:scoped>
-    .blockquote {
+    .backdrop {
         background: #ffffff1e;
+        padding: 0.5em;
+    }
+
+    .blockquote {
         border-left: 2px solid #ffffff8e;
-        margin: 1em 0;
         padding: 0.5em 10px;
         quotes: "\201C" "\201D" "\2018" "\2019";
     }
@@ -14,8 +17,32 @@
     :host {
         margin: 0;
     }
-</style>
 
-<p class="blockquote">
-    <slot>Empty blockquote</slot>
-</p>
+    .title {
+        font-weight: bold;
+    }
+
+    .author,
+    .title {
+        font-size: smaller;
+        text-align: right;
+    }
+
+    .flex {
+        display: flex;
+        align-items: center;
+    }
+</style>
+<div class="backdrop">
+    <div class="flex">
+        <p class="blockquote">
+            <slot>Empty blockquote</slot>
+        </p>
+    </div>
+    <p class="title">
+        <slot name="title"></slot>
+    </p>
+    <p class="author">
+        <slot name="author"></slot>
+    </p>
+</div>

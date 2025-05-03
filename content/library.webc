@@ -1,6 +1,7 @@
 <article>
 	<h2>Library</h2>
-	<blockquote>Behold! A work in progress!</blockquote>
 	<p>I'm working on making little library to share my favorite books with my friends 👀</p>
-	<book olid="OL25884350M"></book>
+	<p>For now, you can check out what I'm reading on <a target="_blank"
+			href="https://app.thestorygraph.com/profile/blakeearth">The
+			StoryGraph</a>!</p>
 </article>

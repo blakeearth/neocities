@@ -14,12 +14,6 @@
         padding: 1em;
     }
 
-    .book-item img {
-        height: 9em;
-        min-width: 6em;
-        margin: 0;
-    }
-
     .book-item div {
         display: flex;
         height: 100%;
@@ -35,6 +29,16 @@
         flex-direction: column;
     }
 
+    .book-sub {
+        color: white;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .book-blurb {
+        margin-top: 0.5rem;
+    }
+
     .links {
         display: flex;
         gap: 1em;
@@ -43,10 +47,11 @@
 
 
 <div class="book-item" webc:if="booksLookup[olid]">
-    <img :src="'https://covers.openlibrary.org/b/olid/' + olid + '.jpg'" />
+    <book-cover :olid="olid"></book-cover>
     <div>
         <div class="meta">
             <h3 class="book-title" @text="booksLookup[olid].title"></h3>
+            <div class="book-sub" @text="booksLookup[olid].subtitle"></div>
             <div class="book-blurb" @text="booksLookup[olid].blurb"></div>
         </div>
         <div class="links">
