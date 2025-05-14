@@ -31,11 +31,12 @@
 	},
 	"homepage": "https://github.com/11ty/eleventy-base-webc#readme",
 	"devDependencies": {
-		"@11ty/eleventy": "3.0.0-alpha.5",
+		"@11ty/eleventy": "^3.0.0-alpha.5",
 		"@11ty/eleventy-plugin-webc": "^0.11.2",
 		"luxon": "^3.5.0"
 	},
 	"dependencies": {
+		"@11ty/eleventy-plugin-rss": "^2.0.4",
 		"@11ty/is-land": "^4.0.0"
 	}
 }

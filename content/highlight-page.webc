@@ -1,0 +1,9 @@
+---
+pagination:
+data: highlights
+size: 1
+alias: highlight
+permalink: /highlights/{{ highlight.timestamp }}/
+---
+
+<highlight highlight="@highlight"></highlight>

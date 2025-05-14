@@ -1,4 +1,5 @@
 import pluginWebc from "@11ty/eleventy-plugin-webc";
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import { InputPathToUrlTransformPlugin } from "@11ty/eleventy";
 
 import pluginFilters from "./_config/filters.js";
@@ -15,6 +16,23 @@ export default function (eleventyConfig) {
 	});
 
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
+
+	eleventyConfig.addPlugin(feedPlugin, {
+		type: "atom",
+		outputPath: "/feed.xml",
+		collection: {
+			name: "card",
+			limit: 10,
+		},
+		metadata: {
+			language: "en",
+			title: "blake.earth",
+			base: "https://blake.earth/",
+			author: {
+				name: "blake earth",
+			}
+		}
+	});
 
 	eleventyConfig.setServerOptions({
 		domDiff: false
@@ -36,6 +54,13 @@ export default function (eleventyConfig) {
 		});
 		return tagsList;
 	});
+
+	module.exports = function(eleventyConfig) {
+		eleventyConfig.addCollection("highlights", function(collectionApi) {
+		  return collectionApi.getAll().filter(item => item.data.highlight);
+		});
+	  };
+	  
 
 	const monthText = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 	function toReadableDate(date) {
