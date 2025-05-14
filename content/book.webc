@@ -1,0 +1,34 @@
+---js
+{
+pagination: {
+data: "books",
+size: 1,
+alias: "olid"
+},
+permalink: function(args) {
+const { olid } = args;
+return `/books/${olid}/`;
+}
+}
+---
+
+<script webc:setup>
+    const filteredHighlights = highlights.filter(h => h.OLID === OLID);
+    const booksLookup = books;
+</script>
+
+<style webc:keep>
+    /* Add your styles here */
+</style>
+
+<template webc:type="11ty" 11ty:type="njk">
+    <h1>Highlights from Book <span @text="booksLookup[olid].title"></span></h1>
+    <book-cover :olid="book"></book-cover>
+    <ul>
+        {% for highlight in filteredHighlights | reverse %}
+        <li><a
+                href="{{ highlight.text }}">{{ highlight.text }}</a><span>{{ highlight.timestamp | toReadableDate }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</template>

@@ -60,7 +60,6 @@
     </div>
 </div>
 
-<!-- Display a message if the book isn't found -->
 <div webc:else>
     Book with ID "<span @text="olid"></span>" not found
 </div>

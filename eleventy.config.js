@@ -55,10 +55,6 @@ export default function (eleventyConfig) {
 		return tagsList;
 	});
 
-	eleventyConfig.addCollection("highlights", function(collectionApi) {
-		return collectionApi.getAll().filter(item => item.data.highlight);
-	});
-
 	const monthText = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 	function toReadableDate(date) {
 		const year = date.getUTCFullYear().toString();

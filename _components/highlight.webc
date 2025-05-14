@@ -1,0 +1,44 @@
+<style webc:keep>
+    .highlight {
+        margin-bottom: 1em;
+    }
+
+    .highlight-text {
+        margin-bottom: 0.5em;
+    }
+
+    .highlight-meta {
+        font-size: smaller;
+        color: #888;
+    }
+
+    .highlight-meta p {
+        margin: 0;
+    }
+
+    .highlight-meta a {
+        color: #888;
+        text-decoration: none;
+    }
+
+    .highlight-meta a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="highlight">
+    <blockquote>
+        <p @text="highlight.text"></p>
+        <book-cover :olid="@highlight.OLID"></book-cover>
+        <span slot="title" @text="highlight.title"></span>
+        <span slot="author" @text="highlight.author"></span>
+    </blockquote>
+
+    <div class="highlight-meta">
+        <p>Book: <a @href="'/books/' + highlight.OLID"
+                @text="highlight.OLID"></a></p>
+        <p>Chapter: <span @text="highlight.chapter"></span></p>
+        <p>Note: <span @text="highlight.note"></span></p>
+        <p>Tags: <span @text="highlight.tags.join(', ')"></span></p>
+    </div>
+</div>
