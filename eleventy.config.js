@@ -1,12 +1,18 @@
 import pluginWebc from "@11ty/eleventy-plugin-webc";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import { InputPathToUrlTransformPlugin } from "@11ty/eleventy";
+import tailwindcss from '@tailwindcss/postcss';
+import fs from 'fs';
+import path from 'path';
 
+import cssnano from 'cssnano';
+import postcss from 'postcss';
 import pluginFilters from "./_config/filters.js";
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 export default function (eleventyConfig) {
 	eleventyConfig.ignores.add("README.md");
+	eleventyConfig.ignores.add("./_includes/layouts/css/tailwind.css");
 
 	eleventyConfig.addPlugin(pluginWebc, {
 		components: [
@@ -57,6 +63,7 @@ export default function (eleventyConfig) {
 
 	const monthText = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 	function toReadableDate(date) {
+		date = new Date(date);
 		const year = date.getUTCFullYear().toString();
 		const month = monthText[date.getUTCMonth()];
 		const day = date.getUTCDate().toString();
@@ -69,6 +76,36 @@ export default function (eleventyConfig) {
 		return array.filter((tagName) => {return !tagName.includes('card')});
 	}
 	eleventyConfig.addNunjucksFilter("getPostTags", getPostTags);
+
+	eleventyConfig.on('eleventy.before', async () => {
+		const tailwindInputPath = path.resolve('./assets/styles/tailwind.css');
+
+		const tailwindOutputPath = './_includes/layouts/css/tailwind.css';
+
+		const cssContent = fs.readFileSync(tailwindInputPath, 'utf8');
+
+		const outputDir = path.dirname(tailwindOutputPath);
+		if (!fs.existsSync(outputDir)) {
+			fs.mkdirSync(outputDir, { recursive: true });
+		}
+
+		const result = await processor.process(cssContent, {
+			from: tailwindInputPath,
+			to: tailwindOutputPath,
+		});
+
+		fs.writeFileSync(tailwindOutputPath, result.css);
+	});
+
+	const processor = postcss([
+	//compile tailwind
+	tailwindcss(),
+
+	//minify tailwind css
+	cssnano({
+		preset: 'default',
+	}),
+	]);
 
 	return {
 		dir: {

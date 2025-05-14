@@ -12,6 +12,7 @@
 
 	<!--- This is rolled into the bundle. --->
 	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/tailwind.css">
 	<link rel="stylesheet" webc:keep :href="getBundleFileUrl('css')">
 </head>
 
