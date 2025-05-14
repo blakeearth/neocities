@@ -18,7 +18,7 @@ tags:
         }
     </style>
 
-    <article class="fixed inset-0 flex justify-center items-center">
+    <article>
         <h1>The Kobo Glo</h1>
         <p>{{ date | toReadableDate }}</p>
         <ul class="tags">
