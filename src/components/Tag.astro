@@ -1,0 +1,26 @@
+---
+interface Props {
+  emoji: string;
+  href: string;
+  className?: string;
+}
+
+const { emoji, href, className = "" } = Astro.props;
+---
+
+<a
+  href={href}
+  class={`
+    inline-flex 
+    items-center 
+    gap-1 
+    px-2  
+    rounded-xl 
+    border
+    bg-white-500/50
+    ${className}
+  `}
+>
+  <span class="text-s">{emoji}</span>
+  <span class="text-xs"><slot /></span>
+</a>
