@@ -1,7 +1,7 @@
 ---
-import HighlightGrid from "../../components/HighlightGrid.astro";
+import HighlightGrid from "../../../components/HighlightGrid.astro";
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/BlogPost.astro";
+import Layout from "../../../layouts/BlogPost.astro";
 
 export async function getStaticPaths({ paginate }) {
   const highlights = await getCollection("highlights");

@@ -9,8 +9,9 @@ import tailwindcss from "@tailwindcss/vite"
 export default defineConfig({
     site: "https://blake.earth",
     redirects: {
-        "/highlights/tags": "/highlights",
+        "/highlights": "/library/highlights",
         "/highlights/books": "/highlights",
+        "/highlights/tags": "/highlights",
     },
     integrations: [mdx(), sitemap()],
 
