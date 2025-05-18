@@ -1,0 +1,40 @@
+---
+import FormattedDate from "./FormattedDate.astro";
+
+interface Props {
+  emoji?: string;
+  date?: string;
+  attribution?: string;
+}
+
+const { emoji, date, attribution } = Astro.props;
+---
+
+<style>
+  li {
+    list-style: none;
+  }
+
+  .lyric-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .emoji {
+    font-size: 3rem;
+    line-height: 1;
+    user-select: none;
+  }
+</style>
+
+<li>
+  <div class="lyric-row">
+    {emoji && <span class="emoji">{emoji}</span>}
+    <div class="flex flex-col">
+      {date && <FormattedDate date={new Date(date)} className="text-sm" />}
+      {attribution && <span class="text-sm">{attribution}</span>}
+      <slot />
+    </div>
+  </div>
+</li>

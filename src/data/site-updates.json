@@ -1,0 +1,26 @@
+{
+    "0": {
+        "date": "December 24, 2024",
+        "text": "Updated the About page"
+    },
+    "1": {
+        "date": "January 25, 2025",
+        "text": "Added a theme inspired by Frutiger Aero and Vista. It feels calm"
+    },
+    "2": {
+        "date": "January 27, 2025",
+        "text": "Added \"Oats and coffee\""
+    },
+    "3": {
+        "date": "April 16, 2025",
+        "text": "Added a few old blog posts from previous versions of the site & brought back the Lyric Status section"
+    },
+    "4": {
+        "date": "May 3, 2025",
+        "text": "Added \"It won't be perfect. Do it anyway\", refreshed the home page"
+    },
+    "5": {
+        "date": "May 17, 2025",
+        "text": "Major overhaul! Migrated the site to Astro and added an initial highlights system!"
+    }
+}

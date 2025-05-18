@@ -22,6 +22,14 @@ const lyricStatuses = defineCollection({
 	})
 });
 
+const siteUpdates = defineCollection({
+	loader: file("src/data/site-updates.json"),
+	schema: z.object({
+		text: z.string(),
+		date: z.coerce.date().nullable().optional(),
+	})
+});
+
 const highlights = defineCollection({
 	loader: file("src/data/highlights.json"),
 	schema: z.object({
@@ -52,4 +60,4 @@ const books = defineCollection({
 	})
 });
 
-export const collections = { cards, lyricStatuses, highlights, books };
+export const collections = { cards, lyricStatuses, siteUpdates, highlights, books };

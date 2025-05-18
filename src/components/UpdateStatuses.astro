@@ -1,9 +1,8 @@
 ---
-// src/pages/lyrics.astro
 import { getCollection } from "astro:content";
-import LyricStatus from "./Status.astro";
+import Status from "./Status.astro";
 
-const lyricStatuses = await getCollection("lyricStatuses");
+const lyricStatuses = await getCollection("siteUpdates");
 
 const latestLyric = lyricStatuses[lyricStatuses.length - 1];
 const olderLyrics = Object.entries(lyricStatuses).slice(
@@ -41,25 +40,26 @@ const olderLyrics = Object.entries(lyricStatuses).slice(
 </style>
 
 <ul class="lyrics">
-  <LyricStatus
+  <Status
     emoji={latestLyric.data.emoji}
     date={latestLyric.data.date?.toLocaleDateString()}
     attribution={latestLyric.data.attribution}
-    ><span class="italic">{latestLyric.data.text}</span></LyricStatus
   >
+    {latestLyric.data.text}
+  </Status>
 
   <details class="older-lyrics p-0">
     <summary>Older</summary>
     <div class="lyrics-container flex flex-col gap-2">
       {
         olderLyrics.reverse().map(([_key, lyric]) => (
-          <LyricStatus
+          <Status
             emoji={lyric.data.emoji}
             date={lyric.data.date ? lyric.data.date.toLocaleDateString() : ""}
             attribution={lyric.data.attribution}
           >
-            <span class="italic">{latestLyric.data.text}</span>
-          </LyricStatus>
+            {lyric.data.text}
+          </Status>
         ))
       }
     </div>
