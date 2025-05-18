@@ -17,7 +17,6 @@ async function processBookDetails() {
     const bookDetailsMap = {};
 
     for (const olid of uniqueOLIDs) {
-        await new Promise(resolve => setTimeout(resolve, 200));
         try {
             const highlight = findFirstHighlightByOLID(highlights, olid);
             const bookDetails = await fetchBookDetails(olid, {

@@ -33,9 +33,9 @@
     "subtitle": "How to Live Better Without Burning Out",
     "author": "Leena Norms",
     "coverImage": {
-      "small": null,
-      "medium": null,
-      "large": null
+      "small": "https://covers.openlibrary.org/b/id/15087839-S.jpg",
+      "medium": "https://covers.openlibrary.org/b/id/15087839-M.jpg",
+      "large": "https://covers.openlibrary.org/b/id/15087839-L.jpg"
     },
     "publishDate": "2024",
     "publishers": [
@@ -45,20 +45,27 @@
     "pageCount": 224,
     "url": "https://openlibrary.org/books/OL52567052M/Half-Arse_Human"
   },
-  "OL16929630W": {
-    "title": "Attached: The New Science of Adult Attachment and How It Can Help You Findâand KeepâLove",
-    "subtitle": "",
-    "author": "Amir Levine, Rachel Heller",
+  "OL28230035M": {
+    "title": "Attached",
+    "subtitle": "Are you Anxious, Avoidant or Secure? How the science of adult attachment can help you find – and keep – love",
+    "author": "Amir Levine",
     "coverImage": {
-      "small": null,
-      "medium": null,
-      "large": null
+      "small": "https://covers.openlibrary.org/b/id/10162119-S.jpg",
+      "medium": "https://covers.openlibrary.org/b/id/10162119-M.jpg",
+      "large": "https://covers.openlibrary.org/b/id/10162119-L.jpg"
     },
-    "publishDate": null,
-    "publishers": [],
-    "subjects": [],
-    "pageCount": null,
-    "url": null
+    "publishDate": "Aug 22, 2019",
+    "publishers": [
+      "Bluebird"
+    ],
+    "subjects": [
+      "Attachment behavior",
+      "Interpersonal relations",
+      "Intimacy (Psychology)",
+      "Psychology"
+    ],
+    "pageCount": 304,
+    "url": "https://openlibrary.org/books/OL28230035M/Attached"
   },
   "OL38627505M": {
     "title": "Project Hail Mary",
@@ -103,20 +110,27 @@
     "pageCount": 496,
     "url": "https://openlibrary.org/books/OL38627505M/Project_Hail_Mary"
   },
-  "OL3238478W": {
-    "title": "Mules of Love",
-    "subtitle": "",
+  "OL3955602M": {
+    "title": "Mules of love",
+    "subtitle": "poems",
     "author": "Ellen Bass",
     "coverImage": {
-      "small": null,
-      "medium": null,
-      "large": null
+      "small": "https://covers.openlibrary.org/b/id/954196-S.jpg",
+      "medium": "https://covers.openlibrary.org/b/id/954196-M.jpg",
+      "large": "https://covers.openlibrary.org/b/id/954196-L.jpg"
     },
-    "publishDate": null,
-    "publishers": [],
-    "subjects": [],
-    "pageCount": null,
-    "url": null
+    "publishDate": "2002",
+    "publishers": [
+      "BOA Editions"
+    ],
+    "subjects": [
+      "Poetry (poetic works by one author)",
+      "LGBTQ poetry",
+      "Lambda Literary Awards",
+      "Lambda Literary Award Winner"
+    ],
+    "pageCount": 89,
+    "url": "https://openlibrary.org/books/OL3955602M/Mules_of_love"
   },
   "OL27735764M": {
     "title": "Normal People",
@@ -157,50 +171,74 @@
     "pageCount": null,
     "url": "https://openlibrary.org/books/OL27735764M/Normal_People"
   },
-  "OL20652387W": {
-    "title": "Do Nothing: Break Away from Overworking, Overdoing and Underliving",
-    "subtitle": "",
+  "OL34679768M": {
+    "title": "Do Nothing",
+    "subtitle": "Break Away from Overworking, Overdoing and Underliving",
     "author": "Celeste Headlee",
     "coverImage": {
-      "small": null,
-      "medium": null,
-      "large": null
+      "small": "https://covers.openlibrary.org/b/id/12410996-S.jpg",
+      "medium": "https://covers.openlibrary.org/b/id/12410996-M.jpg",
+      "large": "https://covers.openlibrary.org/b/id/12410996-L.jpg"
     },
-    "publishDate": null,
-    "publishers": [],
-    "subjects": [],
+    "publishDate": "2021",
+    "publishers": [
+      "Little, Brown Book Group Limited"
+    ],
+    "subjects": [
+      "Leisure",
+      "Work, psychological aspects",
+      "Happiness",
+      "Ethics"
+    ],
     "pageCount": null,
-    "url": null
+    "url": "https://openlibrary.org/books/OL34679768M/Do_Nothing"
   },
-  "OL19799434W": {
-    "title": "Company of One: Why Staying Small is the Next Big Thing for Business",
-    "subtitle": "",
+  "OL28306869M": {
+    "title": "Company of One",
+    "subtitle": "Why Staying Small Is the Next Big Thing for Business",
     "author": "Paul Jarvis",
     "coverImage": {
-      "small": null,
-      "medium": null,
-      "large": null
+      "small": "https://covers.openlibrary.org/b/id/10234746-S.jpg",
+      "medium": "https://covers.openlibrary.org/b/id/10234746-M.jpg",
+      "large": "https://covers.openlibrary.org/b/id/10234746-L.jpg"
     },
-    "publishDate": null,
-    "publishers": [],
-    "subjects": [],
-    "pageCount": null,
-    "url": null
+    "publishDate": "Jan 14, 2020",
+    "publishers": [
+      "Mariner Books"
+    ],
+    "subjects": [
+      "business",
+      "Small business",
+      "Strategic planning"
+    ],
+    "pageCount": 272,
+    "url": "https://openlibrary.org/books/OL28306869M/Company_of_One"
   },
-  "OL21703286W": {
+  "OL34176795M": {
     "title": "One Last Stop",
     "subtitle": "",
     "author": "Casey McQuiston",
     "coverImage": {
-      "small": null,
-      "medium": null,
-      "large": null
+      "small": "https://covers.openlibrary.org/b/id/12951811-S.jpg",
+      "medium": "https://covers.openlibrary.org/b/id/12951811-M.jpg",
+      "large": "https://covers.openlibrary.org/b/id/12951811-L.jpg"
     },
-    "publishDate": null,
-    "publishers": [],
-    "subjects": [],
-    "pageCount": null,
-    "url": null
+    "publishDate": "2021",
+    "publishers": [
+      "St. Martin's Press"
+    ],
+    "subjects": [
+      "nyt:combined-print-and-e-book-fiction=2021-06-20",
+      "New York Times bestseller",
+      "Fiction, lesbian",
+      "Fiction, romance, contemporary",
+      "New york (n.y.), fiction",
+      "Lesbians, fiction",
+      "Fiction, romance, lgbtq+, lesbian",
+      "Fiction, romance, romantic comedy"
+    ],
+    "pageCount": 432,
+    "url": "https://openlibrary.org/books/OL34176795M/One_Last_Stop"
   },
   "OL29833807M": {
     "title": "Out of Love",
@@ -306,94 +344,234 @@
     "pageCount": 256,
     "url": "https://openlibrary.org/books/OL17148283M/The_Phantom_Tollbooth"
   },
-  "OL18181599W": {
-    "title": "Unrequited: The Thinking Woman's Guide to Romantic Obsession",
-    "subtitle": "",
+  "OL37409676M": {
+    "title": "Unrequited",
+    "subtitle": "The Thinking Woman's Guide to Romantic Obsession",
     "author": "Lisa A. Phillips",
     "coverImage": {
-      "small": null,
-      "medium": null,
-      "large": null
+      "small": "https://covers.openlibrary.org/b/id/15087699-S.jpg",
+      "medium": "https://covers.openlibrary.org/b/id/15087699-M.jpg",
+      "large": "https://covers.openlibrary.org/b/id/15087699-L.jpg"
     },
-    "publishDate": null,
-    "publishers": [],
-    "subjects": [],
+    "publishDate": "2015",
+    "publishers": [
+      "HarperCollins Publishers"
+    ],
+    "subjects": [
+      "Romance",
+      "Women",
+      "Psychology",
+      "Stalking",
+      "Stalkers",
+      "Biography",
+      "Unrequited love",
+      "Love"
+    ],
     "pageCount": null,
-    "url": null
+    "url": "https://openlibrary.org/books/OL37409676M/Unrequited"
   },
-  "OL20003482W": {
-    "title": "Fangirl: A Novel",
+  "OL27183580M": {
+    "title": "Fangirl",
     "subtitle": "",
     "author": "Rainbow Rowell",
     "coverImage": {
-      "small": null,
-      "medium": null,
-      "large": null
+      "small": "https://covers.openlibrary.org/b/id/13153485-S.jpg",
+      "medium": "https://covers.openlibrary.org/b/id/13153485-M.jpg",
+      "large": "https://covers.openlibrary.org/b/id/13153485-L.jpg"
     },
-    "publishDate": null,
-    "publishers": [],
-    "subjects": [],
-    "pageCount": null,
-    "url": null
+    "publishDate": "2015",
+    "publishers": [
+      "Alfaguara"
+    ],
+    "subjects": [
+      "Fan fiction",
+      "Mellizas",
+      "Spanish language materials",
+      "Hermanas",
+      "Arte de escribir",
+      "Tipos literarios",
+      "Fiction",
+      "Fathers and daughters",
+      "Ficción juvenil",
+      "Twins",
+      "Estudiantes universitarios",
+      "Characters and characteristics in literature",
+      "College freshmen",
+      "Characters in literature",
+      "College students",
+      "Juvenile fiction",
+      "Fans (Persons)",
+      "Sisters",
+      "Authorship",
+      "Padres e hijas",
+      "Young adult fiction, school & education, college & university",
+      "Young adult fiction, romance, contemporary",
+      "Young adult fiction, coming of age",
+      "Young adult fiction, loners & outcasts",
+      "nyt:young-adult-hardcover=2015-08-30",
+      "New York Times bestseller"
+    ],
+    "pageCount": 506,
+    "url": "https://openlibrary.org/books/OL27183580M/Fangirl"
   },
-  "OL37629112W": {
+  "OL50733631M": {
     "title": "Better by Far",
-    "subtitle": "",
+    "subtitle": "A Novel",
     "author": "Hazel Hayes",
     "coverImage": {
-      "small": null,
-      "medium": null,
-      "large": null
+      "small": "https://covers.openlibrary.org/b/id/15087700-S.jpg",
+      "medium": "https://covers.openlibrary.org/b/id/15087700-M.jpg",
+      "large": "https://covers.openlibrary.org/b/id/15087700-L.jpg"
     },
-    "publishDate": null,
-    "publishers": [],
-    "subjects": [],
+    "publishDate": "2024",
+    "publishers": [
+      "Penguin Publishing Group"
+    ],
+    "subjects": [
+      "English literature"
+    ],
     "pageCount": null,
-    "url": null
+    "url": "https://openlibrary.org/books/OL50733631M/Better_by_Far"
   },
-  "OL26123201W": {
+  "OL47322359M": {
     "title": "How to Live",
-    "subtitle": "",
+    "subtitle": "27 conflicting answers and one weird conclusion",
     "author": "Derek Sivers",
     "coverImage": {
-      "small": null,
-      "medium": null,
-      "large": null
+      "small": "https://covers.openlibrary.org/b/id/13861623-S.jpg",
+      "medium": "https://covers.openlibrary.org/b/id/13861623-M.jpg",
+      "large": "https://covers.openlibrary.org/b/id/13861623-L.jpg"
     },
-    "publishDate": null,
-    "publishers": [],
+    "publishDate": "May 01, 2022",
+    "publishers": [
+      "Hit Media"
+    ],
     "subjects": [],
-    "pageCount": null,
-    "url": null
+    "pageCount": 130,
+    "url": "https://openlibrary.org/books/OL47322359M/How_to_Live"
   },
-  "OL17842319W": {
+  "OL27901261M": {
     "title": "Turtles All the Way Down",
     "subtitle": "",
     "author": "John Green",
     "coverImage": {
-      "small": null,
-      "medium": null,
-      "large": null
+      "small": "https://covers.openlibrary.org/b/id/9255739-S.jpg",
+      "medium": "https://covers.openlibrary.org/b/id/9255739-M.jpg",
+      "large": "https://covers.openlibrary.org/b/id/9255739-L.jpg"
     },
-    "publishDate": null,
-    "publishers": [],
-    "subjects": [],
-    "pageCount": null,
-    "url": null
+    "publishDate": "2017",
+    "publishers": [
+      "Penguin Random House"
+    ],
+    "subjects": [
+      "Anxiety disorders",
+      "Young adult fiction",
+      "Teenage girls",
+      "Juvenile fiction",
+      "Fiction",
+      "Obsessive-compulsive disorder",
+      "Missing persons",
+      "Friendship",
+      "nyt:young-adult-hardcover=2017-10-29",
+      "New York Times bestseller",
+      "Children's fiction",
+      "Missing persons, fiction",
+      "Friendship, fiction",
+      "Mental illness, fiction",
+      "YOUNG ADULT FICTION / Coming of Age",
+      "Mental illness",
+      "YOUNG ADULT FICTION / Social Themes / Mental Illness",
+      "YOUNG ADULT FICTION / Social Themes / Friendship",
+      "nyt:young-adult-paperback-monthly=2019-10-13",
+      "Teenage girls -- Juvenile fiction",
+      "Obsessive-compulsive disorder -- Juvenile fiction",
+      "Anxiety disorders -- Juvenile fiction",
+      "Friendship -- Juvenile fiction",
+      "Missing persons -- Juvenile fiction",
+      "Obsessive-compulsive disorder -- Fiction",
+      "Friendship -- Fiction",
+      "Missing persons -- Fiction",
+      "YOUNG ADULT FICTION -- Coming of Age",
+      "YOUNG ADULT FICTION -- Social Themes -- Friendship",
+      "YOUNG ADULT FICTION -- Social Themes -- Mental Illness",
+      "Juvenile works",
+      "Young adult works",
+      "Teenage girls -- Fiction",
+      "Mental illness -- Fiction",
+      "Mental illness -- Juvenile fiction",
+      "Anxiety disorders -- Fiction",
+      "Spanish language materials",
+      "Adolescentes -- Romans, nouvelles, etc. pour la jeunesse",
+      "Personnes disparues -- Romans, nouvelles, etc. pour la jeunesse",
+      "Amitié -- Romans, nouvelles, etc. pour la jeunesse",
+      "Maladies mentales -- Romans, nouvelles, etc. pour la jeunesse",
+      "Névroses obsessionnelles -- Romans, nouvelles, etc",
+      "Troubles anxieux -- Romans, nouvelles, etc",
+      "Roman pour jeunes adultes",
+      "Amistad -- Novela juvenil",
+      "Muchachas adolescentes -- Novela juvenil",
+      "Personas desaparecidas -- Novela juvenil",
+      "Transtorno obsesiveo compulsivo -- Novela juvenil",
+      "Materiales en español",
+      "Enfermedad mental -- Ficción juvenil",
+      "Indianapolis (Ind.) -- Fiction",
+      "Indiana -- Indianapolis"
+    ],
+    "pageCount": 304,
+    "url": "https://openlibrary.org/books/OL27901261M/Turtles_All_the_Way_Down"
   },
-  "OL17357353W": {
+  "OL25935278M": {
     "title": "Simon vs. the Homo Sapiens Agenda",
     "subtitle": "",
     "author": "Becky Albertalli",
     "coverImage": {
-      "small": null,
-      "medium": null,
-      "large": null
+      "small": "https://covers.openlibrary.org/b/id/12303551-S.jpg",
+      "medium": "https://covers.openlibrary.org/b/id/12303551-M.jpg",
+      "large": "https://covers.openlibrary.org/b/id/12303551-L.jpg"
     },
-    "publishDate": null,
-    "publishers": [],
-    "subjects": [],
+    "publishDate": "April 7, 2015",
+    "publishers": [
+      "Balzer + Bray"
+    ],
+    "subjects": [
+      "LGBT",
+      "Young Adult",
+      "JUVENILE FICTION / Love & Romance",
+      "Secrets",
+      "Juvenile fiction",
+      "Secrecy",
+      "JUVENILE FICTION / Social Issues / Friendship",
+      "Friendship in adolescence",
+      "Fiction",
+      "Gay teenagers",
+      "Schools",
+      "High schools",
+      "Gays",
+      "Friendship",
+      "Extortion",
+      "JUVENILE FICTION / Social Issues / Homosexuality",
+      "Pen pals",
+      "Social Issues",
+      "Library list",
+      "Highland Park High School",
+      "Love & Romance",
+      "School stories",
+      "Coming out (Sexual orientation)",
+      "Reading list",
+      "2016 Summer",
+      "Homosexuality",
+      "Children's fiction",
+      "Homosexuality, fiction",
+      "Friendship, fiction",
+      "Schools, fiction",
+      "LGBTQ young adult",
+      "Adventure and adventurers, fiction",
+      "Young adult fiction, romance, lgbtq+",
+      "Young adult fiction, social themes, friendship",
+      "Young adult fiction, lgbtq+",
+      "LGBTQ coming out"
+    ],
     "pageCount": null,
-    "url": null
+    "url": "https://openlibrary.org/books/OL25935278M/Simon_vs._the_Homo_Sapiens_Agenda"
   }
 }
