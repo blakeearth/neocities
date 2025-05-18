@@ -1,0 +1,82 @@
+---
+import "../styles/global.css";
+
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import LyricStatuses from "../components/LyricStatuses.astro";
+
+const { title, description, pubDate } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+
+    <style>
+      main {
+        display: flex;
+        flex-direction:;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="bg-circle"></div>
+    <div class="bg-circle"></div>
+    <div class="container">
+      <Header />
+      <div class="layout">
+        <main class="glass-panel flex flex-col gap-2">
+          <h2>{title}</h2>
+          {description && <span class="italic">{description}</span>}
+          {pubDate && <FormattedDate date={pubDate} />}
+          <slot />
+        </main>
+
+        <div class="next">
+          <aside class="sidebar glass-panel">
+            <h2>Lyric Status</h2>
+            <LyricStatuses />
+          </aside>
+
+          <aside class="glass-panel sidebar">
+            <h2>Updates</h2>
+            <ul class="updates-list">
+              <li>
+                <span class="update-date">May 3, 2025</span>
+                Added <a href="/cards/perfectionism"
+                  >It won't be perfect. Do it anyway</a
+                >, refreshed the home page
+              </li>
+              <details class="older-updates">
+                <summary>Older</summary>
+                <ul class="updates-list">
+                  <li>
+                    <span class="update-date">April 16, 2025</span>
+                    Added a few old blog posts from previous versions of the site
+                    & brought back the Lyric Status section
+                  </li>
+                  <li>
+                    <span class="update-date">January 27, 2025</span>
+                    Added <a href="/cards/breakfasts">Oats and coffee</a>
+                  </li>
+                  <li>
+                    <span class="update-date">January 25, 2025</span>
+                    Added a theme inspired by Frutiger Aero and Vista. It feels calm
+                  </li>
+                  <li>
+                    <span class="update-date">December 24, 2024</span>
+                    Updated the About page
+                  </li>
+                </ul>
+              </details>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <Footer />
+  </body>
+</html>

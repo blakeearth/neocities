@@ -1,0 +1,69 @@
+---
+// src/pages/lyrics.astro
+import { getCollection } from "astro:content";
+import LyricStatus from "../components/LyricStatus.astro";
+
+const lyricStatuses = await getCollection("lyricStatuses");
+
+const latestLyric = lyricStatuses[lyricStatuses.length - 1];
+const olderLyrics = Object.entries(lyricStatuses).slice(
+  0,
+  lyricStatuses.length - 1
+);
+---
+
+<style>
+  .lyrics {
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  details.older-lyrics {
+    margin-top: 1rem;
+    border-top: none;
+  }
+
+  details summary {
+    cursor: pointer;
+    user-select: none;
+    color: #93c5fd;
+    font-size: 0.9rem;
+  }
+
+  details summary:hover {
+    color: #bfdbfe;
+  }
+
+  details .lyrics-container {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+</style>
+
+<ul class="lyrics">
+  <LyricStatus
+    emoji={latestLyric.data.emoji}
+    text={latestLyric.data.text}
+    date={latestLyric.data.date?.toLocaleDateString()}
+    attribution={latestLyric.data.attribution}
+  />
+
+  <details class="older-lyrics p-0">
+    <summary>Older</summary>
+    <div class="lyrics-container flex flex-col gap-2">
+      {
+        olderLyrics
+          .reverse()
+          .map(([_key, lyric]) => (
+            <LyricStatus
+              emoji={lyric.data.emoji}
+              text={lyric.data.text}
+              date={lyric.data.date ? lyric.data.date.toLocaleDateString() : ""}
+              attribution={lyric.data.attribution}
+            />
+          ))
+      }
+    </div>
+  </details>
+</ul>

@@ -1,28 +1,68 @@
-# eleventy-base-webc
+# Astro Starter Kit: Blog
 
-A minimalist bare-bones Eleventy-official starter project useful for demos/experiments with [WebC](https://www.11ty.dev/docs/languages/webc/) and the [Eleventy](https://www.11ty.dev/) site generator (using the [v3.0 release](https://www.11ty.dev/blog/canary-eleventy-v3/)).
+```sh
+npm create astro@latest -- --template blog
+```
 
-## Features
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
 
-* [Eleventy WebC plugin](https://www.11ty.dev/docs/languages/webc/) preconfigured:
-	* Includes the [`<is-land>` WebC component](https://www.11ty.dev/docs/plugins/partial-hydration/) ready for use.
-	* Add your own `*.webc` files to the `_components` folder.
-* Using the new `node` front matter type for arbitrary JavaScript front matter (via [`node-retrieve-globals`](https://github.com/zachleat/node-retrieve-globals/))
-* Simple WebC Eleventy Layout file with streamlined critical CSS and JS bundles (see `_includes/layouts/base.webc`)
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## Get Started
+![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
 
-1. Make a copy of this code with **one** of these on the command line (both install into the current folder):
-	* `git clone https://github.com/11ty/eleventy-base-webc.git .`
-	* `npx degit 11ty/eleventy-base-webc`
-	* …or you can use the [_"Use this template"_ button on GitHub](https://github.com/11ty/eleventy-base-webc).
-2. Install the dependencies by running `npm install`
-3. Run it with `npm start` (see the other commands in `package.json` or on the [CLI docs](https://www.11ty.dev/docs/usage/))
-4. Navigate to `http://localhost:8080` in your web browser.
-5. Edit `content/index.webc` to change content on the home page.
+Features:
 
-## Demo
+- ✅ Minimal styling (make it your own!)
+- ✅ 100/100 Lighthouse performance
+- ✅ SEO-friendly with canonical URLs and OpenGraph data
+- ✅ Sitemap support
+- ✅ RSS Feed support
+- ✅ Markdown & MDX support
 
-- [Cloudflare Pages](https://eleventy-base-webc.pages.dev/)
-- [Netlify](https://eleventy-base-webc.netlify.app/)
-- Learn more about [deploying an Eleventy project to the web](https://www.11ty.dev/docs/deployment/).
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+├── public/
+├── src/
+│   ├── components/
+│   ├── content/
+│   ├── layouts/
+│   └── pages/
+├── astro.config.mjs
+├── README.md
+├── package.json
+└── tsconfig.json
+```
+
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Credit
+
+This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).

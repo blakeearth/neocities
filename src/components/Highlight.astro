@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+
+const { highlightId } = Astro.props;
+
+const books = await getCollection("books");
+const highlights = await getCollection("highlights");
+
+const highlightItem = highlights.find((h: { id: any }) => h.id === highlightId);
+const highlight = highlightItem!.data;
+
+const bookItem = books.find((b: { id: any }) => b.id === highlight.OLID);
+const book = bookItem!.data;
+---
+
+<blockquote class="flex flex-col w-full border-white border-l-1 py-4 pl-4">
+  <div class="flex gap-4 justify-between h-full">
+    <div class="flex flex-col justify-between gap-8">
+      <span class="text-2xl">{highlight.text}</span>
+      <div>
+        <span class="text-sm">
+          —{book.author}, <cite
+            ><a href={`/highlights/books/${highlight.OLID}`}>{book.title}</a
+            ></cite
+          >
+        </span>
+        <div class="flex gap-2">
+          {
+            highlight.tags.split(",").map((tag: unknown) => (
+              <span class="text-sm">
+                <a href={`/highlights/tags/${tag}`}>#{tag}</a>
+              </span>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    {
+      book?.coverImage?.medium && (
+        <img
+          src={book.coverImage.medium}
+          alt={`Cover of ${book.title}`}
+          class="w-30 h-fit rounded-xl"
+        />
+      )
+    }
+  </div>
+</blockquote>

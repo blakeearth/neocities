@@ -1,0 +1,59 @@
+---
+interface Props {
+  emoji?: string;
+  date?: string;
+  attribution?: string;
+  text: string;
+}
+
+const { emoji, date, attribution, text } = Astro.props;
+---
+
+<style>
+  li {
+    list-style: none;
+  }
+
+  .lyric-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .emoji {
+    font-size: 3rem;
+    line-height: 1;
+    user-select: none;
+  }
+
+  .lyric-text {
+    flex: 1;
+    color: white;
+    font-style: italic;
+  }
+
+  .meta {
+    color: #666;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .date,
+  .attribution {
+    display: block;
+    font-size: 0.875rem;
+    color: #ffffff99;
+    margin-bottom: 0.25rem;
+  }
+</style>
+
+<li>
+  <div class="lyric-row">
+    {emoji && <span class="emoji">{emoji}</span>}
+    <div class="meta">
+      {date && <span class="date">{date}</span>}
+      {attribution && <span class="attribution">{attribution}</span>}
+      <span class="lyric-text">{text}</span>
+    </div>
+  </div>
+</li>

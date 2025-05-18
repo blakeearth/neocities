@@ -1,0 +1,32 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+---
+
+<header>
+  <nav>
+    <HeaderLink href="/">{SITE_TITLE}</HeaderLink>
+    <HeaderLink href="/cards">cards</HeaderLink>
+    <HeaderLink href="/highlights">highlights</HeaderLink>
+    <a
+      target="_blank"
+      href="https://drive.proton.me/urls/4Z6XRNNZ64#qIyCKpbs20KG">guestbook</a
+    >
+  </nav>
+</header>
+<style>
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  nav a {
+    color: white;
+  }
+
+  nav a:hover {
+    box-shadow: 0 6px 8px var(--glass-shadow);
+  }
+</style>

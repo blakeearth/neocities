@@ -1,0 +1,27 @@
+---
+const today = new Date();
+---
+
+<div class="w-full flex justify-center pb-8">
+  <footer class="mx-8 w-xl">
+    <p>
+      &copy;2017–{today.getFullYear()} blakeearth. All rights reserved.
+    </p>
+  </footer>
+</div>
+<style>
+  footer {
+    margin-top: 1rem;
+    padding: 2em;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #ffffff99;
+    background: linear-gradient(135deg, #3b82f61a, #1d4ed80d);
+    border: 0.2vh solid var(--glass-border);
+    border-radius: 1rem;
+  }
+
+  footer p {
+    margin-bottom: 0;
+  }
+</style>

@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import HighlightGrid from "../../../components/HighlightGrid.astro";
+import Layout from "../../../layouts/BlogPost.astro";
+
+export async function getStaticPaths() {
+  const highlights = await getCollection("highlights");
+  const books = await getCollection("books");
+
+  const uniqueBookOLIDs = [
+    ...new Set(highlights.flatMap((highlight) => highlight.data.OLID)),
+  ];
+
+  return uniqueBookOLIDs.map((olid) => ({
+    params: { olid },
+    props: {
+      book: books.find((b) => b.id === olid)?.data,
+      filteredHighlights: highlights.filter(
+        (highlight) => highlight.data.OLID == olid
+      ),
+    },
+  }));
+}
+
+const { filteredHighlights, book } = Astro.props;
+---
+
+<Layout title=`Highlights`>
+  <h3>From <span class="italic">{book?.title}</span></h3>
+  <HighlightGrid highlights={filteredHighlights} showBookLink={true} />
+</Layout>

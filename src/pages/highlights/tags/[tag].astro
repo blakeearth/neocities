@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+import HighlightGrid from "../../../components/HighlightGrid.astro";
+import Layout from "../../../layouts/BlogPost.astro";
+
+export async function getStaticPaths() {
+  const highlights = await getCollection("highlights");
+
+  // Split tags and get unique values
+  const uniqueTags = [
+    ...new Set(
+      highlights.flatMap((highlight) =>
+        highlight.data.tags.split(",").map((tag: string) => tag.trim())
+      )
+    ),
+  ];
+
+  return uniqueTags.map((tag) => ({
+    params: { tag },
+    props: {
+      filteredHighlights: highlights.filter((highlight) =>
+        highlight.data.tags
+          .split(",")
+          .map((t: string) => t.trim())
+          .includes(tag)
+      ),
+    },
+  }));
+}
+
+const { tag } = Astro.params;
+const { filteredHighlights } = Astro.props;
+---
+
+<Layout title=`Highlights`>
+  <h3>Tagged "#{tag}"</h3>
+  <HighlightGrid highlights={filteredHighlights} />
+</Layout>
