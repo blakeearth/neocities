@@ -3,7 +3,6 @@
 :root {
     --glass-border: #ffffff1a;
     --glass-shadow: #00000033;
-    --glass-highlight: #ffffff0c;
 }
 
 h1 {
@@ -86,16 +85,6 @@ main {
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 8px 16px var(--glass-shadow);
-}
-
-.glass-panel::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, var(--glass-highlight), transparent);
-    transform: skewY(-12deg);
-    transform-origin: top;
-    pointer-events: none;
 }
 
 .next {
