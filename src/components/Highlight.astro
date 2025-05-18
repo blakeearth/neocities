@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Tag from "./Tag.astro";
+import FormattedDate from "./FormattedDate.astro";
 
 const { highlightId } = Astro.props;
 
@@ -24,7 +25,9 @@ const book = bookItem!.data;
             —{book.author}, <cite
               ><a href={`/highlights/books/${highlight.OLID}`}>{book.title}</a
               ></cite
-            >
+            >. Highlighted <FormattedDate
+              date={new Date(highlight.timestamp)}
+            />
           </span>
           <div class="flex gap-2 flex-wrap">
             {
