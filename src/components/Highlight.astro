@@ -17,7 +17,7 @@ const book = bookItem!.data;
   <div class="flex gap-4 justify-between h-full">
     <div class="w-full flex flex-col justify-between gap-8">
       <span class="text-xl lg:text-2xl">{highlight.text}</span>
-      <div class="flex justify-between">
+      <div class="flex justify-between items-start">
         <div>
           <span class="text-sm">
             —{book.author}, <cite
@@ -44,7 +44,7 @@ const book = bookItem!.data;
               <img
                 src={book.coverImage.small}
                 alt={`Cover of ${book.title}`}
-                class="rounded-xl lg:hidden"
+                class="min-w-max rounded-xl lg:hidden"
               />
             </a>
           )
