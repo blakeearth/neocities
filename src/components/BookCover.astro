@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+import FormattedDate from "./FormattedDate.astro";
+
+const { olid, readDate } = Astro.props;
+
+const books = await getCollection("books");
+const bookItem = books.find((b: { id: any }) => b.id === olid);
+const book = bookItem!.data;
+---
+
+<figure class="flex flex-col items-center text-center text-xs gap-2">
+  {
+    book?.coverImage?.medium && (
+      <a href={`/library/highlights/books/${olid}`}>
+        <img
+          src={book.coverImage.medium}
+          alt={`Cover of ${book.title} by ${book.author}`}
+          class="rounded-xl"
+        />
+      </a>
+    )
+  }
+  <figcaption>
+    {
+      readDate && (
+        <span class="text-xs">
+          Last highlighted <FormattedDate date={new Date(readDate)} />
+        </span>
+      )
+    }
+  </figcaption>
+</figure>

@@ -1,0 +1,117 @@
+---
+// src/pages/library.astro
+import { getCollection } from "astro:content";
+import BookCover from "../components/BookCover.astro"; // Your existing component
+
+// Define TypeScript interfaces
+interface Highlight {
+  text: string;
+  title: string;
+  OLID: string;
+  tags: string;
+  timestamp: string;
+}
+
+interface Book {
+  olid: string;
+  title: string;
+  yearRead: number;
+}
+
+interface HighlightsByBook {
+  [olid: string]: Highlight[];
+}
+
+interface BooksByYear {
+  [year: string]: Book[];
+}
+
+// Interface for storing the most recent highlight date by OLID
+interface RecentHighlightDates {
+  [olid: string]: Date;
+}
+
+// Get all highlights
+const allHighlights = await getCollection("highlights");
+
+// Group highlights by book (OLID)
+const highlightsByBook: HighlightsByBook = {};
+allHighlights.forEach((highlight) => {
+  const olid = highlight.data.OLID;
+  if (!highlightsByBook[olid]) {
+    highlightsByBook[olid] = [];
+  }
+  highlightsByBook[olid].push(highlight.data);
+});
+
+// Create lookup for most recent highlight date by OLID
+const recentHighlightDates: RecentHighlightDates = {};
+
+// Extract books with the year they were read (based on most recent highlight)
+const books: Book[] = [];
+Object.entries(highlightsByBook).forEach(([olid, bookHighlights]) => {
+  // Sort highlights by timestamp (newest first)
+  const sortedHighlights = [...bookHighlights].sort(
+    (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
+  );
+
+  const mostRecentHighlight = sortedHighlights[0];
+  const mostRecentDate = new Date(mostRecentHighlight.timestamp);
+  const yearRead = mostRecentDate.getFullYear();
+
+  // Store the most recent date for this OLID
+  recentHighlightDates[olid] = mostRecentDate;
+
+  books.push({
+    olid,
+    title: mostRecentHighlight.title,
+    yearRead,
+  });
+});
+
+// Group books by year read
+const booksByYear: BooksByYear = {};
+books.forEach((book) => {
+  const year = book.yearRead.toString();
+  if (!booksByYear[year]) {
+    booksByYear[year] = [];
+  }
+  booksByYear[year].push(book);
+});
+
+// Sort years in descending order (newest first)
+const sortedYears = Object.keys(booksByYear).sort(
+  (a, b) => Number(b) - Number(a)
+);
+
+// Current year (2025)
+const currentYear = new Date().getFullYear();
+
+// Helper function to get most recent highlight date for an OLID
+function getRecentHighlightDate(olid: string): Date | null {
+  return recentHighlightDates[olid] || null;
+}
+---
+
+<div class="flex flex-col gap-2">
+  {
+    sortedYears.map((year) => (
+      <details open={parseInt(year) === currentYear}>
+        <summary>
+          <span class="text-xl">
+            {year} ({booksByYear[year].length} books)
+          </span>
+        </summary>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 mt-6">
+          {booksByYear[year].map((book) => (
+            <BookCover
+              olid={book.olid}
+              readDate={"Last highlighted " + getRecentHighlightDate(book.olid)}
+            />
+          ))}
+        </div>
+      </details>
+    ))
+  }
+</div>

@@ -1,0 +1,50 @@
+---
+import { getCollection } from "astro:content";
+import Tag from "./Tag.astro";
+
+interface Props {
+  highlights: {
+    text: string;
+    title: string;
+    OLID: string;
+    tags: string;
+    timestamp: string;
+  }[];
+}
+
+const highlights = await getCollection("highlights");
+
+interface TagCount {
+  tag: string;
+  count: number;
+}
+
+const tagDictionary: Record<string, number> = {};
+
+highlights.forEach((highlight) => {
+  const tags = highlight.data.tags.split(",").map((tag: string) => tag.trim());
+
+  tags.forEach((tag: string) => {
+    if (!tagDictionary[tag]) {
+      tagDictionary[tag] = 0;
+    }
+    tagDictionary[tag]++;
+  });
+});
+
+const tagArray: TagCount[] = Object.entries(tagDictionary)
+  .map(([tag, count]) => ({ tag, count }))
+  .sort((a, b) => b.count - a.count);
+---
+
+<div class="flex flex-wrap gap-2">
+  {
+    tagArray.map((tag) => (
+      <div class="flex items-center">
+        <Tag emoji="📑" href={"/library/highlights/tags/" + tag.tag}>
+          {tag.tag} ({tag.count})
+        </Tag>
+      </div>
+    ))
+  }
+</div>
