@@ -573,5 +573,33 @@
     ],
     "pageCount": null,
     "url": "https://openlibrary.org/books/OL25935278M/Simon_vs._the_Homo_Sapiens_Agenda"
+  },
+  "OL31489498M": {
+    "title": "101 Essays That Will Change The Way You Think",
+    "subtitle": "",
+    "author": "Brianna Wiest",
+    "coverImage": {
+      "small": "https://covers.openlibrary.org/b/id/15062968-S.jpg",
+      "medium": "https://covers.openlibrary.org/b/id/15062968-M.jpg",
+      "large": "https://covers.openlibrary.org/b/id/15062968-L.jpg"
+    },
+    "publishDate": "Nov 07, 2018",
+    "publishers": [
+      "Thought Catalog Books"
+    ],
+    "subjects": [
+      "Self-Help",
+      "Self-improvement",
+      "BODY, MIND & SPIRIT / Meditation",
+      "Essays",
+      "Literary collections",
+      "Emotions and cognition",
+      "Self-actualization (Psychology)",
+      "Change (Psychology)",
+      "Thought and thinking",
+      "Philosophy"
+    ],
+    "pageCount": 448,
+    "url": "https://openlibrary.org/books/OL31489498M/101_Essays_That_Will_Change_The_Way_You_Think"
   }
 }

@@ -1,7 +1,6 @@
 ---
-// src/pages/library.astro
 import { getCollection } from "astro:content";
-import BookCover from "../components/BookCover.astro"; // Your existing component
+import BookCover from "../components/BookCover.astro";
 
 // Define TypeScript interfaces
 interface Highlight {
@@ -26,15 +25,12 @@ interface BooksByYear {
   [year: string]: Book[];
 }
 
-// Interface for storing the most recent highlight date by OLID
 interface RecentHighlightDates {
   [olid: string]: Date;
 }
 
-// Get all highlights
 const allHighlights = await getCollection("highlights");
 
-// Group highlights by book (OLID)
 const highlightsByBook: HighlightsByBook = {};
 allHighlights.forEach((highlight) => {
   const olid = highlight.data.OLID;
@@ -44,7 +40,6 @@ allHighlights.forEach((highlight) => {
   highlightsByBook[olid].push(highlight.data);
 });
 
-// Create lookup for most recent highlight date by OLID
 const recentHighlightDates: RecentHighlightDates = {};
 
 // Extract books with the year they were read (based on most recent highlight)
@@ -69,7 +64,6 @@ Object.entries(highlightsByBook).forEach(([olid, bookHighlights]) => {
   });
 });
 
-// Group books by year read
 const booksByYear: BooksByYear = {};
 books.forEach((book) => {
   const year = book.yearRead.toString();
@@ -79,15 +73,22 @@ books.forEach((book) => {
   booksByYear[year].push(book);
 });
 
-// Sort years in descending order (newest first)
+// Sort each year's book list by most recent highlight date
+Object.keys(booksByYear).forEach((year) => {
+  booksByYear[year].sort((a, b) => {
+    const dateA = recentHighlightDates[a.olid];
+    const dateB = recentHighlightDates[b.olid];
+    return dateB.getTime() - dateA.getTime();
+  });
+});
+
 const sortedYears = Object.keys(booksByYear).sort(
   (a, b) => Number(b) - Number(a)
 );
 
-// Current year (2025)
+// Current year
 const currentYear = new Date().getFullYear();
 
-// Helper function to get most recent highlight date for an OLID
 function getRecentHighlightDate(olid: string): Date | null {
   return recentHighlightDates[olid] || null;
 }
