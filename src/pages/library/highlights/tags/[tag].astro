@@ -18,12 +18,19 @@ export async function getStaticPaths() {
   return uniqueTags.map((tag) => ({
     params: { tag },
     props: {
-      filteredHighlights: highlights.filter((highlight) =>
-        highlight.data.tags
-          .split(",")
-          .map((t: string) => t.trim())
-          .includes(tag)
-      ),
+      filteredHighlights: highlights
+        // apparently this is horrendous for perf, but because this is just during build time I think it's ok
+        .sort(
+          (a, b) =>
+            new Date(b.data.timestamp).getTime() -
+            new Date(a.data.timestamp).getTime()
+        )
+        .filter((highlight) =>
+          highlight.data.tags
+            .split(",")
+            .map((t: string) => t.trim())
+            .includes(tag)
+        ),
     },
   }));
 }

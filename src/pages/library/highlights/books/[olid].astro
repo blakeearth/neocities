@@ -15,9 +15,14 @@ export async function getStaticPaths() {
     params: { olid },
     props: {
       book: books.find((b) => b.id === olid)?.data,
-      filteredHighlights: highlights.filter(
-        (highlight) => highlight.data.OLID == olid
-      ),
+      filteredHighlights: highlights
+        // apparently this is horrendous for perf, but because this is just during build time I think it's ok
+        .sort(
+          (a, b) =>
+            new Date(b.data.timestamp).getTime() -
+            new Date(a.data.timestamp).getTime()
+        )
+        .filter((highlight) => highlight.data.OLID == olid),
     },
   }));
 }
@@ -27,5 +32,5 @@ const { filteredHighlights, book } = Astro.props;
 
 <Layout title=`Highlights`>
   <h3>From <span class="italic">{book?.title}</span></h3>
-  <HighlightGrid highlights={filteredHighlights} showBookLink={true} />
+  <HighlightGrid highlights={filteredHighlights} />
 </Layout>
