@@ -1,21 +1,28 @@
 {
-  "name": "blake.earth",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "process:books": "tsx src/utils/processBookDetails.ts",
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/mdx": "^4.2.6",
-    "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.4.0",
-    "@tailwindcss/vite": "^4.1.7",
-    "astro": "^5.7.13",
-    "tailwindcss": "^4.1.7",
-    "tsx": "^4.19.4"
-  }
+    "name": "blake.earth",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "npm run process-books:dev && astro dev",
+        "start": "npm run process-books:dev && astro dev",
+        "build": "npm run process-books:build && astro build",
+        "preview": "astro preview",
+        "process-books:dev": "tsx src/utils/process-book-details.ts --dev",
+        "process-books:build": "tsx src/utils/process-book-details.ts",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/mdx": "^4.2.6",
+        "@astrojs/rss": "^4.0.11",
+        "@astrojs/sitemap": "^3.4.0",
+        "@tailwindcss/vite": "^4.1.7",
+        "astro": "^5.7.13",
+        "cli-progress": "^3.12.0",
+        "tailwindcss": "^4.1.7",
+        "tsx": "^4.19.4"
+    },
+    "devDependencies": {
+        "@types/cli-progress": "^3.11.6",
+        "@types/node-fetch": "^2.6.12"
+    }
 }
