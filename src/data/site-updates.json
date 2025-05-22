@@ -22,5 +22,9 @@
     "5": {
         "date": "May 17, 2025",
         "text": "Major overhaul! Migrated the site to Astro and added an initial highlights system!"
+    },
+    "6": {
+        "date": "May 21, 2025",
+        "text": "Got Webmentions working! (I think...)"
     }
 }
