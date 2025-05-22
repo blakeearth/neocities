@@ -76,7 +76,7 @@ async function handleCoverImage(imageUrl: string | undefined, olid: string, size
         const buffer = await response.arrayBuffer();
         const extension = path.extname(imageUrl) || '.jpg'; // Default to .jpg if no extension
 
-        const directory = './public/images/covers';
+        const directory = './src/images/covers';
 
         // Create directory if it doesn't exist
         await mkdir(directory, { recursive: true });
@@ -87,7 +87,7 @@ async function handleCoverImage(imageUrl: string | undefined, olid: string, size
         // Save the image
         await writeFile(filePath, Buffer.from(buffer));
 
-        return `/images/covers/${filename}`;
+        return `/src/covers/${filename}`;
     } catch (error) {
         console.error(`Error downloading cover image for OLID ${olid}:`, error);
         return null;
