@@ -21,6 +21,6 @@ const { emoji, href, className = "" } = Astro.props;
     ${className}
   `}
 >
-  <span class="text-s">{emoji}</span>
-  <span class="text-xs"><slot /></span>
+  <span class="text-s pb-1">{emoji}</span>
+  <span class="text-xs mb-px"><slot /></span>
 </a>
