@@ -8,10 +8,17 @@ import FormattedDate from "../components/FormattedDate.astro";
 import LyricStatuses from "../components/LyricStatuses.astro";
 import UpdateStatuses from "../components/UpdateStatuses.astro";
 
-const { title, description, pubDate } = Astro.props;
+const {
+  title,
+  description,
+  pubDate,
+  hideGuestbook,
+  overflowHidden,
+  targetParent,
+} = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" class=`${overflowHidden ? 'overflow-hidden' : ''}`>
   <head>
     <BaseHead title={title + " | blake.earth"} description={description} />
 
@@ -26,13 +33,13 @@ const { title, description, pubDate } = Astro.props;
     <div class="bg-circle"></div>
     <div class="bg-circle"></div>
     <div class="container">
-      <Header />
+      <Header hideGuestbook={hideGuestbook} targetParent={targetParent} />
       <div class="layout">
         <main class="glass-panel flex flex-col gap-2">
           <h2>{title}</h2>
           {description && <span class="italic">{description}</span>}
           {pubDate && <FormattedDate date={pubDate} />}
-          <slot />
+          <article><slot /></article>
         </main>
 
         <div class="next">

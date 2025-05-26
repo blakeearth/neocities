@@ -9,7 +9,7 @@ const posts = (await getCollection("cards")).sort(
 ---
 
 <Layout title="All Cards">
-  <ul class="p-0">
+  <ul>
     {
       posts.map((post) => (
         <li class="flex flex-col lg:flex-row w-full justify-between">

@@ -1,0 +1,20 @@
+---
+interface Props {
+  src: string;
+}
+
+const { src = "" } = Astro.props;
+---
+
+<style>
+  iframe {
+    width: 250px;
+    height: 250px;
+    margin: 0.5rem 0;
+    border-radius: 2ch;
+    border: 0.2vh solid var(--glass-border);
+  }
+</style>
+
+<iframe width="250px" height="250px" src=`${src}` loading="lazy" scrolling="no"
+></iframe>

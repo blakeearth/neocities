@@ -1,27 +1,41 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
+
+const { hideGuestbook, targetParent } = Astro.props;
 ---
 
-<header>
-  <nav>
-    <HeaderLink href="/">{SITE_TITLE}</HeaderLink>
-    <HeaderLink href="/cards">cards</HeaderLink>
-    <HeaderLink href="/library">library</HeaderLink>
+<header class="flex justify-between">
+  <nav class="flex items-end gap-2 mb-2">
+    <HeaderLink href="/" target=`${targetParent ? '_blank' : ''}`
+      >{SITE_TITLE}</HeaderLink
+    >
+    <HeaderLink href="/cards" target=`${targetParent ? '_blank' : ''}`
+      >cards</HeaderLink
+    >
+    <HeaderLink href="/library" target=`${targetParent ? '_blank' : ''}`
+      >library</HeaderLink
+    >
+    <HeaderLink
+      href="/webgarden"
+      target=`${targetParent ? '_blank' : ''}`
+      class=`${hideGuestbook ? 'hidden' : ''}`>webgarden</HeaderLink
+    >
     <a
+      class=`${hideGuestbook ? 'hidden' : ''}`
       target="_blank"
       href="https://drive.proton.me/urls/4Z6XRNNZ64#qIyCKpbs20KG">guestbook</a
     >
   </nav>
+  <div class="relative h-full pointer-events-none flex">
+    <img
+      class="md:h-[6rem] h-[3rem] mb-1"
+      src="/images/lamp.gif"
+      alt="An animated purple-and-orange lava lamp"
+    />
+  </div>
 </header>
 <style>
-  nav {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-
   nav a {
     color: white;
   }
