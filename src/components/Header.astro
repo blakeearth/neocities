@@ -6,7 +6,7 @@ const { hideGuestbook, targetParent } = Astro.props;
 ---
 
 <header class="flex justify-between">
-  <nav class="flex items-end gap-2 mb-2">
+  <nav class="flex flex-wrap items-end gap-2 mb-2">
     <HeaderLink href="/" target=`${targetParent ? '_blank' : ''}`
       >{SITE_TITLE}</HeaderLink
     >
