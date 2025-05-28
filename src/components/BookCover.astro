@@ -9,7 +9,7 @@ const bookItem = books.find((b: { id: any }) => b.id === olid);
 const book = bookItem!.data;
 ---
 
-<figure class="flex flex-col items-center text-center text-xs gap-2">
+<figure class="flex flex-col items-center text-center text-xs gap-2 m-0">
   {
     book?.coverImage?.medium && (
       <a href={`/library/highlights/books/${olid}`}>

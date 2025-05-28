@@ -53,19 +53,17 @@ article ul:not(.tags, .cards), article ol {
     padding-left: 4ch;
 }
 
-article figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem 0;
-}
-
-main img {
+article img {
     max-width: 100%;
     max-height: 24rem;
     margin: 0.5rem 0;
     border-radius: 2ch;
     border: 0.2vh solid var(--glass-border);
+    margin: auto;
+}
+
+article ol, ul {
+    list-style: initial;
 }
 
 main {
