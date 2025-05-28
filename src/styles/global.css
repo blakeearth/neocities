@@ -62,8 +62,12 @@ article img {
     margin: auto;
 }
 
-article ol, ul {
+article ul {
     list-style: initial;
+}
+
+article ol {
+    list-style: decimal;
 }
 
 main {
