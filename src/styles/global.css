@@ -82,7 +82,7 @@ main {
 .glass-panel {
     position: relative;
     padding: 2rem;
-    background-color: #3b83f604;
+    background-color: #0f172a;
     border: 0.2vh solid var(--glass-border);
     border-radius: 1rem;
     overflow: hidden;
@@ -156,7 +156,8 @@ a:hover {
 .bg-circle {
     position: fixed;
     border-radius: 50%;
-    z-index: -1;
+    z-index: 2;
+    pointer-events: none;
     filter: blur(70px);
 }
 
