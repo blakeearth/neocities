@@ -34,5 +34,9 @@
     "8": {
         "date": "May 26, 2025",
         "text": "Added a webgarden!"
+    },
+    "9": {
+        "date": "May 29, 2025",
+        "text": "Made a little app with val.town to make it easier to manage my highlights. Lots of fun. I'll probably make a guestbook or comments section with it next!"
     }
 }
