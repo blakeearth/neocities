@@ -11,8 +11,8 @@ async function processBookDetails() {
     console.log(`Running in ${isDevMode ? 'development' : 'production'} mode`);
 
     // Read highlights
-    const highlightsRaw = await readFile('src/data/highlights.json', 'utf-8');
-    const highlights = JSON.parse(highlightsRaw);
+    const highlightsRaw = await fetch(process.env.HIGHLIGHTS_API);
+    const highlights = await highlightsRaw.json();
 
     // Collect unique OLIDs
     const uniqueOLIDs = [...new Set(Object.values(highlights).map(h => h.OLID))];

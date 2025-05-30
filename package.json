@@ -7,8 +7,8 @@
         "start": "npm run process-books:dev && astro dev",
         "build": "npm run process-books:build && astro build",
         "preview": "astro preview",
-        "process-books:dev": "tsx src/utils/process-book-details.ts --dev",
-        "process-books:build": "tsx src/utils/process-book-details.ts",
+        "process-books:dev": "env-cmd tsx src/utils/process-book-details.ts --dev",
+        "process-books:build": "env-cmd tsx src/utils/process-book-details.ts",
         "astro": "astro"
     },
     "dependencies": {
@@ -23,6 +23,7 @@
     },
     "devDependencies": {
         "@types/cli-progress": "^3.11.6",
-        "@types/node-fetch": "^2.6.12"
+        "@types/node-fetch": "^2.6.12",
+        "env-cmd": "^10.1.0"
     }
 }

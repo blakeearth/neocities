@@ -31,7 +31,10 @@ const siteUpdates = defineCollection({
 });
 
 const highlights = defineCollection({
-	loader: file("src/data/highlights.json"),
+	loader: async () => {
+		const response = await fetch(import.meta.env.HIGHLIGHTS_API);
+		return await response.json();
+	},
 	schema: z.object({
 		text: z.string(),
 		title: z.string(),
