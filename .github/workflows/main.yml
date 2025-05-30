@@ -25,7 +25,7 @@ jobs:
             - name: Create env file
               run: |
                   touch .env
-                  echo API_ENDPOINT="${{ secrets.HIGHLIGHTS_API }}" >> .env
+                  echo HIGHLIGHTS_API="${{ secrets.HIGHLIGHTS_API }}" >> .env
                   cat .env
             # If you have a different build process, replace this with your own build steps
             - name: Install deps and build
