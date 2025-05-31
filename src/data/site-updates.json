@@ -38,5 +38,9 @@
     "9": {
         "date": "May 29, 2025",
         "text": "Made a little app with val.town to make it easier to manage my highlights. Lots of fun. I'll probably make a guestbook or comments section with it next!"
+    },
+    "10": {
+        "date": "May 30, 2025",
+        "text": "Briefly added comments and then decided to leave things up to webmentions for now. I'm a sucker for decentralization."
     }
 }
