@@ -13,18 +13,9 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"cards">;
 
 const post = Astro.props;
-const { slug } = Astro.params;
 const { Content } = await render(post);
 ---
 
 <BlogPost {...post.data}>
   <Content />
-  <iframe
-    src=`https://blakeearth--3f528fdc3dbe11f0b83376b3cceeab13.web.val.run/?slug=/cards/${slug}`
-    width="100%"
-    height="600"
-    frameborder="0"
-    style="background: transparent;"
-  >
-  </iframe>
 </BlogPost>
