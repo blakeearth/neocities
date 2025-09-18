@@ -32,6 +32,8 @@ jobs:
               run: |
                   npm i
                   npm run build
+            - name: Remove gitignore file
+              run: rm ./dist/admin/.gitignore
             # When the dist_dir is ready, deploy it to neocities
             - name: Deploy to neocities
               uses: bcomnes/deploy-to-neocities@v3
