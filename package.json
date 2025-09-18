@@ -4,7 +4,7 @@
     "version": "0.0.1",
     "scripts": {
         "dev": "npm run process-books:dev && tinacms dev -c \"astro dev\"",
-        "build": "npm run process-books:build && astro build && tinacms build",
+        "build": "npm run process-books:build && tinacms build && astro build",
         "preview": "astro preview",
         "process-books:dev": "env-cmd tsx src/utils/process-book-details.ts --dev",
         "process-books:build": "env-cmd tsx src/utils/process-book-details.ts",
