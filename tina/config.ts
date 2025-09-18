@@ -52,6 +52,7 @@ export default defineConfig({
             type: "rich-text",
             label: "Body",
             name: "body",
+            isBody: true,
           }
         ],
       },
