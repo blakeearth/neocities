@@ -49,7 +49,7 @@ export default defineConfig({
             required: false,
           },
           {
-            type: "string",
+            type: "rich-text",
             label: "Body",
             name: "body",
             isBody: true,
