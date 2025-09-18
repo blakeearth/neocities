@@ -49,10 +49,20 @@ export default defineConfig({
             required: false,
           },
           {
-            type: "rich-text",
+            type: "string",
             label: "Body",
             name: "body",
             isBody: true,
+            templates: [
+              {
+                name: "Highlight",
+                label: "Highlight",
+                fields: [{
+                  name: "highlightId",
+                  type: "number"
+                }]
+              }
+            ],
           }
         ],
       },
