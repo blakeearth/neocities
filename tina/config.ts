@@ -11,6 +11,12 @@ export default defineConfig({
   branch,
   clientId: process.env.TINA_PUBLIC_CLIENT_ID, // Get this from tina.io
   token: process.env.TINA_TOKEN, // Get this from tina.io
+  search: {
+    tina: {
+      stopwordLanguages: ['eng'],
+      indexerToken: process.env.TINA_SEARCH_TOKEN
+    }
+  },
   build: {
     outputFolder: "admin",
     publicFolder: "public",
