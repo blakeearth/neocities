@@ -28,6 +28,7 @@ jobs:
                   echo HIGHLIGHTS_API="${{ secrets.HIGHLIGHTS_API }}" >> .env
                   echo TINA_PUBLIC_CLIENT_ID="${{ secrets.TINA_PUBLIC_CLIENT_ID }}" >> .env
                   echo TINA_TOKEN="${{ secrets.TINA_TOKEN }}" >> .env
+                  echo TINA_SEARCH_TOKEN="${{ secrets.TINA_SEARCH_TOKEN }}" >> .env
                   cat .env
             # If you have a different build process, replace this with your own build steps
             - name: Install deps and build
