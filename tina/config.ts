@@ -45,7 +45,7 @@ export default defineConfig({
           {
             type: "string",
             name: "description",
-            label: "Descripption",
+            label: "Description",
             required: false,
           },
           {
