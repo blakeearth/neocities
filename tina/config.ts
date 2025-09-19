@@ -59,7 +59,7 @@ export default defineConfig({
                 label: "Highlight",
                 fields: [{
                   name: "highlightId",
-                  type: "number"
+                  type: "string"
                 }]
               }
             ],
