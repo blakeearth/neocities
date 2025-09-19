@@ -4,6 +4,7 @@ import mdx from "@astrojs/mdx"
 import sitemap from "@astrojs/sitemap"
 
 import tailwindcss from "@tailwindcss/vite"
+import AutoImport from "astro-auto-import"
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,7 +14,13 @@ export default defineConfig({
         "/highlights/books": "/library",
         "/highlights/tags": "/library",
     },
-    integrations: [mdx(), sitemap()],
+    integrations: [
+        AutoImport({
+            imports: ["./src/components/Highlight.astro"],
+        }),
+        mdx(),
+        sitemap(),
+    ],
 
     vite: {
         plugins: [tailwindcss()],
