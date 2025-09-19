@@ -44,16 +44,23 @@ export default defineConfig({
             required: true,
           },
           {
+            type: "string",
+            name: "description",
+            label: "Description",
+            required: false,
+          },
+          {
             type: "datetime",
             name: "pubDate",
             label: "Date Posted",
             required: true,
           },
           {
-            type: "string",
-            name: "description",
-            label: "Description",
-            required: false,
+            name: 'draft',
+            label: 'Draft',
+            type: 'boolean',
+            required: true,
+            description: 'Drafts will be saved but not publicly visible.',
           },
           {
             type: "rich-text",

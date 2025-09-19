@@ -33,7 +33,7 @@ const book = bookItem!.data;
           <div class="flex gap-2 flex-wrap">
             {
               highlight.tags.split(",").map((tag: unknown) => (
-                <Tag emoji="⭐" href={`/library/highlights/tags/${tag}`}>
+                <Tag emoji="#" href={`/library/highlights/tags/${tag}`}>
                   {tag}
                 </Tag>
               ))
@@ -48,7 +48,7 @@ const book = bookItem!.data;
           <img
             src={book.coverImage.medium}
             alt={`Cover of ${book.title}`}
-            class="rounded-xl hidden md:block"
+            class="hidden md:block"
           />
         </a>
       )

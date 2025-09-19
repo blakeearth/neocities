@@ -1,10 +1,5 @@
  @import "tailwindcss";
 
-:root {
-    --glass-border: #ffffff1a;
-    --glass-shadow: #00000033;
-}
-
 h1 {
 	font-size: 2.25rem;
 	font-weight: bold;
@@ -26,9 +21,8 @@ h1 {
 
 body {
     min-height: 100vh;
-    background-color: #0f172a;
-    font-family: Segoe UI, Arial, Helvetica, sans-serif;
-    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
 }
 
 .container {
@@ -57,8 +51,7 @@ article img {
     max-width: 100%;
     max-height: 24rem;
     margin: 0.5rem 0;
-    border-radius: 2ch;
-    border: 0.2vh solid var(--glass-border);
+    border: 0.2vh solid black;
     margin: auto;
 }
 
@@ -82,11 +75,8 @@ main {
 .glass-panel {
     position: relative;
     padding: 2rem;
-    background-color: #0f172a;
-    border: 0.2vh solid var(--glass-border);
-    border-radius: 1rem;
+    border: 0.2vh solid black;
     overflow: hidden;
-    box-shadow: 0 8px 16px var(--glass-shadow);
 }
 
 .next {
@@ -125,56 +115,13 @@ details.older-updates, details.older-lyrics {
     border-top: none;
 }
 
-details summary {
-    cursor: pointer;
-	margin-bottom: 1rem;
-    user-select: none;
-    color: #93c5fd;
-    font-size: 0.9rem;
-}
-
-details summary:hover {
-    color: #bfdbfe;
-}
-
-.update-date {
-    display: block;
-    font-size: 0.875rem;
-    color: #ffffff99;
-    margin-bottom: 0.25rem;
-}
-
 a {
-    color: #93c5fd;
+    color: #156e3d;
     text-decoration: none;
 }
 
 a:hover {
-    color: #bfdbfe;
-}
-
-.bg-circle {
-    position: fixed;
-    border-radius: 50%;
-    z-index: 2;
-    pointer-events: none;
-    filter: blur(70px);
-}
-
-.bg-circle:nth-child(1) {
-    top: -100px;
-    right: -100px;
-    width: 24rem;
-    height: 24rem;
-    background: #3b82f61a;
-}
-
-.bg-circle:nth-child(2) {
-    bottom: -50px;
-    left: -50px;
-    width: 18rem;
-    height: 18rem;
-    background: #3b82f61a;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {

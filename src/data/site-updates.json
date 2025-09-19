@@ -42,5 +42,9 @@
     "10": {
         "date": "May 30, 2025",
         "text": "Briefly added comments and then decided to leave things up to webmentions for now. I'm a sucker for decentralization."
+    },
+    "11": {
+        "date": "September 18, 2025",
+        "text": "Added TinaCMS on top of Astro for easier content management. Added draft functionality to the Astro configuration. Added some new books and highlights. Re-did the styling of the website to be more Earth-y."
     }
 }
