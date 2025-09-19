@@ -15,7 +15,8 @@ export default defineConfig({
     tina: {
       stopwordLanguages: ['eng'],
       indexerToken: process.env.TINA_SEARCH_TOKEN
-    }
+    },
+    maxSearchIndexFieldLength: 999999,
   },
   build: {
     outputFolder: "admin",
