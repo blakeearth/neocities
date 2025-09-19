@@ -32,11 +32,14 @@ const book = bookItem!.data;
           </span>
           <div class="flex gap-2 flex-wrap">
             {
-              highlight.tags.split(",").map((tag: unknown) => (
-                <Tag emoji="#" href={`/library/highlights/tags/${tag}`}>
-                  {tag}
-                </Tag>
-              ))
+              highlight.tags
+                .split(",")
+                .filter((tag: string) => tag.length > 0)
+                .map((tag: string) => (
+                  <Tag emoji="#" href={`/library/highlights/tags/${tag}`}>
+                    {tag.trim()}
+                  </Tag>
+                ))
             }
           </div>
         </div>
