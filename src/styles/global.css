@@ -74,7 +74,7 @@ main {
 .glass-panel {
     position: relative;
     padding: 2rem;
-    border: 1px solid black;
+    border: 2px solid black;
     overflow: hidden;
 }
 
