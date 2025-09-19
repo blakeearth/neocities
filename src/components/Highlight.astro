@@ -35,9 +35,10 @@ const book = bookItem!.data;
               highlight.tags
                 .split(",")
                 .filter((tag: string) => tag.length > 0)
+                .map((tag: string) => tag.trim())
                 .map((tag: string) => (
                   <Tag emoji="#" href={`/library/highlights/tags/${tag}`}>
-                    {tag.trim()}
+                    {tag}
                   </Tag>
                 ))
             }
