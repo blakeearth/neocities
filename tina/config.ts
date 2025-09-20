@@ -1,6 +1,6 @@
 import { defineConfig } from "tinacms";
-import tags from '../src/data/highlights/tags.json'
-import books from '../src/data/highlights/books.json'
+import tags from '../src/data/tags/tags.json'
+import books from '../src/data/books/books.json'
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -35,102 +35,207 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "data",
-        label: "Data",
-        path: "src/data/highlights",
-        format: 'json',
-        templates: [
-          {
-            name: 'tags',
-            label: "Tags",
-            fields: [
-              {
-                name: "tags",
-                list: true,
-                label: "Tags",
-                type: "string",
-                required: true
-              }
-            ]
+        name: "tags",
+        label: "Tags",
+        path: "src/data/tags",
+        format: "json",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
           },
+        },
+        fields: [
+          {
+            name: "tags",
+            list: true,
+            label: "Tags",
+            type: "string",
+            required: true,
+          },
+        ],
+      },
+      {
+        name: "books",
+        label: "Books",
+        path: "src/data/books",
+        format: "json",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
           {
             name: "books",
             label: "Books",
+            list: true,
+            type: "object",
+            ui: {
+              itemProps: (values) => ({
+                label: values?.title,
+              }),
+            },
             fields: [
               {
-                name: "books",
-                label: "Books",
-                list: true,
-                type: "object",
-                ui: {
-                  itemProps: (values) => ({
-                    label: values?.title,
-                  }),
-                },
-                fields: [
-                  {
-                    name: "title",
-                    label: "Title",
-                    type: "string",
-                  },
-                  {
-                    name: "olid",
-                    label: "OLID",
-                    type: "string",
-                    required: true,
-                  },
-                ]
+                name: "title",
+                label: "Title",
+                type: "string",
               },
-
-            ]
-          },
-          {
-            name: 'highlights',
-            label: 'Highlights',
-            fields: [
               {
-                name: "highlights",
-                list: true,
-                label: "Highlights",
-                type: "object",
+                name: "olid",
+                label: "OLID",
+                type: "string",
                 required: true,
-                ui: {
-                  itemProps: (values) => ({
-                    label: values?.text,
-                  }),
-                },
-                fields: [
-                  {
-                    name: "text",
-                    label: "Text",
-                    type: "string",
-                    required: true,
-                  },
-                  {
-                    name: "timestamp",
-                    label: "Date Highlighted",
-                    type: "datetime",
-                    required: true,
-                  },
-                  {
-                    name: "source",
-                    label: "Source",
-                    type: "string",
-                    required: true,
-                    options: books.books.map((book) => { return { value: book.olid, label: book.title } })
-                  },
-                  {
-                    name: "tag",
-                    label: "Tag",
-                    type: "string",
-                    list: true,
-                    options: tags.tags.map(tag => { return { value: tag, label: tag } })
-                  },
-                ]
-              }
+              },
             ],
           },
-        ]
+        ],
+      },
+      {
+        name: 'highlights',
+        label: 'Highlights',
+        path: 'src/data/highlights',
+        format: 'json',
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
+          {
+            name: "highlights",
+            list: true,
+            label: "Highlights",
+            type: "object",
+            required: true,
+            ui: {
+              itemProps: (values) => ({
+                label: values?.text,
+              }),
+            },
+            fields: [
+              {
+                name: "text",
+                label: "Text",
+                type: "string",
+                required: true,
+              },
+              {
+                name: "timestamp",
+                label: "Date Highlighted",
+                type: "datetime",
+                required: true,
+              },
+              {
+                name: "source",
+                label: "Source",
+                type: "string",
+                required: true,
+                options: books.books.map((book) => { return { value: book.olid, label: book.title } })
+              },
+              {
+                name: "tag",
+                label: "Tag",
+                type: "string",
+                list: true,
+                options: tags.tags.map(tag => { return { value: tag, label: tag } })
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: "lyric_statuses",
+        label: "Lyric Statuses",
+        path: "src/data/lyric_statuses",
+        format: 'json',
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
+          {
+            name: "lyric_statuses",
+            label: "Lyric Statuses",
+            list: true,
+            type: "object",
+            ui: {
+              itemProps: (values) => ({
+                label: values?.text,
+              }),
+            },
+            fields: [
+              {
+                name: "emoji",
+                label: "Emoji",
+                type: "string",
+                required: true
+              },
+              {
+                name: "text",
+                label: "Text",
+                type: "string",
+                required: true,
+              },
+              {
+                name: "date",
+                label: "Date",
+                type: "datetime",
+                required: true,
+              },
+              {
+                name: "attribution",
+                label: "Attribution",
+                type: "string",
+                required: true,
+              }
+            ]
+          },
+        ],
+      },
+      {
+        name: "site_updates",
+        label: "Site Updates",
+        path: "src/data/site_updates",
+        format: 'json',
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
+          {
+            name: "site_updates",
+            label: "Site Updates",
+            list: true,
+            type: "object",
+            ui: {
+              itemProps: (values) => ({
+                label: values?.text,
+              }),
+            },
+            fields: [
+              {
+                name: "text",
+                label: "Text",
+                type: "string",
+                required: true,
+              },
+              {
+                name: "date",
+                label: "Date",
+                type: "datetime",
+                required: true,
+              },
+            ]
+          },
+        ],
       },
       {
         name: "cards",

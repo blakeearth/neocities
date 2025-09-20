@@ -1,5 +1,7 @@
 import { file, glob } from 'astro/loaders';
 import highlightData from '../src/data/highlights/highlights.json';
+import updateData from '../src/data/site_updates/site-updates.json';
+import lyricData from '../src/data/lyric_statuses/lyric-statuses.json';
 import { defineCollection, z } from 'astro:content';
 
 const cards = defineCollection({
@@ -13,7 +15,10 @@ const cards = defineCollection({
 });
 
 const lyricStatuses = defineCollection({
-	loader: file("src/data/lyric-statuses.json"),
+	loader: () => {
+		const response = lyricData.lyric_statuses;
+		return response.map((l, index) => { return { ...l, id: index.toString() } });
+	}, 
 	schema: z.object({
 		emoji: z.string(),
 		text: z.string(),
@@ -23,7 +28,10 @@ const lyricStatuses = defineCollection({
 });
 
 const siteUpdates = defineCollection({
-	loader: file("src/data/site-updates.json"),
+	loader: () => {
+		const response = updateData.site_updates;
+		return response.map((u, index) => { return { ...u, id: index.toString() } });
+	},
 	schema: z.object({
 		text: z.string(),
 		date: z.coerce.date().nullable().optional(),
@@ -33,7 +41,7 @@ const siteUpdates = defineCollection({
 const highlights = defineCollection({
 	loader: () => {
 		const response = highlightData.highlights;
-		return response.map((h, index) => { return {...h, tags: h.tag.toString(), id: index.toString()} });
+		return response.map((h, index) => { return { ...h, tags: h.tag.toString(), id: index.toString() } });
 	},
 	schema: z.object({
 		text: z.string(),

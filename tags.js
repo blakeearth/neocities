@@ -1,54 +1,24 @@
-import { readFile, writeFile } from 'fs';
+import { readFileSync, writeFileSync } from 'fs';
 
-function transformData(inputData) {
-  const outputData = {
-    _template: "highlights",
-    highlights: []
+// Sample JSON data (this would usually be loaded from a file)
+const inputData = JSON.parse(readFileSync('src/data/statuses/site-updates.json', 'utf-8'));
+
+
+// Function to convert input JSON to the desired output format
+function convertJson(input) {
+  const result = {
+    "_template": "site-updates",
+    "site-updates": Object.values(input)
   };
-
-  Object.keys(inputData).forEach(key => {
-    const item = inputData[key];
-    const highlight = {
-      text: item.text,
-      timestamp: new Date(item.timestamp).toISOString(), // Ensures correct format for timestamp
-      source: item.OLID,
-      tag: item.tags.split(',').map(tag => tag.trim())
-    };
-
-    outputData.highlights.push(highlight);
-  });
-
-  return outputData;
+  
+  return result;
 }
 
-// Function to read input file and write output file
-function processFile(inputFile, outputFile) {
-  readFile(inputFile, 'utf-8', (err, data) => {
-    if (err) {
-      console.error('Error reading the input file:', err);
-      return;
-    }
+// Call the function to convert the input data
+const outputData = convertJson(inputData);
 
-    try {
-      const inputData = JSON.parse(data);
-      const transformedData = transformData(inputData);
+// Output the result
+console.log(JSON.stringify(outputData, null, 2));
 
-      writeFile(outputFile, JSON.stringify(transformedData, null, 2), 'utf-8', (err) => {
-        if (err) {
-          console.error('Error writing the output file:', err);
-        } else {
-          console.log('File transformed successfully.');
-        }
-      });
-
-    } catch (err) {
-      console.error('Error parsing the input JSON:', err);
-    }
-  });
-}
-
-// Example usage
-const inputFile = 'src/data/highlights/highlights.json';  // Path to the input JSON file
-const outputFile = 'src/data/highlights/highlightso.json'; // Path where the output JSON will be saved
-
-processFile(inputFile, outputFile);
+// If you want to save the result to a file:
+writeFileSync('src/data/statuses/site-updateso.json', JSON.stringify(outputData, null, 2));

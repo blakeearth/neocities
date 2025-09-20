@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 import path from 'path';
 import cliProgress from 'cli-progress';
 import highlights from '../data/highlights/highlights.json';
-import books from '../data/highlights/books.json';
+import books from '../data/books/books.json';
 
 // Parse command line arguments
 const args = process.argv.slice(2);
