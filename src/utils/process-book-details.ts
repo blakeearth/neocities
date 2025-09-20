@@ -3,6 +3,7 @@ import fetch from 'node-fetch';
 import path from 'path';
 import cliProgress from 'cli-progress';
 import highlights from '../data/highlights/highlights.json';
+import books from '../data/highlights/books.json';
 
 // Parse command line arguments
 const args = process.argv.slice(2);
@@ -31,8 +32,7 @@ async function processBookDetails() {
 
     for (const olid of uniqueOLIDs) {
         try {
-            const highlight = findFirstHighlightByOLID(highlights, olid);
-            const bookDetails = await fetchBookDetails(olid);
+            const bookDetails = await fetchBookDetails(olid, { title: books.books.find(b => b.olid === olid)?.title });
             bookDetailsMap[olid] = bookDetails;
         } catch (error) {
             console.error(`Failed to fetch details for OLID ${olid}`, error);
@@ -101,7 +101,7 @@ export async function fetchBookDetails(olid: string, fallbackData?: any) {
         }
 
         const processedDetails = {
-            title: bookDetails.title || fallbackData?.title || 'Unknown Title',
+            title: fallbackData?.title || 'Unknown Title',
             subtitle: bookDetails.subtitle || fallbackData?.subtitle || '',
             author: bookDetails.authors?.[0]?.name || fallbackData?.author || 'Unknown Author',
             coverImage: {

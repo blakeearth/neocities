@@ -20,7 +20,7 @@ export async function getStaticPaths() {
         .sort(
           (a, b) =>
             new Date(b.data.timestamp).getTime() -
-            new Date(a.data.timestamp).getTime()
+            new Date(a.data.timestamp).getTime(),
         )
         .filter((highlight) => highlight.data.source == olid),
     },
@@ -31,6 +31,9 @@ const { filteredHighlights, book } = Astro.props;
 ---
 
 <Layout title=`Highlights`>
-  <h3>From <span class="italic">{book?.title}</span></h3>
+  <div>
+    <h3>From <span class="italic">{book?.title}</span></h3>
+    <span>By {book?.author}</span>
+  </div>
   <HighlightGrid highlights={filteredHighlights} />
 </Layout>
