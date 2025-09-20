@@ -24,7 +24,7 @@ const { targetParent } = Astro.props;
   </nav>
   <div class="mb-2">
     <a class="cursor-pointer" id="themeToggle" aria-label="Toggle theme">
-      <span id="themeIcon">☀</span>
+      <span id="themeIcon">☼</span>
     </a>
   </div>
 </header>
@@ -41,7 +41,7 @@ const { targetParent } = Astro.props;
         icon.textContent = "☽";
       } else {
         root.classList.remove("dark");
-        icon.textContent = "☀";
+        icon.textContent = "☼";
       }
     }
 
