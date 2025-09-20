@@ -2,7 +2,7 @@
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 
-const { hideGuestbook, targetParent } = Astro.props;
+const { targetParent } = Astro.props;
 ---
 
 <header class="flex justify-between items-center md:items-end">
@@ -19,12 +19,7 @@ const { hideGuestbook, targetParent } = Astro.props;
     <HeaderLink
       href="/links"
       target=`${targetParent ? '_blank' : ''}`
-      class=`${hideGuestbook ? 'hidden' : ''}`>links</HeaderLink
-    >
-    <a
-      class=`${hideGuestbook ? 'hidden' : ''}`
-      target="_blank"
-      href="https://drive.proton.me/urls/4Z6XRNNZ64#qIyCKpbs20KG">guestbook</a
+      class=`${targetParent ? 'hidden' : ''}`>links</HeaderLink
     >
   </nav>
   <div class="mb-2">
