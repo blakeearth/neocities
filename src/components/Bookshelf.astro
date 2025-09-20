@@ -2,18 +2,15 @@
 import { getCollection } from "astro:content";
 import BookCover from "../components/BookCover.astro";
 
-// Define TypeScript interfaces
 interface Highlight {
   text: string;
-  title: string;
-  OLID: string;
+  source: string;
   tags: string;
   timestamp: string;
 }
 
 interface Book {
   olid: string;
-  title: string;
   yearRead: number;
 }
 
@@ -33,7 +30,7 @@ const allHighlights = await getCollection("highlights");
 
 const highlightsByBook: HighlightsByBook = {};
 allHighlights.forEach((highlight) => {
-  const olid = highlight.data.OLID;
+  const olid = highlight.data.source;
   if (!highlightsByBook[olid]) {
     highlightsByBook[olid] = [];
   }
@@ -59,7 +56,6 @@ Object.entries(highlightsByBook).forEach(([olid, bookHighlights]) => {
 
   books.push({
     olid,
-    title: mostRecentHighlight.title,
     yearRead,
   });
 });

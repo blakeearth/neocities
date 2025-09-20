@@ -1,0 +1,89 @@
+{
+  "books": [
+    {
+      "title": "I Hope We Choose Love",
+      "olid": "OL28932587M"
+    },
+    {
+      "title": "Half-Arse Human",
+      "olid": "OL52567052M"
+    },
+    {
+      "title": "Attached",
+      "olid": "OL28230035M"
+    },
+    {
+      "title": "Project Hail Mary",
+      "olid": "OL38627505M"
+    },
+    {
+      "title": "Mules of love",
+      "olid": "OL3955602M"
+    },
+    {
+      "title": "Normal People",
+      "olid": "OL27735764M"
+    },
+    {
+      "title": "Do Nothing",
+      "olid": "OL34679768M"
+    },
+    {
+      "title": "Company of One",
+      "olid": "OL28306869M"
+    },
+    {
+      "title": "One Last Stop",
+      "olid": "OL34176795M"
+    },
+    {
+      "title": "Out of Love",
+      "olid": "OL29833807M"
+    },
+    {
+      "title": "The Phantom Tollbooth",
+      "olid": "OL17148283M"
+    },
+    {
+      "title": "Unrequited",
+      "olid": "OL37409676M"
+    },
+    {
+      "title": "Fangirl",
+      "olid": "OL27183580M"
+    },
+    {
+      "title": "Better by Far",
+      "olid": "OL50733631M"
+    },
+    {
+      "title": "How to Live",
+      "olid": "OL47322359M"
+    },
+    {
+      "title": "Turtles All the Way Down",
+      "olid": "OL27901261M"
+    },
+    {
+      "title": "Simon vs. the Homo Sapiens Agenda",
+      "olid": "OL25935278M"
+    },
+    {
+      "title": "101 Essays That Will Change The Way You Think",
+      "olid": "OL31489498M"
+    },
+    {
+      "title": "How to Stop Time",
+      "olid": "OL28898184M"
+    },
+    {
+      "title": "The Defining Decade: Why Your Twenties Matter--And How to Make the Most of Them Now",
+      "olid": "OL26791039M"
+    },
+    {
+      "title": "The library of unrequited love",
+      "olid": "OL28422147M"
+    }
+  ],
+  "_template": "books"
+}

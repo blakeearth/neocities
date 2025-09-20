@@ -8,7 +8,7 @@ export async function getStaticPaths() {
   const books = await getCollection("books");
 
   const uniqueBookOLIDs = [
-    ...new Set(highlights.flatMap((highlight) => highlight.data.OLID)),
+    ...new Set(highlights.flatMap((highlight) => highlight.data.source)),
   ];
 
   return uniqueBookOLIDs.map((olid) => ({
@@ -22,7 +22,7 @@ export async function getStaticPaths() {
             new Date(b.data.timestamp).getTime() -
             new Date(a.data.timestamp).getTime()
         )
-        .filter((highlight) => highlight.data.OLID == olid),
+        .filter((highlight) => highlight.data.source == olid),
     },
   }));
 }

@@ -1,4 +1,5 @@
 import { file, glob } from 'astro/loaders';
+import highlightData from '../src/data/highlights/highlights.json';
 import { defineCollection, z } from 'astro:content';
 
 const cards = defineCollection({
@@ -30,14 +31,13 @@ const siteUpdates = defineCollection({
 });
 
 const highlights = defineCollection({
-	loader: async () => {
-		const response = await fetch(import.meta.env.HIGHLIGHTS_API);
-		return await response.json();
+	loader: () => {
+		const response = highlightData.highlights;
+		return response.map((h, index) => { return {...h, tags: h.tag.toString(), id: index.toString()} });
 	},
 	schema: z.object({
 		text: z.string(),
-		title: z.string(),
-		OLID: z.string(),
+		source: z.string(),
 		tags: z.string(),
 		timestamp: z.string(),
 	})

@@ -1,7 +1,8 @@
-import { writeFile, readFile, mkdir } from 'fs/promises';
+import { writeFile, mkdir } from 'fs/promises';
 import fetch from 'node-fetch';
 import path from 'path';
 import cliProgress from 'cli-progress';
+import highlights from '../data/highlights/highlights.json';
 
 // Parse command line arguments
 const args = process.argv.slice(2);
@@ -10,14 +11,10 @@ const isDevMode = args.includes('--dev');
 async function processBookDetails() {
     console.log(`Running in ${isDevMode ? 'development' : 'production'} mode`);
 
-    // Read highlights
-    const highlightsRaw = await fetch(process.env.HIGHLIGHTS_API);
-    const highlights = await highlightsRaw.json();
-
     // Collect unique OLIDs
-    const uniqueOLIDs = [...new Set(Object.values(highlights).map(h => h.OLID))];
+    const uniqueOLIDs = [...new Set(Object.values(highlights.highlights).map(h => h.source))];
     const findFirstHighlightByOLID = (highlights: any, targetOLID: string) => {
-        return Object.values(highlights).find(highlight => highlight.OLID === targetOLID);
+        return Object.values(highlights).find(highlight => highlight.source === targetOLID);
     };
 
     // Create a new progress bar instance
@@ -35,10 +32,7 @@ async function processBookDetails() {
     for (const olid of uniqueOLIDs) {
         try {
             const highlight = findFirstHighlightByOLID(highlights, olid);
-            const bookDetails = await fetchBookDetails(olid, {
-                title: highlight.title,
-                author: highlight.author,
-            });
+            const bookDetails = await fetchBookDetails(olid);
             bookDetailsMap[olid] = bookDetails;
         } catch (error) {
             console.error(`Failed to fetch details for OLID ${olid}`, error);
