@@ -96,7 +96,7 @@ export default defineConfig({
                 required: true,
                 ui: {
                   itemProps: (values) => ({
-                    label: ": " + values?.text,
+                    label: values?.text,
                   }),
                 },
                 fields: [
