@@ -41,7 +41,6 @@ jobs:
             # If you have a different build process, replace this with your own build steps
             - name: Install deps and build
               run: |
-                  npm i
                   npm run build
             - name: Remove gitignore file
               run: rm ./dist/admin/.gitignore
