@@ -3,6 +3,8 @@
     "type": "module",
     "version": "0.0.1",
     "scripts": {
+        "gen": "tinacms dev -c \"exit\"",
+        "exit": "env-cmd tsx src/utils/exit-parent-process.ts",
         "dev": "npm run process-books:dev && tinacms dev -c \"astro dev\"",
         "build": "npm run process-books:build && tinacms build && astro build",
         "preview": "astro preview",
