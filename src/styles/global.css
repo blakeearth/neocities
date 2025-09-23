@@ -9,11 +9,11 @@
 }
 
 html.dark {
-    --bg: #272727;
-    --text: white;
+    --bg: #1b1b1b;
+    --text: #fff8ea;
     --link: #37ce69;
     --panel-bg: black;
-    --border: white;
+    --border: #fff8ea;
 }
 
 h1 {
