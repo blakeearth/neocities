@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-    --bg: white;
-    --text: black;
+    --bg: #fff8ea;
+    --text: #363636;
     --link: #156e3d;
     --panel-bg: white;
     --border: black;
