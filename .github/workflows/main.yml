@@ -18,7 +18,12 @@ jobs:
             - uses: actions/checkout@v4
             # Set up any tools and build steps here
             # This example uses a Node.js toolchain to build a site
-            - uses: EndBug/add-and-commit@v9
+            - name: Build schema
+              run: |
+                  npm i
+                  npm run gen
+            - name: Use commit
+              uses: EndBug/add-and-commit@v9
               with:
                   default_author: github_actions
             - name: Use Node.js
