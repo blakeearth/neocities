@@ -11,7 +11,7 @@ const highlights = await getCollection("highlights");
 const highlightItem = highlights.find((h: { id: any }) => h.id === highlightId);
 const highlight = highlightItem!.data;
 
-const bookItem = books.find((b: { id: any }) => b.id === highlight.OLID);
+const bookItem = books.find((b: { id: any }) => b.id === highlight.source);
 const book = bookItem!.data;
 ---
 
@@ -23,7 +23,7 @@ const book = bookItem!.data;
         <div class="flex flex-col gap-2">
           <span class="text-sm">
             —{book.author}, <cite
-              ><a href={`/library/highlights/books/${highlight.OLID}`}
+              ><a href={`/library/highlights/books/${highlight.source}`}
                 >{book.title}</a
               ></cite
             >. Highlighted <FormattedDate
@@ -48,7 +48,7 @@ const book = bookItem!.data;
     </div>
     {
       book?.coverImage?.medium && (
-        <a href={`/library/highlights/books/${highlight.OLID}`}>
+        <a href={`/library/highlights/books/${highlight.source}`}>
           <img
             src={book.coverImage.medium}
             alt={`Cover of ${book.title}`}

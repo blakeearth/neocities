@@ -9,9 +9,9 @@
 }
 
 html.dark {
-    --bg: black;
+    --bg: #272727;
     --text: white;
-    --link: #10a151;
+    --link: #37ce69;
     --panel-bg: black;
     --border: white;
 }

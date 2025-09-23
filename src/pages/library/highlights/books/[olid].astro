@@ -8,7 +8,7 @@ export async function getStaticPaths() {
   const books = await getCollection("books");
 
   const uniqueBookOLIDs = [
-    ...new Set(highlights.flatMap((highlight) => highlight.data.OLID)),
+    ...new Set(highlights.flatMap((highlight) => highlight.data.source)),
   ];
 
   return uniqueBookOLIDs.map((olid) => ({
@@ -20,9 +20,9 @@ export async function getStaticPaths() {
         .sort(
           (a, b) =>
             new Date(b.data.timestamp).getTime() -
-            new Date(a.data.timestamp).getTime()
+            new Date(a.data.timestamp).getTime(),
         )
-        .filter((highlight) => highlight.data.OLID == olid),
+        .filter((highlight) => highlight.data.source == olid),
     },
   }));
 }
@@ -31,6 +31,9 @@ const { filteredHighlights, book } = Astro.props;
 ---
 
 <Layout title=`Highlights`>
-  <h3>From <span class="italic">{book?.title}</span></h3>
+  <div>
+    <h3>From <span class="italic">{book?.title}</span></h3>
+    <span>By {book?.author}</span>
+  </div>
   <HighlightGrid highlights={filteredHighlights} />
 </Layout>

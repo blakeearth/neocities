@@ -1,0 +1,56 @@
+{
+  "site_updates": [
+    {
+      "text": "Updated the About page",
+      "date": "2024-12-24T00:00:00.000Z"
+    },
+    {
+      "text": "Added a theme inspired by Frutiger Aero and Vista. It feels calm",
+      "date": "2025-01-25T00:00:00.000Z"
+    },
+    {
+      "text": "Added \"Oats and coffee\"",
+      "date": "2025-01-27T00:00:00.000Z"
+    },
+    {
+      "text": "Added a few old blog posts from previous versions of the site & brought back the Lyric Status section",
+      "date": "2025-04-16T00:00:00.000Z"
+    },
+    {
+      "text": "Added \"It won't be perfect. Do it anyway\", refreshed the home page",
+      "date": "2025-05-03T00:00:00.000Z"
+    },
+    {
+      "text": "Major overhaul! Migrated the site to Astro and added an initial highlights system!",
+      "date": "2025-05-17T00:00:00.000Z"
+    },
+    {
+      "text": "Got Webmentions working (I think...)! Also finished up the first batch of highlights.",
+      "date": "2025-05-21T00:00:00.000Z"
+    },
+    {
+      "text": "Found and added a few, ahem, *vintage* cards to the site from the early days of blake.earth. There are still more out there...",
+      "date": "2025-05-22T00:00:00.000Z"
+    },
+    {
+      "text": "Added a webgarden!",
+      "date": "2025-05-26T00:00:00.000Z"
+    },
+    {
+      "text": "Made a little app with val.town to make it easier to manage my highlights. Lots of fun. I'll probably make a guestbook or comments section with it next!",
+      "date": "2025-05-29T00:00:00.000Z"
+    },
+    {
+      "text": "Briefly added comments and then decided to leave things up to webmentions for now. I'm a sucker for decentralization.",
+      "date": "2025-05-30T00:00:00.000Z"
+    },
+    {
+      "text": "Added TinaCMS on top of Astro for easier content management. Added draft functionality to the Astro configuration. Added some new books and highlights. Re-did the styling of the website to be more Earth-y.",
+      "date": "2025-09-18T00:00:00.000Z"
+    },
+    {
+      "text": "Fully implemented Tina CMS and removed all external dependencies (except Open Library)! Now, I can fully manage books, highlights, tags, site updates, lyric statuses, and cards - all right here.",
+      "date": "2025-09-21T00:00:00.000Z"
+    }
+  ]
+}
