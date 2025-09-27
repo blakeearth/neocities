@@ -17,7 +17,7 @@ const siteUpdates = await getCollection("siteUpdates");
   <body style="background:transparent;">
     <main class="p-4">
       <ul>
-        {siteUpdates.map((update) => (
+        {siteUpdates.reverse().map((update) => (
           <Status
             date={update.data.date ? update.data.date.toLocaleDateString() : ""}
           >
