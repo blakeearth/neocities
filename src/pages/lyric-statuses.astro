@@ -4,16 +4,17 @@ import { getCollection } from "astro:content";
 import Status from "../components/Status.astro";
 
 const lyricStatuses = await getCollection("lyricStatuses");
-
-const latestLyric = lyricStatuses.length ? lyricStatuses[lyricStatuses.length - 1] : null;
-const olderLyrics = lyricStatuses.length ? lyricStatuses.slice(0, lyricStatuses.length - 1) : [];
 ---
 
 <html lang="en">
   <head>
     <title>Lyric Status | blake.earth</title>
+    <script is:inline>
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark') document.documentElement.classList.add('dark');
+    </script>
   </head>
-  <body>
+  <body style="background:transparent;">
     <main class="p-4">
       <ul class="lyrics">
         {

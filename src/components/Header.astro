@@ -50,11 +50,14 @@ const { targetParent } = Astro.props;
       applyTheme(saved);
     }
 
-    toggle.addEventListener("click", function () {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
       const isDark = root.classList.contains("dark");
       const next = isDark ? "light" : "dark";
       applyTheme(next);
       localStorage.setItem("theme", next);
+      // Reload so same-origin iframes reload and can pick up the new theme
+      location.reload();
     });
   })();
 </script>

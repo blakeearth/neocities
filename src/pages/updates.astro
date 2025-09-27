@@ -4,14 +4,17 @@ import { getCollection } from "astro:content";
 import Status from "../components/Status.astro";
 
 const siteUpdates = await getCollection("siteUpdates");
-
 ---
 
 <html lang="en">
   <head>
     <title>Site Updates | blake.earth</title>
+    <script is:inline>
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark') document.documentElement.classList.add('dark');
+    </script>
   </head>
-  <body>
+  <body style="background:transparent;">
     <main class="p-4">
       <ul>
         {siteUpdates.map((update) => (
