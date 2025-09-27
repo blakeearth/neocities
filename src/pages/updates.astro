@@ -1,0 +1,27 @@
+---
+import "../styles/global.css";
+import { getCollection } from "astro:content";
+import Status from "../components/Status.astro";
+
+const siteUpdates = await getCollection("siteUpdates");
+
+---
+
+<html lang="en">
+  <head>
+    <title>Site Updates | blake.earth</title>
+  </head>
+  <body>
+    <main class="p-4">
+      <ul>
+        {siteUpdates.map((update) => (
+          <Status
+            date={update.data.date ? update.data.date.toLocaleDateString() : ""}
+          >
+            {update.data.text}
+          </Status>
+        ))}
+      </ul>
+    </main>
+  </body>
+</html>

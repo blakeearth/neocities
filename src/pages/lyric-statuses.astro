@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+import { getCollection } from "astro:content";
+import Status from "../components/Status.astro";
+
+const lyricStatuses = await getCollection("lyricStatuses");
+
+const latestLyric = lyricStatuses.length ? lyricStatuses[lyricStatuses.length - 1] : null;
+const olderLyrics = lyricStatuses.length ? lyricStatuses.slice(0, lyricStatuses.length - 1) : [];
+---
+
+<html lang="en">
+  <head>
+    <title>Lyric Status | blake.earth</title>
+  </head>
+  <body>
+    <main class="p-4">
+      <ul class="lyrics">
+        {
+              lyricStatuses.reverse().map((lyric) => (
+                <Status
+                  emoji={lyric.data.emoji}
+                  date={lyric.data.date ? lyric.data.date.toLocaleDateString() : ""}
+                  attribution={lyric.data.attribution}
+                >
+                  <span class="italic">{lyric.data.text}</span>
+                </Status>
+              ))
+            }
+      </ul>
+    </main>
+  </body>
+</html>
