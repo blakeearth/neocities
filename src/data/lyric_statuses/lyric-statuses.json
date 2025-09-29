@@ -1,100 +1,98 @@
 {
-  "lyric_statuses": [
-    {
-      "emoji": "🕊️",
-      "text": "Handmade Heaven",
-      "date": "2019-02-09T00:00:00.000Z",
-      "attribution": "\"Handmade Heaven\" by Marina"
-    },
-    {
-      "emoji": "⏳",
-      "text": "Backup makeshift life",
-      "date": "1970-01-01T00:00:00.000Z",
-      "attribution": "\"Wait it Out\" by Imogen Heap"
-    },
-    {
-      "emoji": "🌳",
-      "text": "Forming empires in the shade of trees",
-      "date": "1970-01-01T00:00:00.000Z",
-      "attribution": "\"Running with the Boys\" (Midnight Machines version) by Lights"
-    },
-    {
-      "emoji": "🍃",
-      "text": "Bad ideas, ay / I know where they lead",
-      "date": "2019-08-24T00:00:00.000Z",
-      "attribution": "\"Bad Ideas\" by Tessa Violet"
-    },
-    {
-      "emoji": "⏰",
-      "text": "I'm stayin' up too late just so I can stay awake",
-      "date": "2019-11-23T00:00:00.000Z",
-      "attribution": "\"Bored\" by Tessa Violet"
-    },
-    {
-      "emoji": "💤",
-      "text": "You think that I could sense a trend",
-      "date": "2019-11-25T00:00:00.000Z",
-      "attribution": "\"Bored\" by Tessa Violet"
-    },
-    {
-      "emoji": "👻",
-      "text": "Good at overthinking with my heart / How you even think it got this far?",
-      "date": "2019-12-19T00:00:00.000Z",
-      "attribution": "\"needy\" by Ariana Grande"
-    },
-    {
-      "emoji": "⛵",
-      "text": "I'm gonna need something to hold on to",
-      "date": "2020-02-04T00:00:00.000Z",
-      "attribution": "\"Something to Hold on To\" by Emily Warren"
-    },
-    {
-      "emoji": "🌈",
-      "text": "And now I see technicolor",
-      "date": "2020-04-28T00:00:00.000Z",
-      "attribution": "\"The Fool\" by Ryn Weaver"
-    },
-    {
-      "emoji": "🎙️",
-      "text": "And it breaks my heart",
-      "date": "2020-05-23T00:00:00.000Z",
-      "attribution": "\"Fidelity\" by Regina Spektor"
-    },
-    {
-      "emoji": "🛻",
-      "text": "Do I make you wanna dance real slow / Go flyin' down a two-lane road",
-      "date": "2020-08-22T00:00:00.000Z",
-      "attribution": "\"Do I Make You Wanna\" by Billy Currington"
-    },
-    {
-      "emoji": "💤",
-      "text": "I got my coffee, Sunday, New York Times / Little piece of paradise",
-      "date": "2020-10-29T00:00:00.000Z",
-      "attribution": "\"Coffee Sunday NYT\" by Leah Nobel"
-    },
-    {
-      "emoji": "🚪",
-      "text": "Always dreamed of kicking down the door / What were you waiting for?",
-      "date": "2021-04-19T00:00:00.000Z",
-      "attribution": "\"Younger Me\" by Brothers Osborne"
-    },
-    {
-      "emoji": "📂",
-      "text": "Nobody's keeping tabs on us",
-      "date": "2025-04-22T00:00:00.000Z",
-      "attribution": "\"Tabs\" by Lights"
-    },
-    {
-      "emoji": "🎨",
-      "text": "It looks a little rough, but it runs okay",
-      "date": "2025-05-18T00:00:00.000Z",
-      "attribution": "\"Imperfectly\" by Ani DiFranco"
-    },
-    {
-      "emoji": "☔️",
-      "text": "Don’t listen to the weatherman; he never goes outside. [If] we keep hanging on, the storm will pass us by.",
-      "date": "2025-09-22T00:00:00.000Z",
-      "attribution": "“Weatherman” by Hush Kids"
-    }
-  ]
+    "lyric_statuses": [
+        {
+            "emoji": "🕊️",
+            "text": "Handmade Heaven",
+            "date": "2019-02-09T00:00:00.000Z",
+            "attribution": "\"Handmade Heaven\" by Marina"
+        },
+        {
+            "emoji": "⏳",
+            "text": "Backup makeshift life",
+            "attribution": "\"Wait it Out\" by Imogen Heap"
+        },
+        {
+            "emoji": "🌳",
+            "text": "Forming empires in the shade of trees",
+            "attribution": "\"Running with the Boys\" (Midnight Machines version) by Lights"
+        },
+        {
+            "emoji": "🍃",
+            "text": "Bad ideas, ay / I know where they lead",
+            "date": "2019-08-24T00:00:00.000Z",
+            "attribution": "\"Bad Ideas\" by Tessa Violet"
+        },
+        {
+            "emoji": "⏰",
+            "text": "I'm stayin' up too late just so I can stay awake",
+            "date": "2019-11-23T00:00:00.000Z",
+            "attribution": "\"Bored\" by Tessa Violet"
+        },
+        {
+            "emoji": "💤",
+            "text": "You think that I could sense a trend",
+            "date": "2019-11-25T00:00:00.000Z",
+            "attribution": "\"Bored\" by Tessa Violet"
+        },
+        {
+            "emoji": "👻",
+            "text": "Good at overthinking with my heart / How you even think it got this far?",
+            "date": "2019-12-19T00:00:00.000Z",
+            "attribution": "\"needy\" by Ariana Grande"
+        },
+        {
+            "emoji": "⛵",
+            "text": "I'm gonna need something to hold on to",
+            "date": "2020-02-04T00:00:00.000Z",
+            "attribution": "\"Something to Hold on To\" by Emily Warren"
+        },
+        {
+            "emoji": "🌈",
+            "text": "And now I see technicolor",
+            "date": "2020-04-28T00:00:00.000Z",
+            "attribution": "\"The Fool\" by Ryn Weaver"
+        },
+        {
+            "emoji": "🎙️",
+            "text": "And it breaks my heart",
+            "date": "2020-05-23T00:00:00.000Z",
+            "attribution": "\"Fidelity\" by Regina Spektor"
+        },
+        {
+            "emoji": "🛻",
+            "text": "Do I make you wanna dance real slow / Go flyin' down a two-lane road",
+            "date": "2020-08-22T00:00:00.000Z",
+            "attribution": "\"Do I Make You Wanna\" by Billy Currington"
+        },
+        {
+            "emoji": "💤",
+            "text": "I got my coffee, Sunday, New York Times / Little piece of paradise",
+            "date": "2020-10-29T00:00:00.000Z",
+            "attribution": "\"Coffee Sunday NYT\" by Leah Nobel"
+        },
+        {
+            "emoji": "🚪",
+            "text": "Always dreamed of kicking down the door / What were you waiting for?",
+            "date": "2021-04-19T00:00:00.000Z",
+            "attribution": "\"Younger Me\" by Brothers Osborne"
+        },
+        {
+            "emoji": "📂",
+            "text": "Nobody's keeping tabs on us",
+            "date": "2025-04-22T00:00:00.000Z",
+            "attribution": "\"Tabs\" by Lights"
+        },
+        {
+            "emoji": "🎨",
+            "text": "It looks a little rough, but it runs okay",
+            "date": "2025-05-18T00:00:00.000Z",
+            "attribution": "\"Imperfectly\" by Ani DiFranco"
+        },
+        {
+            "emoji": "☔️",
+            "text": "Don’t listen to the weatherman; he never goes outside. [If] we keep hanging on, the storm will pass us by.",
+            "date": "2025-09-22T00:00:00.000Z",
+            "attribution": "“Weatherman” by Hush Kids"
+        }
+    ]
 }

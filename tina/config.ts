@@ -186,7 +186,6 @@ export default defineConfig({
                 name: "date",
                 label: "Date",
                 type: "datetime",
-                required: true,
               },
               {
                 name: "attribution",
