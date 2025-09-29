@@ -4,36 +4,34 @@
     --bg: #fff8ea;
     --text: #363636;
     --link: #156e3d;
-    --panel-bg: white;
     --border: black;
 }
 
 html.dark {
     --bg: #1b1b1b;
     --text: #fff8ea;
-    --link: #37ce69;
-    --panel-bg: black;
+    --link: #82c085;
     --border: #fff8ea;
 }
 
 h1 {
-	font-size: 2.75rem;
-	font-weight: bold;
-	}
+    font-size: 2.75rem;
+    font-weight: bold;
+}
 
-	h2 {
-	font-size: 2.25rem;
-	font-weight: bold;
-	}
+h2 {
+    font-size: 2.25rem;
+    font-weight: bold;
+}
 
-	h3 {
-	font-size: 1.75rem;
-	font-weight: bold;
-	}
+h3 {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
 
-	li {
-	margin-bottom: 0.5rem;
-	}
+li {
+    margin-bottom: 0.5rem;
+}
 
 body {
     min-height: 100vh;
@@ -59,7 +57,8 @@ article {
     gap: 0.5rem;
 }
 
-article ul:not(.tags, .cards), article ol {
+article ul:not(.tags, .cards),
+article ol {
     padding-left: 4ch;
 }
 
@@ -105,27 +104,33 @@ main {
     font-size: large;
 }
 
-.todo-list, .lyrics, .updates-list {
+.todo-list,
+.lyrics,
+.updates-list {
     list-style: none;
-	padding-left: 0;
+    padding-left: 0;
 }
 
-.updates-list li, lyric-status {
+.updates-list li,
+lyric-status {
     margin-bottom: 1rem;
 }
 
-.updates-list li:last-child, .lyrics lyric-status:last-child {
+.updates-list li:last-child,
+.lyrics lyric-status:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: none;
 }
 
-.updates-list, .lyrics {
+.updates-list,
+.lyrics {
     max-height: none;
     overflow-y: visible;
 }
 
-details.older-updates, details.older-lyrics {
+details.older-updates,
+details.older-lyrics {
     margin-top: 1rem;
     border-top: none;
 }
@@ -154,7 +159,7 @@ a:hover {
 }
 
 .theme-toggle:focus {
-    outline: 2px solid rgba(21,110,61,0.25);
+    outline: 2px solid rgba(21, 110, 61, 0.25);
     outline-offset: 2px;
 }
 
