@@ -49,6 +49,7 @@ export default defineConfig({
           {
             name: "tags",
             list: true,
+            addItemBehavior: 'prepend',
             label: "Tags",
             type: "string",
             required: true,
@@ -71,6 +72,7 @@ export default defineConfig({
             name: "books",
             label: "Books",
             list: true,
+            addItemBehavior: 'prepend',
             type: "object",
             ui: {
               itemProps: (values) => ({
@@ -108,6 +110,7 @@ export default defineConfig({
           {
             name: "highlights",
             list: true,
+            addItemBehavior: 'prepend',
             label: "Highlights",
             type: "object",
             required: true,
@@ -134,14 +137,14 @@ export default defineConfig({
                 label: "Source",
                 type: "string",
                 required: true,
-                options: books.books.map((book) => { return { value: book.olid, label: book.title } })
+                options: books.books.sort((a, b) => a.title.localeCompare(b.title)).map((book) => { return { value: book.olid, label: book.title } })
               },
               {
                 name: "tag",
                 label: "Tag",
                 type: "string",
                 list: true,
-                options: tags.tags.map(tag => { return { value: tag, label: tag } })
+                options: tags.tags.sort().map(tag => { return { value: tag, label: tag } })
               },
             ],
           },
@@ -163,6 +166,7 @@ export default defineConfig({
             name: "lyric_statuses",
             label: "Lyric Statuses",
             list: true,
+            addItemBehavior: 'prepend',
             type: "object",
             ui: {
               itemProps: (values) => ({
@@ -213,6 +217,7 @@ export default defineConfig({
             name: "site_updates",
             label: "Site Updates",
             list: true,
+            addItemBehavior: 'prepend',
             type: "object",
             ui: {
               itemProps: (values) => ({
