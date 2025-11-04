@@ -3,12 +3,14 @@ import { getCollection } from "astro:content";
 import Tag from "./Tag.astro";
 import FormattedDate from "./FormattedDate.astro";
 
-const { highlightId } = Astro.props;
+const { highlightId, searchText } = Astro.props;
 
 const books = await getCollection("books");
 const highlights = await getCollection("highlights");
 
-const highlightItem = highlights.find((h: { id: any }) => h.id === highlightId);
+const highlightItem = searchText
+  ? highlights.find((h: any) => h.data.text.includes(searchText))
+  : highlights.find((h: { id: any }) => h.id === highlightId);
 const highlight = highlightItem!.data;
 
 const bookItem = books.find((b: { id: any }) => b.id === highlight.source);
