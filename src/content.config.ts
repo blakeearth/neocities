@@ -62,6 +62,8 @@ const books = defineCollection({
 			medium: z.string().nullable(),
 			large: z.string().nullable()
 		}).nullable(),
+		blurb: z.string().optional(),
+		rating: z.string().optional(),
 		publishDate: z.string().nullable(),
 		publishers: z.array(z.string()).nullable(),
 		subjects: z.array(z.string()).nullable(),

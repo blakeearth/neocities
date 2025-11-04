@@ -5,6 +5,8 @@
     --text: #363636;
     --link: #156e3d;
     --border: black;
+    --sidebar-one: #82c085;
+    --sidebar-two: #ffab67;
 }
 
 html.dark {
@@ -12,6 +14,8 @@ html.dark {
     --text: #fff8ea;
     --link: #82c085;
     --border: #fff8ea;
+    --sidebar-one: #0b160d;
+    --sidebar-two: #251609;
 }
 
 h1 {
@@ -26,6 +30,16 @@ h2 {
 
 h3 {
     font-size: 1.75rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.125rem;
     font-weight: bold;
 }
 
@@ -127,6 +141,14 @@ lyric-status {
 .lyrics {
     max-height: none;
     overflow-y: visible;
+}
+
+.sidebar-one {
+    background-color: var(--sidebar-one);
+}
+
+.sidebar-two {
+    background-color: var(--sidebar-two);
 }
 
 details.older-updates,

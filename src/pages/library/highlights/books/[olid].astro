@@ -27,13 +27,32 @@ export async function getStaticPaths() {
   }));
 }
 
+
 const { filteredHighlights, book } = Astro.props;
 ---
 
 <Layout title=`Highlights`>
   <div>
-    <h3>From <span class="italic">{book?.title}</span></h3>
+    <h3><span class="italic">{book?.title}</span></h3>
     <span>By {book?.author}</span>
   </div>
+  {
+    (book.blurb || book.rating) && (
+      <div class="border my-6 p-4 flex flex-col gap-2">
+        {book.blurb && (
+          <div>
+            <h4>Blurb</h4>
+            <span>{book?.blurb}</span>
+          </div>
+        )}
+        {book.rating && (
+          <div>
+            <h4>Rating</h4>
+            <span>{book?.rating}</span>
+          </div>
+        )}
+      </div>
+    )
+  }
   <HighlightGrid highlights={filteredHighlights} />
 </Layout>

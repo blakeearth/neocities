@@ -86,6 +86,16 @@ export default defineConfig({
                 type: "string",
               },
               {
+                name: "blurb",
+                label: "Blurb",
+                type: "string",
+              },
+              {
+                name: "rating",
+                label: "Rating",
+                type: "string",
+              },
+              {
                 name: "olid",
                 label: "OLID",
                 type: "string",

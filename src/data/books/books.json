@@ -2,6 +2,8 @@
   "books": [
     {
       "title": "I Hope We Choose Love",
+      "blurb": "",
+      "rating": "★★★★⯨",
       "olid": "OL28932587M"
     },
     {
@@ -18,6 +20,8 @@
     },
     {
       "title": "Mules of love",
+      "blurb": "An aching and raw portrayal of love in many forms.",
+      "rating": "★★★★⯨",
       "olid": "OL3955602M"
     },
     {
@@ -54,6 +58,8 @@
     },
     {
       "title": "Better by Far",
+      "blurb": "A beautiful book.",
+      "rating": "5 / 5",
       "olid": "OL50733631M"
     },
     {

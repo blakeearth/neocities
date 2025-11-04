@@ -32,7 +32,11 @@ async function processBookDetails() {
 
     for (const olid of uniqueOLIDs) {
         try {
-            const bookDetails = await fetchBookDetails(olid, { title: books.books.find(b => b.olid === olid)?.title });
+            const book = books.books.find(b => b.olid === olid);
+            const bookDetails = {
+                ...await fetchBookDetails(olid, { title: book?.title }),
+                ...book
+            };
             bookDetailsMap[olid] = bookDetails;
         } catch (error) {
             console.error(`Failed to fetch details for OLID ${olid}`, error);
@@ -50,8 +54,6 @@ async function processBookDetails() {
         'src/data/books.json',
         JSON.stringify(bookDetailsMap, null, 2)
     );
-
-    console.log(`Processed ${Object.keys(bookDetailsMap).length} unique books`);
 }
 
 async function handleCoverImage(imageUrl: string | undefined, olid: string, size: string): Promise<string | null> {
