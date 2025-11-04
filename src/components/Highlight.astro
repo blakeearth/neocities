@@ -15,7 +15,7 @@ const bookItem = books.find((b: { id: any }) => b.id === highlight.source);
 const book = bookItem!.data;
 ---
 
-<blockquote class="flex flex-col w-full border-white border-l-1 py-4 pl-4">
+<blockquote class="flex flex-col w-full border-l-1 py-4 pl-4">
   <div class="flex gap-4 justify-start h-full">
     <div class="w-full flex flex-col justify-start gap-2">
       <span class="text-xl lg:text-2xl">{highlight.text}</span>
