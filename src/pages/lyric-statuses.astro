@@ -16,7 +16,7 @@ const lyricStatuses = await getCollection("lyricStatuses");
   </head>
   <body style="background:transparent;">
     <main class="p-4">
-      <ul class="lyrics">
+      <ul class="lyrics flex flex-col gap-2">
         {
               lyricStatuses.reverse().map((lyric) => (
                 <Status
