@@ -296,6 +296,74 @@ export default defineConfig({
                   name: "highlightId",
                   type: "string"
                 }]
+              },
+              {
+                name: "Quote",
+                label: "Quote",
+                fields: [
+                  {
+                    name: "text",
+                    label: "Quote Text",
+                    type: "string",
+                    required: true,
+                  },
+                  {
+                    name: "author",
+                    label: "Author",
+                    type: "string",
+                    required: true,
+                  },
+                  {
+                    name: "sourceTitle",
+                    label: "Source Title",
+                    type: "string",
+                    required: true,
+                  },
+                  {
+                    name: "sourceUrl",
+                    label: "Source URL",
+                    type: "string",
+                    required: true,
+                  },
+                  {
+                    name: "date",
+                    label: "Date",
+                    type: "datetime",
+                    required: false,
+                  },
+                  {
+                    name: "dateLabel",
+                    label: "Date Label",
+                    type: "string",
+                    required: false,
+                    description: "e.g., 'Highlighted', 'Published', 'Written'. Defaults to 'Highlighted'",
+                  },
+                  {
+                    name: "tags",
+                    label: "Tags",
+                    type: "string",
+                    list: true,
+                    required: false,
+                  },
+                  {
+                    name: "coverImageUrl",
+                    label: "Cover Image URL",
+                    type: "string",
+                    required: false,
+                  },
+                  {
+                    name: "coverImageAlt",
+                    label: "Cover Image Alt Text",
+                    type: "string",
+                    required: false,
+                  },
+                  {
+                    name: "coverImageLinkUrl",
+                    label: "Cover Image Link URL",
+                    type: "string",
+                    required: false,
+                  },
+                ]
               }
             ],
           }

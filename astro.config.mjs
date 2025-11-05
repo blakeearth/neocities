@@ -16,7 +16,10 @@ export default defineConfig({
     },
     integrations: [
         AutoImport({
-            imports: ["./src/components/Highlight.astro"],
+            imports: [
+                "./src/components/Highlight.astro",
+                "./src/components/Quote.astro",
+            ],
         }),
         mdx(),
         sitemap(),
