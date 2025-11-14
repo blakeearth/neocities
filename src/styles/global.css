@@ -68,7 +68,8 @@ body {
 }
 
 nav a,
-a[href*="rss"] {
+a[href*="rss"],
+.footer-tagline {
     font-family: 'Abril Fatface', Georgia, 'Times New Roman', Times, serif;
 }
 
