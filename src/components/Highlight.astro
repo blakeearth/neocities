@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import Tag from "./Tag.astro";
-import FormattedDate from "./FormattedDate.astro";
+import Quote from "./Quote.astro";
 
 const { highlightId, searchText } = Astro.props;
 
@@ -15,49 +14,21 @@ const highlight = highlightItem!.data;
 
 const bookItem = books.find((b: { id: any }) => b.id === highlight.source);
 const book = bookItem!.data;
+
+const tags = highlight.tags
+  .split(",")
+  .filter((tag: string) => tag.length > 0)
+  .map((tag: string) => tag.trim());
 ---
 
-<blockquote class="flex flex-col w-full border-l-1 py-4 pl-4">
-  <div class="flex gap-4 justify-start h-full">
-    <div class="w-full flex flex-col justify-start gap-2">
-      <span class="text-xl lg:text-2xl">{highlight.text}</span>
-      <div class="flex justify-start items-start">
-        <div class="flex flex-col gap-2">
-          <span class="text-sm">
-            —{book.author}, <cite
-              ><a href={`/library/highlights/books/${highlight.source}`}
-                >{book.title}</a
-              ></cite
-            >. Highlighted <FormattedDate
-              date={new Date(highlight.timestamp)}
-            />
-          </span>
-          <div class="flex gap-2 flex-wrap">
-            {
-              highlight.tags
-                .split(",")
-                .filter((tag: string) => tag.length > 0)
-                .map((tag: string) => tag.trim())
-                .map((tag: string) => (
-                  <Tag emoji="#" href={`/library/highlights/tags/${tag}`}>
-                    {tag}
-                  </Tag>
-                ))
-            }
-          </div>
-        </div>
-      </div>
-    </div>
-    {
-      book?.coverImage?.medium && (
-        <a href={`/library/highlights/books/${highlight.source}`}>
-          <img
-            src={book.coverImage.medium}
-            alt={`Cover of ${book.title}`}
-            class="hidden md:block"
-          />
-        </a>
-      )
-    }
-  </div>
-</blockquote>
+<Quote
+  text={highlight.text}
+  author={book.author}
+  sourceTitle={book.title}
+  sourceUrl={`/library/highlights/books/${highlight.source}`}
+  date={highlight.timestamp}
+  tags={tags}
+  coverImageUrl={book?.coverImage?.medium}
+  coverImageAlt={`Cover of ${book.title}`}
+  coverImageLinkUrl={`/library/highlights/books/${highlight.source}`}
+/>
