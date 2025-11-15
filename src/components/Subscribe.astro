@@ -61,63 +61,67 @@ const {
     successDuration,
   }}
 >
-  const form = document.getElementById("google-form") as HTMLFormElement;
-  const submitBtn = document.getElementById("submit-btn") as HTMLButtonElement;
-  const nameInput = document.getElementById("name") as HTMLInputElement;
-  const emailInput = document.getElementById("email") as HTMLInputElement;
+  (function() {
+    const form = document.getElementById("google-form");
+    const submitBtn = document.getElementById("submit-btn");
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
 
-  function setFormState(disabled: boolean, buttonText: string) {
-    nameInput.disabled = disabled;
-    emailInput.disabled = disabled;
-    submitBtn.disabled = disabled;
-    submitBtn.textContent = buttonText;
-  }
+    function setFormState(disabled, buttonText) {
+      nameInput.disabled = disabled;
+      emailInput.disabled = disabled;
+      submitBtn.disabled = disabled;
+      submitBtn.textContent = buttonText;
+    }
 
-  function submitToGoogleForm(name: string, email: string) {
-    const iframe = document.createElement("iframe");
-    iframe.style.display = "none";
-    iframe.name = "hidden_iframe";
-    document.body.appendChild(iframe);
+    function submitToGoogleForm(name, email) {
+      const iframe = document.createElement("iframe");
+      iframe.style.display = "none";
+      iframe.name = "hidden_iframe";
+      document.body.appendChild(iframe);
 
-    const hiddenForm = document.createElement("form");
-    hiddenForm.action = formActionUrl;
-    hiddenForm.method = "POST";
-    hiddenForm.target = "hidden_iframe";
+      const hiddenForm = document.createElement("form");
+      hiddenForm.action = formActionUrl;
+      hiddenForm.method = "POST";
+      hiddenForm.target = "hidden_iframe";
 
-    const fields = [
-      { name: nameFieldId, value: name },
-      { name: emailFieldId, value: email },
-    ];
+      const fields = [
+        { name: nameFieldId, value: name },
+        { name: emailFieldId, value: email },
+      ];
 
-    fields.forEach(({ name, value }) => {
-      const input = document.createElement("input");
-      input.type = "hidden";
-      input.name = name;
-      input.value = value;
-      hiddenForm.appendChild(input);
-    });
+      fields.forEach(function(field) {
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = field.name;
+        input.value = field.value;
+        hiddenForm.appendChild(input);
+      });
 
-    document.body.appendChild(hiddenForm);
-    hiddenForm.submit();
+      document.body.appendChild(hiddenForm);
+      hiddenForm.submit();
 
-    setTimeout(() => {
-      document.body.removeChild(iframe);
-      document.body.removeChild(hiddenForm);
-    }, 1000);
-  }
+      setTimeout(function() {
+        document.body.removeChild(iframe);
+        document.body.removeChild(hiddenForm);
+      }, 1000);
+    }
 
-  form?.addEventListener("submit", (e) => {
-    e.preventDefault();
+    if (form) {
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
 
-    const name = nameInput.value;
-    const email = emailInput.value;
+        const name = nameInput.value;
+        const email = emailInput.value;
 
-    setFormState(true, successMessage);
-    submitToGoogleForm(name, email);
+        setFormState(true, successMessage);
+        submitToGoogleForm(name, email);
 
-    setTimeout(() => {
-      setFormState(false, submitButtonText);
-      form.reset();
-    }, successDuration);
-  });
+        setTimeout(function() {
+          setFormState(false, submitButtonText);
+          form.reset();
+        }, successDuration);
+      });
+    }
+  })();
 </script>
