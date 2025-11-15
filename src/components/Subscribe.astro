@@ -1,5 +1,4 @@
 ---
-// Subscribe component that submits to Google Forms without redirecting
 import subscribeFormData from "../data/subscribe_form/subscribe_form.json";
 
 const {
@@ -42,7 +41,8 @@ const {
       <button
         type="submit"
         id="submit-btn"
-        class="px-4 py-2 rounded font-[inherit] text-base cursor-pointer border border-[var(--border)] bg-transparent text-[var(--link)] font-semibold hover:underline disabled:opacity-60 disabled:cursor-not-allowed"
+        class="px-4 py-2 rounded cursor-pointer border border-[var(--border)] bg-transparent text-[var(--link)] font-bold hover:underline disabled:opacity-60 disabled:cursor-not-allowed text-[1rem]"
+        style="font-family: 'Abril Fatface', Georgia, 'Times New Roman', Times, serif;"
       >
         {submitButtonText}
       </button>
