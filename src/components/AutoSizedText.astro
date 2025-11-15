@@ -1,0 +1,55 @@
+---
+interface Props {
+  text: string;
+  containerId: string;
+  maxHeightPercent?: number;
+}
+
+const { text, containerId, maxHeightPercent = 0.4 } = Astro.props;
+const textId = `text-${containerId}`;
+---
+
+<div id={textId} class="auto-sized-text">{text}</div>
+
+<style>
+  .auto-sized-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Abril Fatface', Georgia, serif;
+    color: #363636;
+    text-align: center;
+    z-index: 10;
+    max-width: 90%;
+    line-height: 1.2;
+    white-space: pre-wrap;
+  }
+</style>
+
+<script define:vars={{ textId, containerId, maxHeightPercent }}>
+  const resizeText = () => {
+    const container = document.getElementById(containerId);
+    const textEl = document.getElementById(textId);
+
+    if (!container || !textEl) return;
+
+    const containerWidth = container.offsetWidth;
+    const containerHeight = container.offsetHeight;
+
+    let fontSize = containerWidth * 0.15; // Start large
+    textEl.style.fontSize = fontSize + 'px';
+
+    const maxHeight = containerHeight * maxHeightPercent;
+
+    // Reduce font size until it fits
+    while (textEl.scrollHeight > maxHeight && fontSize > 20) {
+      fontSize -= 2;
+      textEl.style.fontSize = fontSize + 'px';
+    }
+  };
+
+  window.addEventListener('resize', resizeText);
+  window.addEventListener('load', resizeText);
+  resizeText();
+</script>

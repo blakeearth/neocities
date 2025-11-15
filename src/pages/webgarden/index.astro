@@ -1,0 +1,97 @@
+---
+import "../../styles/global.css";
+import AnimatedHeader from "../../components/AnimatedHeader.astro";
+
+// Randomly select pattern on each visit (at build time this will be random)
+const patterns = [
+  'animated-pattern.svg',
+  'animated-pattern-2.svg',
+  'animated-pattern-3.svg'
+];
+const randomPattern = patterns[Math.floor(Math.random() * patterns.length)];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>blake.earth</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      flex: 1;
+    }
+
+    .header-link:hover {
+      text-decoration: none;
+    }
+
+    .header-link .animated-header {
+      height: 100% !important;
+      width: 100%;
+    }
+
+    nav {
+      padding: 0.5rem;
+      text-align: center;
+      background: var(--bg);
+    }
+
+    nav a {
+      margin: 0 0.5rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="https://blake.earth" class="header-link">
+      <AnimatedHeader
+        title={"blake\nearth"}
+        pattern={randomPattern}
+        height="100%"
+        marginBottom="0"
+      />
+    </a>
+
+    <nav>
+      <a href="https://blake.earth">home</a>
+      <a href="https://blake.earth/cards">cards</a>
+      <a href="https://blake.earth/library">library</a>
+    </nav>
+  </div>
+
+  <script>
+    // Select a random pattern on each page load
+    const patterns = [
+      'animated-pattern.svg',
+      'animated-pattern-2.svg',
+      'animated-pattern-3.svg'
+    ];
+    const randomPattern = patterns[Math.floor(Math.random() * patterns.length)];
+
+    const objectEl = document.querySelector('.animated-header object');
+    if (objectEl) {
+      objectEl.data = `/${randomPattern}`;
+    }
+  </script>
+</body>
+</html>

@@ -1,53 +1,63 @@
 ---
 interface Props {
   title: string;
+  pattern?: string;
+  height?: string;
+  mobileHeight?: string;
+  border?: boolean;
+  marginBottom?: string;
 }
 
-const { title = '' } = Astro.props;
+const {
+  title = '',
+  pattern,
+  height = '300px',
+  mobileHeight = '200px',
+  border = true,
+  marginBottom = '1rem'
+} = Astro.props;
 
-// Randomly select one of the three patterns at build time
+// Randomly select one of the three patterns at build time if not specified
 const patterns = [
   'animated-pattern.svg',
   'animated-pattern-2.svg',
   'animated-pattern-3.svg'
 ];
 
-// Use title as seed for consistent randomness per page with better distribution
 const hash = (str: string) => {
   let hash = 0;
   for (let i = 0; i < str.length; i++) {
     const char = str.charCodeAt(i);
     hash = ((hash << 5) - hash) + char;
-    hash = hash & hash; // Convert to 32-bit integer
+    hash = hash & hash;
   }
   return Math.abs(hash);
 };
 
 const seed = title ? hash(title) : 0;
-const randomPattern = patterns[seed % patterns.length];
+const selectedPattern = pattern || patterns[seed % patterns.length];
+const headerId = `header-${Math.random().toString(36).substr(2, 9)}`;
 ---
 
 {title && (
-  <div class="animated-header">
+  <div id={headerId} class="animated-header" style={`height: ${height}; margin-bottom: ${marginBottom}; ${border ? '' : 'border: none;'}`}>
     <object
-      data={`/${randomPattern}`}
+      data={`/${selectedPattern}`}
       type="image/svg+xml"
       aria-label={title}
       class="pattern-svg"
     >
-      <img src={`/${randomPattern}`} alt={title} />
+      <img src={`/${selectedPattern}`} alt={title} />
     </object>
-    <h1 class="header-title">{title}</h1>
+    <div class="header-title">{title}</div>
   </div>
 )}
 
-<style>
+<style define:vars={{ mobileHeight }}>
   .animated-header {
     position: relative;
     width: 100%;
-    height: 300px;
     overflow: hidden;
-    margin-bottom: 1rem;
     border: 0.2vh solid var(--border);
   }
 
@@ -63,22 +73,44 @@ const randomPattern = patterns[seed % patterns.length];
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Abril Fatface', Georgia, serif;
-    font-size: 3rem;
-    font-weight: normal;
     color: #363636;
     text-align: center;
     margin: 0;
     z-index: 10;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    line-height: 1.2;
+    white-space: pre-wrap;
   }
 
   @media (max-width: 768px) {
     .animated-header {
-      height: 200px;
-    }
-
-    .header-title {
-      font-size: 2rem;
+      height: var(--mobileHeight) !important;
     }
   }
 </style>
+
+<script define:vars={{ headerId }}>
+  const resizeText = () => {
+    const container = document.getElementById(headerId);
+    const textEl = container?.querySelector('.header-title');
+
+    if (!container || !textEl) return;
+
+    const containerWidth = container.offsetWidth;
+    const containerHeight = container.offsetHeight;
+
+    let fontSize = containerWidth * 0.15;
+    textEl.style.fontSize = fontSize + 'px';
+
+    const maxHeight = containerHeight * 0.4;
+
+    while (textEl.scrollHeight > maxHeight && fontSize > 20) {
+      fontSize -= 2;
+      textEl.style.fontSize = fontSize + 'px';
+    }
+  };
+
+  window.addEventListener('resize', resizeText);
+  window.addEventListener('load', resizeText);
+  resizeText();
+</script>
