@@ -5,7 +5,23 @@
     src: url('/fonts/AbrilFatface-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/Nunito-VariableFont_wght.ttf') format('truetype');
+    font-weight: 200 1000;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/Nunito-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 200 1000;
+    font-style: italic;
+    font-display: block;
 }
 
 :root {
@@ -27,6 +43,12 @@ html.dark {
 }
 
 h1 {
+    font-size: 2.75rem;
+    font-weight: bold;
+    font-family: 'Abril Fatface', Georgia, 'Times New Roman', Times, serif;
+}
+
+svg {
     font-size: 2.75rem;
     font-weight: bold;
     font-family: 'Abril Fatface', Georgia, 'Times New Roman', Times, serif;
@@ -60,9 +82,14 @@ li {
     margin-bottom: 0.5rem;
 }
 
+article p, article span, article ol, article ul, article ul li {
+    font-size: large;
+}
+
 body {
     min-height: 100vh;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
     color: var(--text);
     background: var(--bg);
 }

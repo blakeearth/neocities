@@ -24,7 +24,7 @@ const lyricStatuses = await getCollection("lyricStatuses");
                   date={lyric.data.date ? lyric.data.date.toLocaleDateString() : ""}
                   attribution={lyric.data.attribution}
                 >
-                  <span class="italic">{lyric.data.text}</span>
+                  <span class="font-size-sm">{lyric.data.text}</span>
                 </Status>
               ))
             }

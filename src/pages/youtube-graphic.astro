@@ -1,0 +1,67 @@
+---
+import "../styles/global.css";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <title>YouTube Graphic</title>
+  <style>
+    body { margin: 0; padding: 1rem; }
+    select, textarea { padding: 0.5rem; margin: 0.5rem; font-size: 1rem; font-family: inherit; }
+    textarea { width: 400px; height: 100px; resize: vertical; display: block; }
+    #graphic { position: relative; width: 100%; max-width: 1920px; aspect-ratio: 16/9; border: 2px solid black; margin-top: 1rem; }
+    #graphic object { width: 100%; height: 100%; }
+    #text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Abril Fatface', Georgia, serif; color: #363636; text-align: center; z-index: 10; max-width: 90%; line-height: 1.2; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <div>
+    <select id="pattern">
+      <option value="animated-pattern.svg">Semicircles</option>
+      <option value="animated-pattern-2.svg">Squares & Hexagons</option>
+      <option value="animated-pattern-3.svg">Circles & Triangles</option>
+    </select>
+    <br>
+    <textarea id="input" placeholder="Text">Your Text Here</textarea>
+  </div>
+
+  <div id="graphic">
+    <object id="svg" data="/animated-pattern.svg" type="image/svg+xml"></object>
+    <div id="text">Your Text Here</div>
+  </div>
+
+  <script>
+    const resizeText = () => {
+      const graphic = document.getElementById('graphic');
+      const textEl = document.getElementById('text');
+      const graphicWidth = graphic.offsetWidth;
+      const graphicHeight = graphic.offsetHeight;
+
+      let fontSize = graphicWidth * 0.15; // Start large
+      textEl.style.fontSize = fontSize + 'px';
+
+      // Count actual lines in text
+      const lines = text.textContent.split('\n').length;
+      const maxHeight = graphicHeight * 0.4; // Max 40% of graphic height
+
+      // Reduce font size until it fits
+      while (textEl.scrollHeight > maxHeight && fontSize > 20) {
+        fontSize -= 2;
+        textEl.style.fontSize = fontSize + 'px';
+      }
+    };
+
+    pattern.onchange = e => svg.data = `/${e.target.value}`;
+    input.oninput = e => {
+      text.textContent = e.target.value;
+      resizeText();
+    };
+
+    window.addEventListener('resize', resizeText);
+    resizeText();
+  </script>
+</body>
+</html>

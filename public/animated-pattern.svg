@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <style>
+      @keyframes scroll {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(160px, -160px);
+        }
+      }
+
+      .pattern-group {
+        animation: scroll 6s linear infinite;
+      }
+
+      .header-text {
+        font-family: 'Abril Fatface', Georgia, serif;
+        font-size: 80px;
+        font-weight: normal;
+        fill: #363636;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+    </style>
+
+    <!-- Define the semicircle pattern -->
+    <pattern id="semicirclePattern" x="0" y="0" width="160" height="160" patternUnits="userSpaceOnUse">
+      <!-- First semicircle pair - using complementary colors (blue and yellow) -->
+      <g transform="translate(40, 56.4)">
+        <path d="M 21.2,-21.2 A 30,30 0 0,1 -21.2,21.2 Z" fill="#3085b7"/>
+      </g>
+      <g transform="translate(56.4, 40)">
+        <path d="M 21.2,-21.2 A 30,30 0 0,0 -21.2,21.2 Z" fill="#e3b730"/>
+      </g>
+
+      <!-- Second pair (shifted right and down) -->
+      <g transform="translate(120, 136.4)">
+        <path d="M 21.2,-21.2 A 30,30 0 0,1 -21.2,21.2 Z" fill="#3085b7"/>
+      </g>
+      <g transform="translate(136.4, 120)">
+        <path d="M 21.2,-21.2 A 30,30 0 0,0 -21.2,21.2 Z" fill="#e3b730"/>
+      </g>
+
+      <!-- Edge wrapping pairs to prevent cropping -->
+      <!-- Top-left wrap (from bottom-right) -->
+      <g transform="translate(-40, -23.6)">
+        <path d="M 21.2,-21.2 A 30,30 0 0,1 -21.2,21.2 Z" fill="#3085b7"/>
+      </g>
+      <g transform="translate(-23.6, -40)">
+        <path d="M 21.2,-21.2 A 30,30 0 0,0 -21.2,21.2 Z" fill="#e3b730"/>
+      </g>
+
+      <!-- Bottom-right wrap (from top-left) -->
+      <g transform="translate(200, 216.4)">
+        <path d="M 21.2,-21.2 A 30,30 0 0,1 -21.2,21.2 Z" fill="#3085b7"/>
+      </g>
+      <g transform="translate(216.4, 200)">
+        <path d="M 21.2,-21.2 A 30,30 0 0,0 -21.2,21.2 Z" fill="#e3b730"/>
+      </g>
+
+      <!-- Top-right wrap -->
+      <g transform="translate(120, -23.6)">
+        <path d="M 21.2,-21.2 A 30,30 0 0,1 -21.2,21.2 Z" fill="#3085b7"/>
+      </g>
+      <g transform="translate(136.4, -40)">
+        <path d="M 21.2,-21.2 A 30,30 0 0,0 -21.2,21.2 Z" fill="#e3b730"/>
+      </g>
+
+      <!-- Bottom-left wrap -->
+      <g transform="translate(-40, 136.4)">
+        <path d="M 21.2,-21.2 A 30,30 0 0,1 -21.2,21.2 Z" fill="#3085b7"/>
+      </g>
+      <g transform="translate(-23.6, 120)">
+        <path d="M 21.2,-21.2 A 30,30 0 0,0 -21.2,21.2 Z" fill="#e3b730"/>
+      </g>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#fff8ea"/>
+
+  <!-- Animated pattern - create multiple layers for seamless loop -->
+  <g class="pattern-group">
+    <rect x="-120" y="-120" width="1040" height="640" fill="url(#semicirclePattern)"/>
+  </g>
+  <g class="pattern-group">
+    <rect x="-180" y="60" width="1040" height="640" fill="url(#semicirclePattern)"/>
+  </g>
+
+</svg>

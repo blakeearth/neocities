@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <style>
+      @keyframes scrollDownRight {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(210px, 210px);
+        }
+      }
+
+      @keyframes pulse {
+        0%, 100% {
+          r: 28;
+        }
+        50% {
+          r: 32;
+        }
+      }
+
+      .pattern-group {
+        animation: scrollDownRight 6s linear infinite;
+      }
+
+      .header-text {
+        font-family: 'Abril Fatface', Georgia, serif;
+        font-size: 80px;
+        font-weight: normal;
+        fill: #363636;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+
+      .inner-circle {
+        animation: pulse 3s ease-in-out infinite;
+      }
+    </style>
+
+    <!-- Define the circle and triangle pattern -->
+    <pattern id="circleTrianglePattern" x="0" y="0" width="210" height="210" patternUnits="userSpaceOnUse">
+      <!-- First circle and triangle pair - diagonal offset -->
+      <g transform="translate(55, 55)">
+        <circle cx="0" cy="0" r="40" fill="#3085b7"/>
+        <circle cx="0" cy="0" r="30" fill="#fff8ea" class="inner-circle"/>
+      </g>
+      <g transform="translate(155, 155)">
+        <path d="M 0,-34.6 L 30,17.3 L -30,17.3 Z" fill="#d95d3f"/>
+      </g>
+
+      <!-- Edge wrapping pairs to prevent cropping -->
+      <!-- Top wrap (from bottom) -->
+      <g transform="translate(55, -155)">
+        <circle cx="0" cy="0" r="40" fill="#3085b7"/>
+        <circle cx="0" cy="0" r="30" fill="#fff8ea" class="inner-circle"/>
+      </g>
+      <g transform="translate(155, -55)">
+        <path d="M 0,-34.6 L 30,17.3 L -30,17.3 Z" fill="#d95d3f"/>
+      </g>
+
+      <!-- Bottom wrap (from top) -->
+      <g transform="translate(55, 265)">
+        <circle cx="0" cy="0" r="40" fill="#3085b7"/>
+        <circle cx="0" cy="0" r="30" fill="#fff8ea" class="inner-circle"/>
+      </g>
+      <g transform="translate(155, 365)">
+        <path d="M 0,-34.6 L 30,17.3 L -30,17.3 Z" fill="#d95d3f"/>
+      </g>
+
+      <!-- Side wraps for horizontal tiling -->
+      <g transform="translate(-155, 55)">
+        <circle cx="0" cy="0" r="40" fill="#3085b7"/>
+        <circle cx="0" cy="0" r="30" fill="#fff8ea" class="inner-circle"/>
+      </g>
+      <g transform="translate(-55, 155)">
+        <path d="M 0,-34.6 L 30,17.3 L -30,17.3 Z" fill="#d95d3f"/>
+      </g>
+
+      <g transform="translate(265, 55)">
+        <circle cx="0" cy="0" r="40" fill="#3085b7"/>
+        <circle cx="0" cy="0" r="30" fill="#fff8ea" class="inner-circle"/>
+      </g>
+      <g transform="translate(365, 155)">
+        <path d="M 0,-34.6 L 30,17.3 L -30,17.3 Z" fill="#d95d3f"/>
+      </g>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#fff8ea"/>
+
+  <!-- Animated pattern - create multiple layers for seamless loop -->
+  <g class="pattern-group">
+    <rect x="-120" y="-120" width="1040" height="640" fill="url(#circleTrianglePattern)"/>
+  </g>
+  <g class="pattern-group">
+    <rect x="-330" y="-330" width="1040" height="640" fill="url(#circleTrianglePattern)"/>
+  </g>
+
+</svg>
