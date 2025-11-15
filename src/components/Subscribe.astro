@@ -1,0 +1,123 @@
+---
+// Subscribe component that submits to Google Forms without redirecting
+import subscribeFormData from "../data/subscribe_form/subscribe_form.json";
+
+const {
+  heading,
+  formActionUrl,
+  nameFieldId,
+  emailFieldId,
+  namePlaceholder,
+  emailPlaceholder,
+  submitButtonText,
+  successMessage,
+  successDuration,
+} = subscribeFormData;
+---
+
+<div class="w-full">
+  <h3 class="mb-4 text-lg">{heading}</h3>
+  <form id="google-form" class="flex flex-col gap-4">
+    <div class="flex flex-col gap-1">
+      <label for="name" class="font-semibold text-sm">Name</label>
+      <input
+        type="text"
+        id="name"
+        placeholder={namePlaceholder}
+        required
+        class="p-2 border border-[var(--border)] rounded font-[inherit] text-base bg-[var(--bg)] text-[var(--text)] focus:outline-[var(--link)] focus:outline-2 focus:outline-offset-2 disabled:opacity-60 disabled:cursor-not-allowed"
+      />
+    </div>
+    <div class="flex flex-col gap-1">
+      <label for="email" class="font-semibold text-sm">Email</label>
+      <input
+        type="email"
+        id="email"
+        placeholder={emailPlaceholder}
+        required
+        class="p-2 border border-[var(--border)] rounded font-[inherit] text-base bg-[var(--bg)] text-[var(--text)] focus:outline-[var(--link)] focus:outline-2 focus:outline-offset-2 disabled:opacity-60 disabled:cursor-not-allowed"
+      />
+    </div>
+    <div class="flex gap-2 mt-2">
+      <button
+        type="submit"
+        id="submit-btn"
+        class="px-4 py-2 rounded font-[inherit] text-base cursor-pointer border border-[var(--border)] bg-transparent text-[var(--link)] font-semibold hover:underline disabled:opacity-60 disabled:cursor-not-allowed"
+      >
+        {submitButtonText}
+      </button>
+    </div>
+  </form>
+</div>
+
+<script
+  is:inline
+  define:vars={{
+    formActionUrl,
+    nameFieldId,
+    emailFieldId,
+    submitButtonText,
+    successMessage,
+    successDuration,
+  }}
+>
+  const form = document.getElementById("google-form") as HTMLFormElement;
+  const submitBtn = document.getElementById("submit-btn") as HTMLButtonElement;
+  const nameInput = document.getElementById("name") as HTMLInputElement;
+  const emailInput = document.getElementById("email") as HTMLInputElement;
+
+  function setFormState(disabled: boolean, buttonText: string) {
+    nameInput.disabled = disabled;
+    emailInput.disabled = disabled;
+    submitBtn.disabled = disabled;
+    submitBtn.textContent = buttonText;
+  }
+
+  function submitToGoogleForm(name: string, email: string) {
+    const iframe = document.createElement("iframe");
+    iframe.style.display = "none";
+    iframe.name = "hidden_iframe";
+    document.body.appendChild(iframe);
+
+    const hiddenForm = document.createElement("form");
+    hiddenForm.action = formActionUrl;
+    hiddenForm.method = "POST";
+    hiddenForm.target = "hidden_iframe";
+
+    const fields = [
+      { name: nameFieldId, value: name },
+      { name: emailFieldId, value: email },
+    ];
+
+    fields.forEach(({ name, value }) => {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = name;
+      input.value = value;
+      hiddenForm.appendChild(input);
+    });
+
+    document.body.appendChild(hiddenForm);
+    hiddenForm.submit();
+
+    setTimeout(() => {
+      document.body.removeChild(iframe);
+      document.body.removeChild(hiddenForm);
+    }, 1000);
+  }
+
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = nameInput.value;
+    const email = emailInput.value;
+
+    setFormState(true, successMessage);
+    submitToGoogleForm(name, email);
+
+    setTimeout(() => {
+      setFormState(false, submitButtonText);
+      form.reset();
+    }, successDuration);
+  });
+</script>

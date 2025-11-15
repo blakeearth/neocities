@@ -1,0 +1,11 @@
+{
+  "heading": "Subscribe for updates",
+  "formActionUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeAT2pObWNyiX6YfwyFscAk2t68_cNH37gtfNDxeJS6DS-PLw/formResponse",
+  "nameFieldId": "entry.799950262",
+  "emailFieldId": "entry.653673785",
+  "namePlaceholder": "Your name",
+  "emailPlaceholder": "your@email.com",
+  "submitButtonText": "Subscribe",
+  "successMessage": "Thanks for subscribing!",
+  "successDuration": 3000
+}

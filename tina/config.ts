@@ -252,6 +252,78 @@ export default defineConfig({
         ],
       },
       {
+        name: "subscribe_form",
+        label: "Subscribe Form",
+        path: "src/data/subscribe_form",
+        format: "json",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
+          {
+            name: "heading",
+            label: "Heading",
+            type: "string",
+            required: true,
+          },
+          {
+            name: "formActionUrl",
+            label: "Google Form Action URL",
+            type: "string",
+            required: true,
+            description: "The Google Form submission URL (ending in /formResponse)",
+          },
+          {
+            name: "nameFieldId",
+            label: "Name Field ID",
+            type: "string",
+            required: true,
+            description: "Google Form entry ID for name field (e.g., entry.123456789)",
+          },
+          {
+            name: "emailFieldId",
+            label: "Email Field ID",
+            type: "string",
+            required: true,
+            description: "Google Form entry ID for email field (e.g., entry.987654321)",
+          },
+          {
+            name: "namePlaceholder",
+            label: "Name Placeholder",
+            type: "string",
+            required: true,
+          },
+          {
+            name: "emailPlaceholder",
+            label: "Email Placeholder",
+            type: "string",
+            required: true,
+          },
+          {
+            name: "submitButtonText",
+            label: "Submit Button Text",
+            type: "string",
+            required: true,
+          },
+          {
+            name: "successMessage",
+            label: "Success Message",
+            type: "string",
+            required: true,
+          },
+          {
+            name: "successDuration",
+            label: "Success Duration (ms)",
+            type: "number",
+            required: true,
+            description: "How long to show the success message before resetting the form",
+          },
+        ],
+      },
+      {
         name: "cards",
         label: "Cards",
         path: "src/content/cards",
