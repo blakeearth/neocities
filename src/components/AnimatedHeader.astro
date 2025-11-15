@@ -37,6 +37,7 @@ const hash = (str: string) => {
 const seed = title ? hash(title) : 0;
 const selectedPattern = pattern || patterns[seed % patterns.length];
 const headerId = `header-${Math.random().toString(36).substr(2, 9)}`;
+
 ---
 
 {title && (
@@ -80,9 +81,9 @@ const headerId = `header-${Math.random().toString(36).substr(2, 9)}`;
     max-width: 90%;
     line-height: 1.2;
     white-space: pre-wrap;
-    background: var(--bg);
+    background: #fff8ea;
     padding: 0.5rem 1rem;
-    border: 0.2vh solid var(--border);
+    border: 0.2vh solid black;
   }
 
   @media (max-width: 768px) {
