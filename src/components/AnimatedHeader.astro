@@ -102,12 +102,23 @@ const headerId = `header-${Math.random().toString(36).substr(2, 9)}`;
     const containerWidth = container.offsetWidth;
     const containerHeight = container.offsetHeight;
 
+    // Get padding and border values
+    const computedStyle = window.getComputedStyle(textEl);
+    const paddingTop = parseFloat(computedStyle.paddingTop);
+    const paddingBottom = parseFloat(computedStyle.paddingBottom);
+    const borderTop = parseFloat(computedStyle.borderTopWidth);
+    const borderBottom = parseFloat(computedStyle.borderBottomWidth);
+    const verticalExtra = paddingTop + paddingBottom + borderTop + borderBottom;
+
+    // Start with a larger font size
     let fontSize = containerWidth * 0.15;
     textEl.style.fontSize = fontSize + 'px';
 
+    // Max height should account for the box chrome
     const maxHeight = containerHeight * 0.4;
 
-    while (textEl.scrollHeight > maxHeight && fontSize > 20) {
+    // Use scrollHeight to measure just the content, then add padding/border
+    while ((textEl.scrollHeight + verticalExtra) > maxHeight && fontSize > 20) {
       fontSize -= 2;
       textEl.style.fontSize = fontSize + 'px';
     }

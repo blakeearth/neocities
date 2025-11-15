@@ -11,22 +11,27 @@ import AnimatedHeader from "../components/AnimatedHeader.astro";
   <title>YouTube Graphic</title>
   <style>
     body { margin: 0; padding: 1rem; }
-    select, textarea { padding: 0.5rem; margin: 0.5rem; font-size: 1rem; font-family: inherit; }
+    form { margin-bottom: 1rem; }
+    select, textarea, button { padding: 0.5rem; margin: 0.5rem; font-size: 1rem; font-family: inherit; }
     textarea { width: 400px; height: 100px; resize: vertical; display: block; }
+    button { background: var(--bg); border: 1px solid var(--border); cursor: pointer; }
+    button:hover { background: var(--text); color: var(--bg); }
     #graphic-container { max-width: 1920px; margin-top: 1rem; }
     #graphic-container .animated-header { border: 2px solid black; }
   </style>
 </head>
 <body>
-  <div>
-    <select id="pattern">
+  <form method="get">
+    <select name="pattern" id="pattern">
       <option value="animated-pattern.svg">Semicircles</option>
       <option value="animated-pattern-2.svg">Squares & Hexagons</option>
       <option value="animated-pattern-3.svg">Circles & Triangles</option>
     </select>
     <br>
-    <textarea id="input" placeholder="Text">Your Text Here</textarea>
-  </div>
+    <textarea name="text" id="input" placeholder="Text">Your Text Here</textarea>
+    <br>
+    <button type="submit">Update Graphic</button>
+  </form>
 
   <div id="graphic-container">
     <AnimatedHeader
@@ -39,36 +44,33 @@ import AnimatedHeader from "../components/AnimatedHeader.astro";
   </div>
 
   <script>
+    // Read URL params and update the graphic
+    const urlParams = new URLSearchParams(window.location.search);
+    const text = urlParams.get('text') || 'Your Text Here';
+    const pattern = urlParams.get('pattern') || 'animated-pattern.svg';
+
+    // Update form inputs
     const patternSelect = document.getElementById('pattern');
-    const inputTextarea = document.getElementById('input');
-    const container = document.getElementById('graphic-container');
+    const textInput = document.getElementById('input');
 
-    const updateGraphic = () => {
-      const selectedPattern = patternSelect.value;
-      const text = inputTextarea.value;
+    if (patternSelect) patternSelect.value = pattern;
+    if (textInput) textInput.value = text;
 
-      // Find the animated header in the container
-      const header = container.querySelector('.animated-header');
-      if (!header) return;
-
-      // Update the pattern
+    // Update the graphic
+    const header = document.querySelector('.animated-header');
+    if (header) {
       const objectEl = header.querySelector('object');
       if (objectEl) {
-        objectEl.data = `/${selectedPattern}`;
+        objectEl.data = `/${pattern}`;
       }
 
-      // Update the text
       const textEl = header.querySelector('.header-title');
       if (textEl) {
         textEl.textContent = text;
-
         // Trigger resize event to recalculate text size
         window.dispatchEvent(new Event('resize'));
       }
-    };
-
-    patternSelect.addEventListener('change', updateGraphic);
-    inputTextarea.addEventListener('input', updateGraphic);
+    }
   </script>
 </body>
 </html>
