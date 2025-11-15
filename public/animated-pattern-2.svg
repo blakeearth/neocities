@@ -31,7 +31,7 @@
         <rect x="-35" y="-35" width="70" height="70" fill="#e3b730"/>
       </g>
       <g transform="translate(160, 160)">
-        <path class="hexagon" d="M -40,0 L -20,-34.6 L 20,-34.6 L 40,0 L 20,34.6 L -20,34.6 Z" fill="#91bf90"/>
+        <path class="hexagon" d="M -40,0 L -20,-34.6 L 20,-34.6 L 40,0 L 20,34.6 L -20,34.6 Z" fill="#4a9e6a"/>
       </g>
 
       <!-- Edge wrapping pairs to prevent cropping -->
@@ -40,7 +40,7 @@
         <rect x="-35" y="-35" width="70" height="70" fill="#e3b730"/>
       </g>
       <g transform="translate(160, -50)">
-        <path class="hexagon" d="M -40,0 L -20,-34.6 L 20,-34.6 L 40,0 L 20,34.6 L -20,34.6 Z" fill="#91bf90"/>
+        <path class="hexagon" d="M -40,0 L -20,-34.6 L 20,-34.6 L 40,0 L 20,34.6 L -20,34.6 Z" fill="#4a9e6a"/>
       </g>
 
       <!-- Bottom wrap (from top) -->
@@ -48,7 +48,7 @@
         <rect x="-35" y="-35" width="70" height="70" fill="#e3b730"/>
       </g>
       <g transform="translate(160, 370)">
-        <path class="hexagon" d="M -40,0 L -20,-34.6 L 20,-34.6 L 40,0 L 20,34.6 L -20,34.6 Z" fill="#91bf90"/>
+        <path class="hexagon" d="M -40,0 L -20,-34.6 L 20,-34.6 L 40,0 L 20,34.6 L -20,34.6 Z" fill="#4a9e6a"/>
       </g>
 
       <!-- Side wraps for horizontal tiling -->
@@ -56,14 +56,14 @@
         <rect x="-35" y="-35" width="70" height="70" fill="#e3b730"/>
       </g>
       <g transform="translate(-50, 160)">
-        <path class="hexagon" d="M -40,0 L -20,-34.6 L 20,-34.6 L 40,0 L 20,34.6 L -20,34.6 Z" fill="#91bf90"/>
+        <path class="hexagon" d="M -40,0 L -20,-34.6 L 20,-34.6 L 40,0 L 20,34.6 L -20,34.6 Z" fill="#4a9e6a"/>
       </g>
 
       <g transform="translate(260, 50)">
         <rect x="-35" y="-35" width="70" height="70" fill="#e3b730"/>
       </g>
       <g transform="translate(370, 160)">
-        <path class="hexagon" d="M -40,0 L -20,-34.6 L 20,-34.6 L 40,0 L 20,34.6 L -20,34.6 Z" fill="#91bf90"/>
+        <path class="hexagon" d="M -40,0 L -20,-34.6 L 20,-34.6 L 40,0 L 20,34.6 L -20,34.6 Z" fill="#4a9e6a"/>
       </g>
     </pattern>
   </defs>
