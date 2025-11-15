@@ -6,6 +6,6 @@
   "namePlaceholder": "Your name",
   "emailPlaceholder": "your@email.com",
   "submitButtonText": "Subscribe",
-  "successMessage": "Thanks for subscribing!",
+  "successMessage": "Welcome!",
   "successDuration": 3000
 }
