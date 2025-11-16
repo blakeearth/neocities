@@ -24,18 +24,22 @@ const patterns = [
   'animated-pattern-3.svg'
 ];
 
-const hash = (str: string) => {
-  let hash = 0;
+// Use a simple prime-based distribution for more equal pattern selection
+const stringToIndex = (str: string, arrayLength: number) => {
+  if (!str) return 0;
+
+  // Use character codes with prime multipliers for better distribution
+  let sum = 0;
+  const primes = [31, 37, 41, 43, 47, 53, 59, 61, 67, 71];
+
   for (let i = 0; i < str.length; i++) {
-    const char = str.charCodeAt(i);
-    hash = ((hash << 5) - hash) + char;
-    hash = hash & hash;
+    sum += str.charCodeAt(i) * primes[i % primes.length];
   }
-  return Math.abs(hash);
+
+  return sum % arrayLength;
 };
 
-const seed = title ? hash(title) : 0;
-const selectedPattern = pattern || patterns[seed % patterns.length];
+const selectedPattern = pattern || patterns[stringToIndex(title, patterns.length)];
 const headerId = `header-${Math.random().toString(36).substr(2, 9)}`;
 
 ---
