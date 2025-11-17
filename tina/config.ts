@@ -436,6 +436,61 @@ export default defineConfig({
                     required: false,
                   },
                 ]
+              },
+              {
+                name: "YouTube",
+                label: "YouTube Video",
+                fields: [
+                  {
+                    name: "id",
+                    label: "YouTube Video ID",
+                    type: "string",
+                    required: true,
+                    description: "The video ID from the YouTube URL (e.g., 'dQw4w9WgXcQ')",
+                  },
+                  {
+                    name: "title",
+                    label: "Video Title",
+                    type: "string",
+                    required: false,
+                    description: "Accessible title for the video (defaults to 'YouTube video')",
+                  },
+                  {
+                    name: "start",
+                    label: "Start Time (seconds)",
+                    type: "number",
+                    required: false,
+                    description: "Start the video at a specific time in seconds",
+                  },
+                  {
+                    name: "end",
+                    label: "End Time (seconds)",
+                    type: "number",
+                    required: false,
+                    description: "End the video at a specific time in seconds",
+                  },
+                  {
+                    name: "autoplay",
+                    label: "Autoplay",
+                    type: "boolean",
+                    required: false,
+                    description: "Auto-play the video when the page loads",
+                  },
+                  {
+                    name: "mute",
+                    label: "Mute",
+                    type: "boolean",
+                    required: false,
+                    description: "Mute the video by default",
+                  },
+                  {
+                    name: "controls",
+                    label: "Show Controls",
+                    type: "boolean",
+                    required: false,
+                    description: "Show video controls (defaults to true)",
+                  },
+                ]
               }
             ],
           }
