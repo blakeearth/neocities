@@ -124,31 +124,22 @@ const {
     }
   })();
 
-  // Handle #subscribe hash in URL
+  // Handle #subscribe wiggle animation
   (function() {
-    function handleSubscribeHash() {
+    function wiggleIfSubscribe() {
       if (window.location.hash === '#subscribe') {
         const subscribeElement = document.getElementById('subscribe');
         if (subscribeElement) {
-          // Scroll to the element
-          subscribeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-          // Add wiggle animation
           subscribeElement.classList.add('wiggle');
-
-          // Remove animation after it completes
           setTimeout(function() {
             subscribeElement.classList.remove('wiggle');
-          }, 600);
+          }, 800);
         }
       }
     }
 
-    // Check on initial load
-    handleSubscribeHash();
-
-    // Check when hash changes
-    window.addEventListener('hashchange', handleSubscribeHash);
+    wiggleIfSubscribe();
+    window.addEventListener('hashchange', wiggleIfSubscribe);
   })();
 </script>
 
