@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+
+const buttons = await getCollection("buttons");
+---
+
+<div class="flex flex-wrap gap-2">
+  {buttons.map((button) => (
+    <a href={button.data.linkUrl} target="_blank" rel="noopener noreferrer">
+      <img
+        src={button.data.image}
+        alt={button.data.alt}
+        width="88"
+        height="31"
+        class="block"
+      />
+    </a>
+  ))}
+</div>

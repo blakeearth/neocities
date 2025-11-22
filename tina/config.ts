@@ -252,6 +252,92 @@ export default defineConfig({
         ],
       },
       {
+        name: "webgardens",
+        label: "Webgardens",
+        path: "src/data/webgardens",
+        format: "json",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
+          {
+            name: "webgardens",
+            label: "Webgardens",
+            list: true,
+            addItemBehavior: "prepend",
+            type: "object",
+            ui: {
+              itemProps: (values) => ({
+                label: values?.name,
+              }),
+            },
+            fields: [
+              {
+                name: "src",
+                label: "Source URL",
+                type: "string",
+                required: true,
+              },
+              {
+                name: "name",
+                label: "Name",
+                type: "string",
+                required: true,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: "buttons",
+        label: "Buttons",
+        path: "src/data/buttons",
+        format: "json",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
+          {
+            name: "buttons",
+            label: "Buttons",
+            list: true,
+            addItemBehavior: "prepend",
+            type: "object",
+            ui: {
+              itemProps: (values) => ({
+                label: values?.alt,
+              }),
+            },
+            fields: [
+              {
+                name: "image",
+                label: "Image",
+                type: "image",
+                required: true,
+              },
+              {
+                name: "alt",
+                label: "Alt Text",
+                type: "string",
+                required: true,
+              },
+              {
+                name: "linkUrl",
+                label: "Link URL",
+                type: "string",
+                required: true,
+              },
+            ],
+          },
+        ],
+      },
+      {
         name: "subscribe_form",
         label: "Subscribe Form",
         path: "src/data/subscribe_form",

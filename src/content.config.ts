@@ -2,6 +2,8 @@ import { file, glob } from 'astro/loaders';
 import highlightData from '../src/data/highlights/highlights.json';
 import updateData from '../src/data/site_updates/site-updates.json';
 import lyricData from '../src/data/lyric_statuses/lyric-statuses.json';
+import buttonData from '../src/data/buttons/buttons.json';
+import webgardenData from '../src/data/webgardens/webgardens.json';
 import { defineCollection, z } from 'astro:content';
 
 const cards = defineCollection({
@@ -72,4 +74,27 @@ const books = defineCollection({
 	})
 });
 
-export const collections = { cards, lyricStatuses, siteUpdates, highlights, books };
+const buttons = defineCollection({
+	loader: () => {
+		const response = buttonData.buttons;
+		return response.map((b, index) => { return { ...b, id: index.toString() } });
+	},
+	schema: z.object({
+		image: z.string(),
+		alt: z.string(),
+		linkUrl: z.string(),
+	})
+});
+
+const webgardens = defineCollection({
+	loader: () => {
+		const response = webgardenData.webgardens;
+		return response.map((w, index) => { return { ...w, id: index.toString() } });
+	},
+	schema: z.object({
+		src: z.string(),
+		name: z.string(),
+	})
+});
+
+export const collections = { cards, lyricStatuses, siteUpdates, highlights, books, buttons, webgardens };

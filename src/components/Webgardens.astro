@@ -1,0 +1,12 @@
+---
+import { getCollection } from "astro:content";
+import WebgardenPlant from "./WebgardenPlant.astro";
+
+const webgardens = await getCollection("webgardens");
+---
+
+<div class="flex flex-wrap justify-around">
+  {webgardens.map((garden) => (
+    <WebgardenPlant src={garden.data.src} />
+  ))}
+</div>

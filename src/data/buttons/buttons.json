@@ -1,0 +1,29 @@
+{
+  "buttons": [
+    {
+      "image": "/images/buttons/keysklubhouse.gif",
+      "alt": "Key's Klubhouse",
+      "linkUrl": "https://keysklubhouse.com/"
+    },
+    {
+      "image": "/images/buttons/pip-pepping.gif",
+      "alt": "PiPe",
+      "linkUrl": "https://pip-pepping.neocities.org/"
+    },
+    {
+      "image": "/images/buttons/bechnokid.png",
+      "alt": "Bechnokid",
+      "linkUrl": "https://bechnokid.neocities.org"
+    },
+    {
+      "image": "/images/buttons/frills.png",
+      "alt": "Frills",
+      "linkUrl": "https://frills.dev/"
+    },
+    {
+      "image": "/images/yarnfish_text_88x31.png",
+      "alt": "Yarnfish",
+      "linkUrl": "https://yarnfish.neocities.org/"
+    }
+  ]
+}

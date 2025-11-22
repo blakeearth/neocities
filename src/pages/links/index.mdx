@@ -3,15 +3,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 import Layout from "../../layouts/BlogPost.astro";
 import WebgardenPlant from "../../components/WebgardenPlant.astro"
+import Webgardens from "../../components/Webgardens.astro"
+import Buttons from "../../components/Buttons.astro"
 
 <Layout title="Links">
-  I'm so freaking excited to make this page y'all. Aaahh! This was one of the biggest
-  inspirations for starting this Neocities version of my site. Check out these
-  awesome sites!
+  This was one of the biggest inspirations for starting this Neocities version of my site. Check out these awesome sites!
 
   ## Buttons
-  Collecting buttons! Work in progress! Here's an initial attempt at a button (hotlinking encouraged until I get my act together and polish it a little):
-  
+  Collecting buttons! Work in progress!
+
+  <Buttons />
+
   !["blake.earth" to the left of a purple-and-orange undulating lava lamp](/images/button.gif)
 
   ## Webgarden
@@ -30,10 +32,5 @@ import WebgardenPlant from "../../components/WebgardenPlant.astro"
     <WebgardenPlant src="/webgarden"/>
   </div>
 
-  <div class="flex flex-wrap justify-around">
-    <WebgardenPlant src="https://bechnokid.neocities.org/webgarden.html"/>
-    <WebgardenPlant src="https://keysklubhouse.neocities.org/webgarden.html"/>
-    <WebgardenPlant src="https://solaria.neocities.org/garden/webgarden"/>
-    <WebgardenPlant src="https://pip-pepping.neocities.org/web-garden/webgarden.html"/>
-  </div>
+  <Webgardens />
 </Layout>
