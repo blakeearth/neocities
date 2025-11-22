@@ -14,7 +14,7 @@ const {
 } = subscribeFormData;
 ---
 
-<div class="w-full">
+<div id="subscribe" class="w-full">
   <h3 class="mb-4 text-lg">{heading}</h3>
   <form id="google-form" class="flex flex-col gap-4">
     <div class="flex flex-col gap-1">
@@ -123,4 +123,62 @@ const {
       });
     }
   })();
+
+  // Handle #subscribe wiggle animation
+  (function() {
+    function wiggleIfSubscribe() {
+      if (window.location.hash === '#subscribe') {
+        const subscribeElement = document.getElementById('subscribe');
+        if (subscribeElement) {
+          subscribeElement.classList.add('wiggle');
+          setTimeout(function() {
+            subscribeElement.classList.remove('wiggle');
+          }, 800);
+        }
+      }
+    }
+
+    wiggleIfSubscribe();
+    window.addEventListener('hashchange', wiggleIfSubscribe);
+  })();
 </script>
+
+<style>
+  @keyframes wiggle {
+    0%, 100% {
+      transform: rotate(0deg) scale(1);
+    }
+    10% {
+      transform: rotate(-3deg) scale(1.05);
+    }
+    20% {
+      transform: rotate(3deg) scale(1.08);
+    }
+    30% {
+      transform: rotate(-3deg) scale(1.05);
+    }
+    40% {
+      transform: rotate(3deg) scale(1.08);
+    }
+    50% {
+      transform: rotate(-2deg) scale(1.05);
+    }
+    60% {
+      transform: rotate(2deg) scale(1.03);
+    }
+    70% {
+      transform: rotate(-1deg) scale(1.02);
+    }
+    80% {
+      transform: rotate(1deg) scale(1.01);
+    }
+    90% {
+      transform: rotate(-0.5deg) scale(1.005);
+    }
+  }
+
+  .wiggle {
+    animation: wiggle 0.8s ease-in-out;
+    transform-origin: center;
+  }
+</style>

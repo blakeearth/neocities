@@ -19,6 +19,7 @@ export default defineConfig({
             imports: [
                 "./src/components/Highlight.astro",
                 "./src/components/Quote.astro",
+                "./src/components/YouTube.astro",
             ],
         }),
         mdx(),
