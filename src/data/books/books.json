@@ -1,6 +1,11 @@
 {
   "books": [
     {
+      "title": "All Fours",
+      "rating": "4.5",
+      "olid": "OL37827700W"
+    },
+    {
       "title": "The Joy of Being Selfish",
       "olid": "OL60774976M"
     },
