@@ -37,10 +37,10 @@ const tagArray: TagCount[] = Object.entries(tagDictionary)
   .sort((a, b) => b.count - a.count);
 ---
 
-<div class="flex gap-2 overflow-x-scroll">
+<div class="flex flex-wrap gap-2">
   {
     tagArray.map((tag) => (
-      <div class="flex items-center w-100">
+      <div class="flex items-center">
         <Tag emoji="#" href={"/library/highlights/tags/" + tag.tag}>
           {tag.tag} ({tag.count})
         </Tag>
