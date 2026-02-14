@@ -1,8 +1,12 @@
 {
   "books": [
     {
+      "title": "The Financial Activist Playbook",
+      "olid": "OL61306696M"
+    },
+    {
       "title": "All Fours",
-      "rating": "4.5",
+      "rating": "★★★★⯨",
       "olid": "OL37827700W"
     },
     {
