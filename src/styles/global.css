@@ -39,9 +39,9 @@ html.dark {
     --text: #fff8ea;
     --link: #91bf90;
     --border: #fff8ea;
-    --sidebar-one: #2a5030;
-    --sidebar-two: #5a4820;
-    --subscribe: #5a3028;
+    --sidebar-one: #1b1b1b;
+    --sidebar-two: #1b1b1b;
+    --subscribe: #1b1b1b;
 }
 
 h1 {

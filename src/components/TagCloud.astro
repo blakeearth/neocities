@@ -22,7 +22,10 @@ interface TagCount {
 const tagDictionary: Record<string, number> = {};
 
 highlights.forEach((highlight) => {
-  const tags = highlight.data.tags.split(",").map((tag: string) => tag.trim());
+  const tags = highlight.data.tags
+    .split(",")
+    .map((tag: string) => tag.trim())
+    .filter((tag) => tag.length);
 
   tags.forEach((tag: string) => {
     if (!tagDictionary[tag]) {
