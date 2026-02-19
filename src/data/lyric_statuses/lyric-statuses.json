@@ -1,11 +1,6 @@
 {
   "lyric_statuses": [
     {
-      "emoji": "☀️",
-      "text": "Look at how well you’re doing / My God, you’re only human",
-      "attribution": "“Only Human” by Hush Kids"
-    },
-    {
       "emoji": "🕊️",
       "text": "Handmade Heaven",
       "date": "2019-02-09T00:00:00.000Z",
@@ -104,6 +99,11 @@
       "text": "Ooh, it's not your fault I made you an art Just to hide from me You're just a Rorschach, baby I see what I want to see",
       "date": "2025-11-04T00:00:00.000Z",
       "attribution": "“Rorschach Baby” by Ryn Weaver"
+    },
+    {
+      "emoji": "☀️",
+      "text": "Look at how well you’re doing / My God, you’re only human",
+      "attribution": "“Only Human” by Hush Kids"
     }
   ]
 }
